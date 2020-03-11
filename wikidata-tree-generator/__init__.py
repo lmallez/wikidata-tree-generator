@@ -1,0 +1,21 @@
+CharacterEntity.py
+MainModule.py
+main.py
+services/
+    CharacterBuilderService.py
+    CharacterFetcherService.py
+    ConfigService.py
+    DatabaseService.py
+    WikidataFetcherService.py
+    export/
+        ExportService.py
+        GedcomExportService.py
+    looger/
+        LoggerErrorService.py
+        LoggerService.py
+    tree/
+        AncestorsTreeBuilderService.py
+        DescandantsTreeBuilderService.py
+        TreeBuilderService.py
+macros/
+    WikidataProperties.py
