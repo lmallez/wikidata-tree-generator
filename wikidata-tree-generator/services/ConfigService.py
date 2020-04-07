@@ -3,8 +3,7 @@ from models.CharacterEntity import Properties
 
 
 class ConfigService:
-    def __init__(self):
-        pass
+    max_thread = 100
 
     load_fathers = True
     load_mothers = True
@@ -15,7 +14,7 @@ class ConfigService:
     export_women = True
     export_men = True
 
-    max_prof = 30
+    max_prof = 6
 
     def get_character_fields(self):
         # TODO : generate this

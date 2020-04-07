@@ -18,5 +18,6 @@ class CharacterFetcherService:
             return self.database.get(entity_id)
         entity = self.wikidata.get(entity_id)
         character = self.builder.build_character(entity)
-        self.database.add(entity_id, character)
+        if not self.database.contains(entity_id):
+            self.database.add(entity_id, character)
         return character

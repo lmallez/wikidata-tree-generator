@@ -77,6 +77,8 @@ class GedcomExportService(ExportService):
         self.families = {}
 
     def allow_export(self, character: CharacterEntity) -> bool:
+        if not character.has_property(Properties.SEX):
+            return True
         sex = character.get_property(Properties.SEX)
         return (sex == Sex.MALE and self.config.export_men) or (sex == Sex.FEMALE and self.config.export_women)
 

@@ -6,10 +6,11 @@ from services.export.GedcomExportService import GedcomExportService
 from services.logger.LoggerService import LoggerService
 from services.WikidataFetcherService import WikidataFetcherService
 from services.CharacterBuilderService import CharacterBuilderService
-from services.tree.AncestorsTreeBuilderService import AncestorsTreeBuilderService
-from services.tree.DescandantsTreeBuilderService import DescandantsTreeBuilderService
-from services.tree.TotalTreeBuilderService import TotalTreeBuilderService
-from services.tree.TreeBuilderService import TreeBuilderService
+from services.tree.dispatcher.ThreadedDispatcher import ThreadedDispatcher
+from services.tree.tree_builder.AncestorsTreeBuilder import AncestorsTreeBuilder
+from services.tree.tree_builder.ClassicTreeBuilder import ClassicTreeBuilder
+from services.tree.tree_builder.DescandantsTreeBuilder import DescendantsTreeBuilder
+from services.tree.tree_builder.FullTreeBuilder import FullTreeBuilder
 
 
 class MainModule:
@@ -19,9 +20,15 @@ class MainModule:
         self.wikidata_fetcher = WikidataFetcherService()
         self.database = DatabaseService()
         self.character_builder = CharacterBuilderService(self.logger, self.config)
-        self.character_fetch = CharacterFetcherService(self.wikidata_fetcher, self.database, self.character_builder)
-        self.a_tree_builder = AncestorsTreeBuilderService(self.character_fetch, self.config, self.logger)
-        self.d_tree_builder = DescandantsTreeBuilderService(self.character_fetch, self.config, self.logger)
-        self.tree_builder = TreeBuilderService(self.character_fetch, self.a_tree_builder, self.d_tree_builder)
-        self.t_tree_builder = TotalTreeBuilderService(self.character_fetch, self.config, self.logger)
-        self.gedcom_exporter = GedcomExportService(self.database, self.config, self.logger)
+
+        self.fetcher = CharacterFetcherService(self.wikidata_fetcher, self.database, self.character_builder)
+
+        # self.dispatcher = BasicDispatcher()
+        self.dispatcher = ThreadedDispatcher(self.config.max_thread)
+
+        self.ancestors_tree_builder = AncestorsTreeBuilder(self.fetcher, self.config, self.dispatcher)
+        self.descandants_tree_builder = DescendantsTreeBuilder(self.fetcher, self.config, self.dispatcher)
+        self.full_tree_builder = FullTreeBuilder(self.fetcher, self.config, self.dispatcher)
+        self.classic_tree_builder = ClassicTreeBuilder(self.ancestors_tree_builder, self.descandants_tree_builder)
+
+        self.exporter = GedcomExportService(self.database, self.config, self.logger)

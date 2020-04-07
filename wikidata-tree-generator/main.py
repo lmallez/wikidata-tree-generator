@@ -4,7 +4,10 @@ from MainModule import MainModule
 
 main = MainModule()
 
-main.tree_builder.build_tree('Q9696')
-main.gedcom_exporter.export('../out/jfk.ged')
+id = 'Q9682'
 
-print(main.database.cache)
+main.config.max_prof = 1000
+main.config.max_thread = 1000
+
+main.ancestors_tree_builder.compute(id)
+main.exporter.export('../out/{}.ged'.format(id))
