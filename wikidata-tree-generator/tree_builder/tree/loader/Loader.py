@@ -2,7 +2,7 @@
 from wikidata.entity import EntityId
 
 from models.CharacterEntity import CharacterEntity
-from services.ConfigService import ConfigService
+from ConfigService import ConfigService
 
 
 class Loader:

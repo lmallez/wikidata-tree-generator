@@ -3,8 +3,8 @@ from wikidata.entity import EntityId
 
 from macros.WikidataProperties import Sex
 from models.CharacterEntity import Properties, CharacterEntity
-from services.ConfigService import ConfigService
-from services.tree.loader.Loader import Loader
+from ConfigService import ConfigService
+from tree_builder.tree.loader.Loader import Loader
 
 
 class DescendantsLoader(Loader):

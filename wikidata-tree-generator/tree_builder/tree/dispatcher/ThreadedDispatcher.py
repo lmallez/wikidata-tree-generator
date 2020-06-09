@@ -3,7 +3,7 @@ from threading import Thread
 
 from wikidata.entity import EntityId
 
-from services.tree.dispatcher.Dispatcher import Dispatcher
+from tree_builder.tree.dispatcher.Dispatcher import Dispatcher
 
 
 class ThreadedDispatcher(Dispatcher):
@@ -16,6 +16,7 @@ class ThreadedDispatcher(Dispatcher):
             return
         if len(entity_ids) == 1:
             method(entity_ids[0], prof, branch)
+            return
         threads = []
         other_entities = []
         for entity_id in entity_ids:

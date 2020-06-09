@@ -5,12 +5,12 @@ from typing import Union
 from models.CharacterEntity import CharacterEntity, Properties
 from macros.WikidataProperties import Sex
 from models.Date import Date
-from services.ConfigService import ConfigService
-from services.DatabaseService import DatabaseService
-from services.export.ExportService import ExportService
+from ConfigService import ConfigService
+from Database import Database
+from export.ExportService import ExportService
 from gedcom.element.element import Element
 
-from services.logger.LoggerService import LoggerService
+from logger.LoggerService import LoggerService
 
 HEADER = '0 HEAD\n1 SOUR Wikidata to Gedcom\n2 VERS 5.1.1\n2 NAME Wikidata to Gedcom\n1 DATE {}\n2 TIME {}\n1 SUBM @SUBM@\n1 FILE {}\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 LANG English\n0 @SUBM@ SUBM\n1 NAME\n1 ADDR\n'
 
@@ -69,7 +69,7 @@ class GedcomExportService(ExportService):
             self.father_id = None
             self.mother_id = None
 
-    def __init__(self, database: DatabaseService, config: ConfigService, logger: LoggerService):
+    def __init__(self, database: Database, config: ConfigService, logger: LoggerService):
         self.database = database
         self.config = config
         self.logger = logger
@@ -84,11 +84,11 @@ class GedcomExportService(ExportService):
 
     def create_character_element(self, character: CharacterEntity):
         element = Element(0, '@{}@'.format(character.id), 'INDI', '')
-        element.new_child_element('NAME', '', str(character[Properties.LABEL]))
+        name_element = element.new_child_element('NAME', '', str(character[Properties.LABEL]))
         for field in self.config.get_export_fields():
             if field in field_method.keys():
                 try:
-                    field_method[field](self, character, element)
+                    field_method[field](self, character, element, name_element)
                 except:
                     self.logger.log('{}: {} is impossible to export'.format(self.__class__.__name__, field))
         self.create_family(character)
@@ -107,11 +107,17 @@ class GedcomExportService(ExportService):
         birth_element.new_child_element('DATE', '', str(create_gedcom_date(birth)))
 
     def export_date_death(self, character: CharacterEntity, element: Element):
-        deat = character.get_property(Properties.DATE_DEATH)
-        if deat is None:
+        death = character.get_property(Properties.DATE_DEATH)
+        if death is None:
             raise
         birth_element = element.new_child_element('DEAT')
-        birth_element.new_child_element('DATE', '', str(create_gedcom_date(deat)))
+        birth_element.new_child_element('DATE', '', str(create_gedcom_date(death)))
+
+    def export_given_name(self, character: CharacterEntity, element: Element, name_element: Element):
+        givens = character.get_property(Properties.GIVEN_NAME)
+        if givens is None:
+            raise
+        name_element.new_child_element('GIVN', '', ' '.join([str(given.label) for given in givens]))
 
     def create_family(self, character: CharacterEntity):
         if not character.has_property(Properties.MOTHER_ID) and not character.has_property(Properties.FATHER_ID):
@@ -150,12 +156,13 @@ class GedcomExportService(ExportService):
         self.elements[family.id] = element
 
     def print_element(self, file, element: Element, depth=0):
-        file.write(element.to_gedcom_string())
+        a = element.to_gedcom_string()
+        file.write(a)
         for child in element.get_child_elements():
             self.print_element(file, child, depth=depth + 1)
 
     def write_gedcom(self, output_file, elements):
-        f = open(output_file, "w+")
+        f = open(output_file, "w+", encoding="utf8")
         dt = datetime.now()
         f.write(HEADER.format(
             dt.strftime("%d %b %Y"),
@@ -182,4 +189,5 @@ field_method = {
     Properties.SEX: GedcomExportService.export_sex,
     Properties.DATE_BIRTH: GedcomExportService.export_date_birth,
     Properties.DATE_DEATH: GedcomExportService.export_date_death,
+    Properties.GIVEN_NAME: GedcomExportService.export_given_name,
 }

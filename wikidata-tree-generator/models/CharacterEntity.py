@@ -12,6 +12,8 @@ class Properties:
     CHILD_IDS = 'child_ids'
     DATE_BIRTH = 'date_birth'
     DATE_DEATH = 'date_death'
+    GIVEN_NAME = 'given_name'
+    FAMILY_NAME = 'family_name'
 
 
 class CharacterEntity(dict):

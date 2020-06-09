@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from wikidata.entity import EntityId
 
-from services.tree.dispatcher.Dispatcher import Dispatcher
+from tree_builder.tree.dispatcher.Dispatcher import Dispatcher
 
 
 class BasicDispatcher(Dispatcher):

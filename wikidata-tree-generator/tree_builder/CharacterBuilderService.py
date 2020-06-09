@@ -4,8 +4,8 @@ from typing import List
 from wikidata.entity import EntityId, Entity
 
 from models.Date import Date
-from services.ConfigService import ConfigService
-from services.logger.LoggerService import LoggerService
+from ConfigService import ConfigService
+from logger.LoggerService import LoggerService
 from macros.WikidataProperties import wikidata_entities, wikidata_properties, Sex
 from models.CharacterEntity import CharacterEntity, Properties
 
@@ -33,7 +33,8 @@ class CharacterBuilderService:
             try:
                 character[field] = field_method[field](self, entity)
             except:
-                self.logger.log('{}: {} is impossible to get'.format(self.__class__.__name__, field))
+                pass
+                # self.logger.log('{}: {} is impossible to get'.format(self.__class__.__name__, field))
         return character
 
     def get_is_human(self, entity: Entity) -> bool:
@@ -112,9 +113,19 @@ class CharacterBuilderService:
             date['mainsnak']['datavalue']['value']['precision']
         )
 
+    def get_given_name(self, entity: Entity):
+        return self.__get_name(entity, wikidata_properties['given_name'])
+
+    def get_family_name(self, entity: Entity):
+        return self.__get_name(entity, wikidata_properties['family_name'])
+
+    def __get_name(self, entity: Entity, property_id: EntityId):
+        given_names = self.__get_property(entity, property_id)
+        return [given_name['mainsnak']['datavalue']['value']['id'] for given_name in given_names]
+
     def __get_property(self, entity: Entity, property_id: EntityId):
         if property_id not in entity.data['claims']:
-            self.logger.log('{}: {} -> property {} not found'.format(self.__class__.__name__, property_id, entity.id))
+            self.logger.log('{}: {} ({}) -> property {} not found'.format(self.__class__.__name__, entity.id, entity.label, property_id))
             raise
         return entity.data['claims'][property_id]
 
@@ -127,4 +138,6 @@ field_method = {
     Properties.CHILD_IDS: CharacterBuilderService.get_child_ids,
     Properties.DATE_BIRTH: CharacterBuilderService.get_date_birth,
     Properties.DATE_DEATH: CharacterBuilderService.get_date_death,
+    Properties.GIVEN_NAME: CharacterBuilderService.get_given_name,
+    Properties.FAMILY_NAME: CharacterBuilderService.get_family_name,
 }

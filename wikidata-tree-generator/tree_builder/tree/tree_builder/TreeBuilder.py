@@ -2,10 +2,10 @@
 from wikidata.entity import EntityId
 
 from models.CharacterEntity import Properties, CharacterEntity
-from services.CharacterFetcherService import CharacterFetcherService
-from services.ConfigService import ConfigService
-from services.tree.loader import Loader
-from services.tree.dispatcher.Dispatcher import Dispatcher
+from tree_builder.CharacterFetcherService import CharacterFetcherService
+from ConfigService import ConfigService
+from tree_builder.tree.loader import Loader
+from tree_builder.tree.dispatcher.Dispatcher import Dispatcher
 
 
 class TreeBuilder:

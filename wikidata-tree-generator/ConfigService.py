@@ -26,6 +26,8 @@ class ConfigService:
             Properties.CHILD_IDS,
             Properties.DATE_DEATH,
             Properties.DATE_BIRTH,
+            Properties.GIVEN_NAME,
+            Properties.FAMILY_NAME
         ]
 
     def get_export_fields(self):
@@ -34,4 +36,5 @@ class ConfigService:
             Properties.SEX,
             Properties.DATE_DEATH,
             Properties.DATE_BIRTH,
+            Properties.GIVEN_NAME,
         ]

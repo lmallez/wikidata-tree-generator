@@ -7,4 +7,4 @@ class LoggerService:
         pass
 
     def log(self, log: str):
-        return # print(log)
+        print(log, file=sys.stderr)

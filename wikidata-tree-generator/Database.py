@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 from wikidata.entity import EntityId
 
-from models.CharacterEntity import CharacterEntity
 
-
-class DatabaseService:
+class Database:
     def __init__(self):
         self.cache = dict()
 
-    def add(self, entity_id: EntityId, character: CharacterEntity):
+    def add(self, entity_id: EntityId, character):
         if self.contains(entity_id):
             raise
         # useful for redirections
@@ -16,7 +14,7 @@ class DatabaseService:
             self.cache[entity_id] = entity_id
         self.cache[character.id] = character
 
-    def remove(self, character: CharacterEntity):
+    def remove(self, character):
         if not self.contains(character.id):
             raise
         del self.cache[character.id]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
-from services.logger.LoggerService import LoggerService
+from logger.LoggerService import LoggerService
 
 
 class LoggerErrorService(LoggerService):
