@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 from threading import Thread
-
 from wikidata.entity import EntityId
-
 from tree_builder.tree.dispatcher.Dispatcher import Dispatcher
 
 

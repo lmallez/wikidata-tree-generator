@@ -11,7 +11,10 @@ wikidata_properties = {
     "family_name": "P734",
     "date_of_birth": "P569",
     "date_of_death": "P570",
+    "place_of_birth": "P19",
+    "place_of_death": "P20",
     "type_of_kinship": "P1039",
+    "coordinate_location": "P625"
 }
 
 wikidata_entities = {

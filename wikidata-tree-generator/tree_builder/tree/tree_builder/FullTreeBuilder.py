@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from tree_builder.CharacterFetcherService import CharacterFetcherService
+from tree_builder.CharacterFetcher import CharacterFetcherService
 from ConfigService import ConfigService
 from tree_builder.tree.loader.AncestorsLoader import AncestorsLoader
 from tree_builder.tree.loader.DescendantsLoader import DescendantsLoader

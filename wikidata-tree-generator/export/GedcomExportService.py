@@ -11,6 +11,7 @@ from export.ExportService import ExportService
 from gedcom.element.element import Element
 
 from logger.LoggerService import LoggerService
+from models.Place import Place
 
 HEADER = '0 HEAD\n1 SOUR Wikidata to Gedcom\n2 VERS 5.1.1\n2 NAME Wikidata to Gedcom\n1 DATE {}\n2 TIME {}\n1 SUBM @SUBM@\n1 FILE {}\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 LANG English\n0 @SUBM@ SUBM\n1 NAME\n1 ADDR\n'
 
@@ -84,15 +85,25 @@ class GedcomExportService(ExportService):
 
     def create_character_element(self, character: CharacterEntity):
         element = Element(0, '@{}@'.format(character.id), 'INDI', '')
-        name_element = element.new_child_element('NAME', '', str(character[Properties.LABEL]))
+        element.new_child_element('NAME', '', str(character[Properties.LABEL]))
         for field in self.config.get_export_fields():
             if field in field_method.keys():
                 try:
-                    field_method[field](self, character, element, name_element)
+                    field_method[field](self, character, element)
                 except:
                     self.logger.log('{}: {} is impossible to export'.format(self.__class__.__name__, field))
         self.create_family(character)
         self.elements[character.id] = element
+
+
+    @staticmethod
+    def get_create_child_by_tag(element: Element, tag: str):
+        childs = element.get_child_elements()
+        for child in childs:
+            if child.get_tag() == tag:
+                return child
+        return element.new_child_element(tag)
+
 
     def export_sex(self, character: CharacterEntity, element: Element):
         sex = character.get_property(Properties.SEX)
@@ -103,21 +114,43 @@ class GedcomExportService(ExportService):
         birth = character.get_property(Properties.DATE_BIRTH)
         if birth is None:
             raise
-        birth_element = element.new_child_element('BIRT')
+        birth_element = self.get_create_child_by_tag(element, 'BIRT')
         birth_element.new_child_element('DATE', '', str(create_gedcom_date(birth)))
 
     def export_date_death(self, character: CharacterEntity, element: Element):
         death = character.get_property(Properties.DATE_DEATH)
         if death is None:
             raise
-        birth_element = element.new_child_element('DEAT')
-        birth_element.new_child_element('DATE', '', str(create_gedcom_date(death)))
+        death_element = self.get_create_child_by_tag(element, 'DEAT')
+        death_element.new_child_element('DATE', '', str(create_gedcom_date(death)))
 
-    def export_given_name(self, character: CharacterEntity, element: Element, name_element: Element):
+    def export_place_birth(self, character: CharacterEntity, element: Element):
+        place_birth = character.get_property(Properties.PLACE_BIRTH)
+        if place_birth is None:
+            raise
+        birth_element = self.get_create_child_by_tag(element, 'BIRT')
+        self.__export_place(place_birth, birth_element)
+
+    def export_place_death(self, character: CharacterEntity, element: Element):
+        place_death = character.get_property(Properties.PLACE_DEATH)
+        if place_death is None:
+            raise
+        death_element = self.get_create_child_by_tag(element, 'DEAT')
+        self.__export_place(place_death, death_element)
+
+    @staticmethod
+    def __export_place(place: Place, event: Element):
+        plac_element = event.new_child_element('PLAC', '', place.name)
+        map_element = plac_element.new_child_element('MAP')
+        map_element.new_child_element('LATI', '', '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
+        map_element.new_child_element('LONG', '', '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
+
+    def export_given_name(self, character: CharacterEntity, element: Element):
         givens = character.get_property(Properties.GIVEN_NAME)
         if givens is None:
             raise
-        name_element.new_child_element('GIVN', '', ' '.join([str(given.label) for given in givens]))
+        name_element = self.get_create_child_by_tag(element, 'NAME')
+        name_element.new_child_element('GIVN', '', ' '.join([given.given for given in givens]))
 
     def create_family(self, character: CharacterEntity):
         if not character.has_property(Properties.MOTHER_ID) and not character.has_property(Properties.FATHER_ID):
@@ -140,8 +173,6 @@ class GedcomExportService(ExportService):
             self.families[family_id] = family
 
     def create_family_element(self, family: Family):
-        if family.mother_id == 'Q271506':
-            print('Q271506')
         element = Element(0, '@{}@'.format(family.id), 'FAM', '')
         if family.father_id and family.father_id in self.elements.keys():
             element.new_child_element('HUSB', '', '@{}@'.format(family.father_id))
@@ -190,4 +221,6 @@ field_method = {
     Properties.DATE_BIRTH: GedcomExportService.export_date_birth,
     Properties.DATE_DEATH: GedcomExportService.export_date_death,
     Properties.GIVEN_NAME: GedcomExportService.export_given_name,
+    Properties.PLACE_BIRTH: GedcomExportService.export_place_birth,
+    Properties.PLACE_DEATH: GedcomExportService.export_place_death,
 }

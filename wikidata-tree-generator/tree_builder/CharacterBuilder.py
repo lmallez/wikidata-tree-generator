@@ -8,6 +8,7 @@ from ConfigService import ConfigService
 from logger.LoggerService import LoggerService
 from macros.WikidataProperties import wikidata_entities, wikidata_properties, Sex
 from models.CharacterEntity import CharacterEntity, Properties
+from tree_builder.Builder import Builder
 
 sex_list = {
     wikidata_entities['male']: Sex.MALE,
@@ -15,12 +16,12 @@ sex_list = {
 }
 
 
-class CharacterBuilderService:
+class CharacterBuilder(Builder):
     def __init__(self, logger: LoggerService, config: ConfigService):
-        self.logger = logger
+        super().__init__(logger)
         self.config = config
 
-    def build_character(self, entity: Entity) -> CharacterEntity:
+    def build(self, entity: Entity) -> CharacterEntity:
         character = CharacterEntity()
         character.id = entity.id
         character[Properties.ID] = entity.id
@@ -33,12 +34,11 @@ class CharacterBuilderService:
             try:
                 character[field] = field_method[field](self, entity)
             except:
-                pass
-                # self.logger.log('{}: {} is impossible to get'.format(self.__class__.__name__, field))
+                self.logger.log('{}: {} is impossible to get'.format(self.__class__.__name__, field))
         return character
 
     def get_is_human(self, entity: Entity) -> bool:
-        instance_of = self.__get_property(entity, wikidata_properties["instance_of"])
+        instance_of = self.get_property(entity, wikidata_properties["instance_of"])
         if len(instance_of) == 0:
             self.logger.log('{}: {} -> is instance of nothing'.format(self.__class__.__name__, entity.id))
             return False
@@ -49,7 +49,7 @@ class CharacterBuilderService:
         return True
 
     def get_sex(self, entity: Entity) -> int:
-        sex = self.__get_property(entity, wikidata_properties["sex"])
+        sex = self.get_property(entity, wikidata_properties["sex"])
         if len(sex) == 0:
             self.logger.log('{}: {} -> sex not specified'.format(self.__class__.__name__, entity.id))
             return Sex.UNDEFINED
@@ -68,7 +68,7 @@ class CharacterBuilderService:
         return self.__get_parent_id(entity, wikidata_properties["mother"])
 
     def __get_parent_id(self, entity, property_id):
-        property = self.__get_property(entity, property_id)
+        property = self.get_property(entity, property_id)
         parents_ids = [parent['mainsnak']['datavalue']['value']['id'] for parent in property]
         # for parent in property:
         #     if 'datavalue' in parent['mainsnak']:
@@ -84,7 +84,7 @@ class CharacterBuilderService:
 
     def get_child_ids(self, entity) -> List[EntityId]:
         child_ids = []
-        childs = self.__get_property(entity, wikidata_properties["child"])
+        childs = self.get_property(entity, wikidata_properties["child"])
         for child in childs:
             # TODO : remove adoptive childs
             # if 'qualifiers' in child and wikidata_properties('type_of_kinship') in child['qualifiers']:
@@ -102,7 +102,7 @@ class CharacterBuilderService:
         return self.__get_date(entity, wikidata_properties['date_of_death'])
 
     def __get_date(self, entity: Entity, property_id: EntityId) -> Date:
-        dates = self.__get_property(entity, property_id)
+        dates = self.get_property(entity, property_id)
         if len(dates) > 0:
             self.logger.log('{}: {} -> has multiple date {}'.format(self.__class__.__name__, entity.id, property_id))
         date = dates[0]
@@ -120,24 +120,33 @@ class CharacterBuilderService:
         return self.__get_name(entity, wikidata_properties['family_name'])
 
     def __get_name(self, entity: Entity, property_id: EntityId):
-        given_names = self.__get_property(entity, property_id)
+        given_names = self.get_property(entity, property_id)
         return [given_name['mainsnak']['datavalue']['value']['id'] for given_name in given_names]
 
-    def __get_property(self, entity: Entity, property_id: EntityId):
-        if property_id not in entity.data['claims']:
-            self.logger.log('{}: {} ({}) -> property {} not found'.format(self.__class__.__name__, entity.id, entity.label, property_id))
+    def get_place_birth(self, entity: Entity) -> EntityId:
+        return self.__get_place(entity, wikidata_properties['place_of_birth'])
+
+    def get_place_death(self, entity: Entity) -> EntityId:
+        return self.__get_place(entity, wikidata_properties['place_of_death'])
+
+    def __get_place(self, entity: Entity, property_id: EntityId):
+        places = self.get_property(entity, property_id)
+        if not places:
             raise
-        return entity.data['claims'][property_id]
+        # TODO : select right place
+        return places[0]['mainsnak']['datavalue']['value']['id']
 
 
 field_method = {
-    Properties.SEX: CharacterBuilderService.get_sex,
-    Properties.IS_HUMAN: CharacterBuilderService.get_is_human,
-    Properties.MOTHER_ID: CharacterBuilderService.get_mother_id,
-    Properties.FATHER_ID: CharacterBuilderService.get_father_id,
-    Properties.CHILD_IDS: CharacterBuilderService.get_child_ids,
-    Properties.DATE_BIRTH: CharacterBuilderService.get_date_birth,
-    Properties.DATE_DEATH: CharacterBuilderService.get_date_death,
-    Properties.GIVEN_NAME: CharacterBuilderService.get_given_name,
-    Properties.FAMILY_NAME: CharacterBuilderService.get_family_name,
+    Properties.SEX: CharacterBuilder.get_sex,
+    Properties.IS_HUMAN: CharacterBuilder.get_is_human,
+    Properties.MOTHER_ID: CharacterBuilder.get_mother_id,
+    Properties.FATHER_ID: CharacterBuilder.get_father_id,
+    Properties.CHILD_IDS: CharacterBuilder.get_child_ids,
+    Properties.DATE_BIRTH: CharacterBuilder.get_date_birth,
+    Properties.DATE_DEATH: CharacterBuilder.get_date_death,
+    Properties.GIVEN_NAME: CharacterBuilder.get_given_name,
+    Properties.FAMILY_NAME: CharacterBuilder.get_family_name,
+    Properties.PLACE_BIRTH: CharacterBuilder.get_place_birth,
+    Properties.PLACE_DEATH: CharacterBuilder.get_place_death,
 }

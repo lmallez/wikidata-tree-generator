@@ -2,13 +2,13 @@
 from wikidata.entity import EntityId
 
 from models.CharacterEntity import CharacterEntity
-from tree_builder.CharacterBuilderService import CharacterBuilderService
+from tree_builder.CharacterBuilder import CharacterBuilder
 from Database import Database
 from WikidataFetcher import WikidataFetcher
 
 
 class CharacterFetcherService:
-    def __init__(self, wikidata: WikidataFetcher, database: Database, builder: CharacterBuilderService):
+    def __init__(self, wikidata: WikidataFetcher, database: Database, builder: CharacterBuilder):
         self.wikidata = wikidata
         self.database = database
         self.builder = builder
@@ -17,7 +17,7 @@ class CharacterFetcherService:
         if self.database.contains(entity_id):
             return self.database.get(entity_id)
         entity = self.wikidata.get(entity_id)
-        character = self.builder.build_character(entity)
+        character = self.builder.build(entity)
         if not self.database.contains(entity_id):
             self.database.add(entity_id, character)
         return character
