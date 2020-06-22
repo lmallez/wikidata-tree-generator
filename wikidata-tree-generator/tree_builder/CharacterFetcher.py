@@ -7,7 +7,7 @@ from Database import Database
 from WikidataFetcher import WikidataFetcher
 
 
-class CharacterFetcherService:
+class CharacterFetcher:
     def __init__(self, wikidata: WikidataFetcher, database: Database, builder: CharacterBuilder):
         self.wikidata = wikidata
         self.database = database

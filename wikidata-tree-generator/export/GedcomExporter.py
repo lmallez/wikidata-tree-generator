@@ -2,15 +2,15 @@
 from datetime import datetime
 from typing import Union
 
-from models.CharacterEntity import CharacterEntity, Properties
-from macros.WikidataProperties import Sex
-from models.Date import Date
-from ConfigService import ConfigService
-from Database import Database
-from export.ExportService import ExportService
 from gedcom.element.element import Element
 
-from logger.LoggerService import LoggerService
+from Config import Config
+from Database import Database
+from export.Exporter import Exporter
+from logger.Logger import Logger
+from macros.WikidataProperties import Sex
+from models.CharacterEntity import CharacterEntity, Properties
+from models.Date import Date
 from models.Place import Place
 
 HEADER = '0 HEAD\n1 SOUR Wikidata to Gedcom\n2 VERS 5.1.1\n2 NAME Wikidata to Gedcom\n1 DATE {}\n2 TIME {}\n1 SUBM @SUBM@\n1 FILE {}\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 LANG English\n0 @SUBM@ SUBM\n1 NAME\n1 ADDR\n'
@@ -47,7 +47,7 @@ class GedcomBetweenDate:
 
 def create_between_gedcom_date(year, around, offset=0):
     year = int(year / around) * around + offset
-    return GedcomBetweenDate(Date(year), Date(year + around - 1))
+    return GedcomBetweenDate(GedcomDate(year), GedcomDate(year + around - 1))
 
 
 def create_gedcom_date(date: Date) -> Union[GedcomDate, GedcomBetweenDate]:
@@ -62,7 +62,7 @@ def create_gedcom_date(date: Date) -> Union[GedcomDate, GedcomBetweenDate]:
     ][date.precision - 7](date.time)
 
 
-class GedcomExportService(ExportService):
+class GedcomExporter(Exporter):
     class Family:
         def __init__(self, family_id):
             self.id = family_id
@@ -70,7 +70,7 @@ class GedcomExportService(ExportService):
             self.father_id = None
             self.mother_id = None
 
-    def __init__(self, database: Database, config: ConfigService, logger: LoggerService):
+    def __init__(self, database: Database, config: Config, logger: Logger):
         self.database = database
         self.config = config
         self.logger = logger
@@ -91,10 +91,9 @@ class GedcomExportService(ExportService):
                 try:
                     field_method[field](self, character, element)
                 except:
-                    self.logger.log('{}: {} is impossible to export'.format(self.__class__.__name__, field))
+                    self.logger.error('{}: {} is impossible to export'.format(self.__class__.__name__, field))
         self.create_family(character)
         self.elements[character.id] = element
-
 
     @staticmethod
     def get_create_child_by_tag(element: Element, tag: str):
@@ -103,7 +102,6 @@ class GedcomExportService(ExportService):
             if child.get_tag() == tag:
                 return child
         return element.new_child_element(tag)
-
 
     def export_sex(self, character: CharacterEntity, element: Element):
         sex = character.get_property(Properties.SEX)
@@ -142,8 +140,10 @@ class GedcomExportService(ExportService):
     def __export_place(place: Place, event: Element):
         plac_element = event.new_child_element('PLAC', '', place.name)
         map_element = plac_element.new_child_element('MAP')
-        map_element.new_child_element('LATI', '', '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
-        map_element.new_child_element('LONG', '', '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
+        map_element.new_child_element('LATI', '',
+                                      '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
+        map_element.new_child_element('LONG', '',
+                                      '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
 
     def export_given_name(self, character: CharacterEntity, element: Element):
         givens = character.get_property(Properties.GIVEN_NAME)
@@ -217,10 +217,10 @@ class GedcomExportService(ExportService):
 
 
 field_method = {
-    Properties.SEX: GedcomExportService.export_sex,
-    Properties.DATE_BIRTH: GedcomExportService.export_date_birth,
-    Properties.DATE_DEATH: GedcomExportService.export_date_death,
-    Properties.GIVEN_NAME: GedcomExportService.export_given_name,
-    Properties.PLACE_BIRTH: GedcomExportService.export_place_birth,
-    Properties.PLACE_DEATH: GedcomExportService.export_place_death,
+    Properties.SEX: GedcomExporter.export_sex,
+    Properties.DATE_BIRTH: GedcomExporter.export_date_birth,
+    Properties.DATE_DEATH: GedcomExporter.export_date_death,
+    Properties.GIVEN_NAME: GedcomExporter.export_given_name,
+    Properties.PLACE_BIRTH: GedcomExporter.export_place_birth,
+    Properties.PLACE_DEATH: GedcomExporter.export_place_death,
 }

@@ -3,12 +3,12 @@ from wikidata.entity import EntityId
 
 from macros.WikidataProperties import Sex
 from models.CharacterEntity import Properties, CharacterEntity
-from ConfigService import ConfigService
+from Config import Config
 from tree_builder.tree.loader.Loader import Loader
 
 
 class DescendantsLoader(Loader):
-    def __init__(self, config: ConfigService):
+    def __init__(self, config: Config):
         super().__init__(config)
 
     def load(self, character: CharacterEntity) -> [EntityId]:

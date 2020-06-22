@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
 
-class ExportService:
+class Exporter:
     def export(self, output_file: str):
         pass

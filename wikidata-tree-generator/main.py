@@ -4,10 +4,10 @@ from MainModule import MainModule
 
 main = MainModule()
 
-id = 'Q82339'
+id = 'Q352'
 
 main.config.max_prof = 1000
-main.config.max_thread = 1000
+main.config.max_thread = 500
 
 main.ancestors_tree_builder.compute(id)
 main.entity_filler.process()

@@ -2,7 +2,7 @@
 from models.CharacterEntity import Properties
 
 
-class ConfigService:
+class Config:
     max_thread = 100
 
     load_fathers = True

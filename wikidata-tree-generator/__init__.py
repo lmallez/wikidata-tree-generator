@@ -1,21 +1,45 @@
-CharacterEntity.py
+Config.py
+Database.py
+WikidataFetcher.py
 MainModule.py
-main.py
-services/
-    CharacterBuilderService.py
-    CharacterFetcherService.py
-    ConfigService.py
-    DatabaseService.py
-    WikidataFetcherService.py
-    export/
-        ExportService.py
-        GedcomExportService.py
-    looger/
-        LoggerErrorService.py
-        LoggerService.py
+logger/
+    Logger.py
+tree_builder/
+    Builder.py
+    CharacterFetcher.py
+    CharacterBuilder.py
+    PlacerBuilder.py
     tree/
-        AncestorsTreeBuilderService.py
-        DescandantsTreeBuilderService.py
-        TreeBuilderService.py
+        tree_builder/
+            TreeBuilder.py
+            ClassicTreeBuilder.py
+            AncestorsTreeBuilder.py
+            DescandantsTreeBuilder.py
+            FullTreeBuilder.py
+        dispatcher/
+            BasicDispatcher.py
+            Dispatcher.py
+            ThreadedDispatcher.py
+        loader/
+            Loader.py
+            AncestorsLoader.py
+            DescendantsLoader.py
+models/
+    Place.py
+    GivenName.py
+    CharacterEntity.py
+    Date.py
 macros/
     WikidataProperties.py
+export/
+    Exporter.py
+    GedcomExporter.py
+entity_filler/
+    EntityFiller.py
+    ThreadedEntityFiller.py
+    property_fillers/
+        PlaceDeathFiller.py
+        GivenNameFiller.py
+        PropertyFiller.py
+        PlaceBirthFiller.py
+        PlaceFiller.py

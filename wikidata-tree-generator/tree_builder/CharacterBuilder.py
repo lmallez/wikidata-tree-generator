@@ -4,8 +4,8 @@ from typing import List
 from wikidata.entity import EntityId, Entity
 
 from models.Date import Date
-from ConfigService import ConfigService
-from logger.LoggerService import LoggerService
+from Config import Config
+from logger.Logger import Logger
 from macros.WikidataProperties import wikidata_entities, wikidata_properties, Sex
 from models.CharacterEntity import CharacterEntity, Properties
 from tree_builder.Builder import Builder
@@ -17,7 +17,7 @@ sex_list = {
 
 
 class CharacterBuilder(Builder):
-    def __init__(self, logger: LoggerService, config: ConfigService):
+    def __init__(self, logger: Logger, config: Config):
         super().__init__(logger)
         self.config = config
 
@@ -30,34 +30,35 @@ class CharacterBuilder(Builder):
         fields = self.config.get_character_fields()
         for field in fields:
             if field not in field_method.keys():
-                self.logger.log("method {} not found".format(field))
+                self.logger.error("method {} not found".format(field))
             try:
                 character[field] = field_method[field](self, entity)
             except:
-                self.logger.log('{}: {} is impossible to get'.format(self.__class__.__name__, field))
+                self.logger.error('{}: {} is impossible to get'.format(self.__class__.__name__, field))
         return character
 
     def get_is_human(self, entity: Entity) -> bool:
         instance_of = self.get_property(entity, wikidata_properties["instance_of"])
         if len(instance_of) == 0:
-            self.logger.log('{}: {} -> is instance of nothing'.format(self.__class__.__name__, entity.id))
+            self.logger.error('{}: {} -> is instance of nothing'.format(self.__class__.__name__, entity.id))
             return False
         instance_of_ids = [instance_of_x['mainsnak']['datavalue']['value']['id'] for instance_of_x in instance_of]
         if wikidata_entities['human'] not in instance_of_ids:
-            self.logger.log('{}: {} -> is not human -> is {}'.format(self.__class__.__name__, entity.id, ", ".join(instance_of_ids)))
+            self.logger.error('{}: {} -> is not human -> is {}'.format(self.__class__.__name__, entity.id,
+                                                                       ", ".join(instance_of_ids)))
             return False
         return True
 
     def get_sex(self, entity: Entity) -> int:
         sex = self.get_property(entity, wikidata_properties["sex"])
         if len(sex) == 0:
-            self.logger.log('{}: {} -> sex not specified'.format(self.__class__.__name__, entity.id))
+            self.logger.error('{}: {} -> sex not specified'.format(self.__class__.__name__, entity.id))
             return Sex.UNDEFINED
         if len(sex) > 1:
-            self.logger.log('{}: {} -> multiple sex specified'.format(self.__class__.__name__, entity.id))
+            self.logger.error('{}: {} -> multiple sex specified'.format(self.__class__.__name__, entity.id))
         sex = sex[0]['mainsnak']['datavalue']['value']['id']
         if sex not in sex_list:
-            self.logger.log('{}: {} -> sex {} unknown'.format(self.__class__.__name__, entity.id, sex))
+            self.logger.error('{}: {} -> sex {} unknown'.format(self.__class__.__name__, entity.id, sex))
             return Sex.UNDEFINED
         return sex_list[sex]
 
@@ -68,15 +69,16 @@ class CharacterBuilder(Builder):
         return self.__get_parent_id(entity, wikidata_properties["mother"])
 
     def __get_parent_id(self, entity, property_id):
-        property = self.get_property(entity, property_id)
-        parents_ids = [parent['mainsnak']['datavalue']['value']['id'] for parent in property]
+        parents = self.get_property(entity, property_id)
+        parents_ids = [parent['mainsnak']['datavalue']['value']['id'] for parent in parents]
         # for parent in property:
         #     if 'datavalue' in parent['mainsnak']:
         #         parents_ids.append(parent['mainsnak']['datavalue']['value']['id'])
         if len(parents_ids) == 0:
             return None
         if len(parents_ids) > 1:
-            self.logger.log('{}: {} -> has more than one parent -> {}'.format(self.__class__.__name__, entity.id, ", ".join(parents_ids)))
+            self.logger.error('{}: {} -> has more than one parent -> {}'.format(self.__class__.__name__, entity.id,
+                                                                                ", ".join(parents_ids)))
             # TODO : implement like this to get priority to already loaded entities + implements filter to select the father or manage multiple fathers
             # loads_parents = list(set(parents_ids).intersection(entity_cache))
             # return loads_parents[0] if len(loads_parents) > 0 else parents_ids[0]
@@ -104,7 +106,7 @@ class CharacterBuilder(Builder):
     def __get_date(self, entity: Entity, property_id: EntityId) -> Date:
         dates = self.get_property(entity, property_id)
         if len(dates) > 0:
-            self.logger.log('{}: {} -> has multiple date {}'.format(self.__class__.__name__, entity.id, property_id))
+            self.logger.error('{}: {} -> has multiple date {}'.format(self.__class__.__name__, entity.id, property_id))
         date = dates[0]
         if not 'datavalue' in date['mainsnak']:
             raise

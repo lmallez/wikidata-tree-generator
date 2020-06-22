@@ -2,12 +2,12 @@
 from wikidata.entity import EntityId
 
 from models.CharacterEntity import Properties, CharacterEntity
-from ConfigService import ConfigService
+from Config import Config
 from tree_builder.tree.loader.Loader import Loader
 
 
 class AncestorsLoader(Loader):
-    def __init__(self, config: ConfigService):
+    def __init__(self, config: Config):
         super().__init__(config)
         self.entity_cache = []
 

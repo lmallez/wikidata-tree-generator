@@ -1,23 +1,23 @@
 from wikidata.entity import Entity
 
+from Config import Config
 from Database import Database
 from WikidataFetcher import WikidataFetcher
-from entity_filler.fillers.GivenNameFiller import GivenNameFiller
-from entity_filler.fillers.PlaceBirthFiller import PlaceBirthFiller
-from entity_filler.fillers.PlaceDeathFiller import PlaceDeathFiller
+from entity_filler.property_fillers.PlaceBirthFiller import PlaceBirthFiller
+from entity_filler.property_fillers.PlaceDeathFiller import PlaceDeathFiller
+from logger.Logger import Logger
 from models.CharacterEntity import Properties
-from ConfigService import ConfigService
 from tree_builder.PlacerBuilder import PlaceBuilder
 
 
 class EntityFiller:
-    def __init__(self, config: ConfigService, entity_database: Database, place_database: Database, wikidata: WikidataFetcher, place_builder: PlaceBuilder):
+    def __init__(self, config: Config, entity_database: Database, place_database: Database, wikidata: WikidataFetcher, place_builder: PlaceBuilder, logger: Logger):
         self.entity_database = entity_database
         self.config = config
         self.entity_filler = {
             # Properties.GIVEN_NAME: GivenNameFiller(wikidata),
-            Properties.PLACE_BIRTH: PlaceBirthFiller(wikidata, place_database, place_builder),
-            Properties.PLACE_DEATH: PlaceDeathFiller(wikidata, place_database, place_builder),
+            Properties.PLACE_BIRTH: PlaceBirthFiller(wikidata, place_database, place_builder, logger),
+            Properties.PLACE_DEATH: PlaceDeathFiller(wikidata, place_database, place_builder, logger),
         }
         self.fillers = []
         self.__init()

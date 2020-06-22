@@ -3,6 +3,6 @@ from wikidata.entity import EntityId
 
 
 class GivenName:
-    def __init__(self, id: EntityId = None, given: str = None):
+    def __init__(self, id: EntityId, given: str = None):
         self.id = id
         self.given = given

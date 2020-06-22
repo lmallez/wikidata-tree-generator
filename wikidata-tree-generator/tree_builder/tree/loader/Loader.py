@@ -2,11 +2,11 @@
 from wikidata.entity import EntityId
 
 from models.CharacterEntity import CharacterEntity
-from ConfigService import ConfigService
+from Config import Config
 
 
 class Loader:
-    def __init__(self, config: ConfigService,):
+    def __init__(self, config: Config, ):
         self.config = config
         self.entity_cache = []
 
