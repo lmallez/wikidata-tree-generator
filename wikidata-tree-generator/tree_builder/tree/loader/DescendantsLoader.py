@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 from wikidata.entity import EntityId
 
+from Configuration import TreeConfiguration
 from macros.WikidataProperties import Sex
 from models.CharacterEntity import Properties, CharacterEntity
-from Config import Config
 from tree_builder.tree.loader.Loader import Loader
 
 
 class DescendantsLoader(Loader):
-    def __init__(self, config: Config):
-        super().__init__(config)
+    def __init__(self, configuration: TreeConfiguration):
+        super().__init__(configuration)
 
     def load(self, character: CharacterEntity) -> [EntityId]:
         if character.id in self.entity_cache:
@@ -18,7 +18,7 @@ class DescendantsLoader(Loader):
         next_entity_ids = []
         if character.has_property(Properties.SEX):
             sex = character.get_property(Properties.SEX)
-            if (sex == Sex.MALE and not self.config.load_men_child) or (sex == Sex.FEMALE and not self.config.load_women_child):
+            if (sex == Sex.MALE and not self.configuration.load_sons) or (sex == Sex.FEMALE and not self.configuration.load_daughters):
                 return []
         if character.has_property(Properties.CHILD_IDS):
             next_entity_ids = character.get_property(Properties.CHILD_IDS)

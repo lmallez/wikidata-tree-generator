@@ -1,0 +1,23 @@
+wikidata_to_gedcom:
+    tree:
+        method: # ["ANCESTORS", "DESCENDANTS", "FULL", "CLASSIC"]
+        generation_limit: # (default 10)
+        load_fathers: # true false (default true)
+        load_mothers: # true false (default true)
+        load_sons: # true false (default true)
+        load_daughters: # true false (default true)
+    thread:
+        enable: # true false (default false)
+        max: # (default 10)
+    export:
+        format: # ["GEDCOM"]
+        export_men: # true false (default true)
+        export_women: # true false (default true)
+    properties:
+#        - SEX
+#        - IS_HUMAN
+#        - DATE_DEATH
+#        - DATE_BIRTH
+#        - PLACE_BIRTH
+#        - PLACE_DEATH
+#        - GIVEN_NAME

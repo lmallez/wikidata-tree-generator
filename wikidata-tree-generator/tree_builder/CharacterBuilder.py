@@ -3,11 +3,10 @@ from typing import List
 
 from wikidata.entity import EntityId, Entity
 
-from models.Date import Date
-from Config import Config
 from logger.Logger import Logger
 from macros.WikidataProperties import wikidata_entities, wikidata_properties, Sex
 from models.CharacterEntity import CharacterEntity, Properties
+from models.Date import Date
 from tree_builder.Builder import Builder
 
 sex_list = {
@@ -17,9 +16,13 @@ sex_list = {
 
 
 class CharacterBuilder(Builder):
-    def __init__(self, logger: Logger, config: Config):
+    def __init__(self, logger: Logger, properties: list):
         super().__init__(logger)
-        self.config = config
+        self.properties = properties + [
+            Properties.FATHER_ID,
+            Properties.MOTHER_ID,
+            Properties.CHILD_IDS,
+        ]
 
     def build(self, entity: Entity) -> CharacterEntity:
         character = CharacterEntity()
@@ -27,7 +30,7 @@ class CharacterBuilder(Builder):
         character[Properties.ID] = entity.id
         character[Properties.LABEL] = entity.label
         # TODO : use function pointer choose from array of properties
-        fields = self.config.get_character_fields()
+        fields = self.properties
         for field in fields:
             if field not in field_method.keys():
                 self.logger.error("method {} not found".format(field))

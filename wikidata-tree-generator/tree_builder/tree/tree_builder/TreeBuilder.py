@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 from wikidata.entity import EntityId
 
+from Configuration import TreeConfiguration
 from logger.Logger import Logger, Color
 from models.CharacterEntity import Properties, CharacterEntity
 from tree_builder.CharacterFetcher import CharacterFetcher
-from Config import Config
-from tree_builder.tree.loader import Loader
 from tree_builder.tree.dispatcher.Dispatcher import Dispatcher
+from tree_builder.tree.loader import Loader
 
 
 class TreeBuilder:
-    def __init__(self, fetcher: CharacterFetcher, dispatcher: Dispatcher, loaders: [Loader], config: Config, logger: Logger):
+    def __init__(self, fetcher: CharacterFetcher, dispatcher: Dispatcher, loaders: [Loader], configuration: TreeConfiguration, logger: Logger):
         self.fetcher = fetcher
         self.dispatcher = dispatcher
         self.loaders = loaders
-        self.config = config
+        self.configuration = configuration
         self.logger = logger
 
     def print(self, prof, branch, character, color=None):
@@ -26,7 +26,7 @@ class TreeBuilder:
         character = self.fetcher.get(entity_id)
         self.print(prof, branch, character)
         prof += 1
-        if prof <= self.config.max_prof:
+        if prof <= self.configuration.generation_limit:
             entity_ids = []
             for loader in self.loaders:
                 entity_ids += loader.load(character)

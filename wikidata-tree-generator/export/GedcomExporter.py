@@ -4,7 +4,7 @@ from typing import Union
 
 from gedcom.element.element import Element
 
-from Config import Config
+from Configuration import ExportConfiguration
 from Database import Database
 from export.Exporter import Exporter
 from logger.Logger import Logger
@@ -70,10 +70,8 @@ class GedcomExporter(Exporter):
             self.father_id = None
             self.mother_id = None
 
-    def __init__(self, database: Database, config: Config, logger: Logger):
-        self.database = database
-        self.config = config
-        self.logger = logger
+    def __init__(self, database: Database, properties: list, configuration: ExportConfiguration, logger: Logger):
+        super().__init__(database, properties, configuration, logger)
         self.elements = {}
         self.families = {}
 
@@ -81,12 +79,12 @@ class GedcomExporter(Exporter):
         if not character.has_property(Properties.SEX):
             return True
         sex = character.get_property(Properties.SEX)
-        return (sex == Sex.MALE and self.config.export_men) or (sex == Sex.FEMALE and self.config.export_women)
+        return (sex == Sex.MALE and self.configuration.export_men) or (sex == Sex.FEMALE and self.configuration.export_women)
 
     def create_character_element(self, character: CharacterEntity):
         element = Element(0, '@{}@'.format(character.id), 'INDI', '')
         element.new_child_element('NAME', '', str(character[Properties.LABEL]))
-        for field in self.config.get_export_fields():
+        for field in self.properties:
             if field in field_method.keys():
                 try:
                     field_method[field](self, character, element)
