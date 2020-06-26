@@ -1,0 +1,18 @@
+wikidata_to_gedcom:
+    tree:
+        method: CLASSIC
+        generation_limit: 10
+    thread:
+        enable: true
+        max: 1000
+    export:
+        format: GEDCOM
+    properties:
+        - SEX
+        - IS_HUMAN
+        - DATE_DEATH
+        - DATE_BIRTH
+        - PLACE_BIRTH
+        - PLACE_DEATH
+        - FAMILY_NAME
+        - GIVEN_NAME

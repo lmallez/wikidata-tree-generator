@@ -1,24 +1,41 @@
 wikidata_to_gedcom:
     tree:
-        method: # ["ANCESTORS", "DESCENDANTS", "FULL", "CLASSIC"]
-        generation_limit: # (default 10)
-        load_fathers: # true false (default true)
-        load_mothers: # true false (default true)
-        load_men_children: # true false (default true)
-        load_women_children: # true false (default true)
+        # Tree generation method
+        #   ANCESTORS: load the ancestors of the character.
+        #   DESCENDANTS: load the character's descendants
+        #   CLASSIC: loads the ancestors and descendants of the character
+        #   FULL: Loads parents and children with all the characters in the tree (can take a long time)
+        method:
+        # Maximum number of generation (from the central character)
+        generation_limit: # int (default 10)
+        # The fathers of the characters are either loaded or not
+        load_fathers: # boolean (default true)
+        # The mothers of the characters are either loaded or not
+        load_mothers: # boolean (default true)
+        # Men's children are either loaded or not
+        load_men_children: # boolean (default true)
+        # Women's children are either loaded or not
+        load_women_children: # boolean (default true)
     thread:
-        enable: # true false (default false)
-        max: # (default 10)
+        # The program uses threads or not (greatly increases the speed of execution)
+        enable: # boolean (default false)
+        # Maximum number of threads used
+        max: # boolean (default 10)
     export:
-        format: # ["GEDCOM"]
-        export_men: # true false (default true)
-        export_women: # true false (default true)
+        # Family tree output format
+        #   GEDCOM: https://en.wikipedia.org/wiki/GEDCOM
+        format:
+        # Men are in the exported file or not
+        export_men: # boolean (default true)
+        # Women are in the exported file or not
+        export_women: # boolean (default true)
+    # List of characters properties that can be loaded
     properties:
-#        - SEX
-#        - IS_HUMAN
-#        - DATE_BIRTH
-#        - DATE_DEATH
-#        - GIVEN_NAME
-#        - FAMILY_NAME
-#        - PLACE_BIRTH
-#        - PLACE_DEATH
+    # - SEX
+    # - IS_HUMAN
+    # - DATE_DEATH
+    # - DATE_BIRTH
+    # - GIVEN_NAME (it is not recommended to use this property without the family name property)
+    # - FAMILY_NAME (it is not recommended to use this property for old people, as it is often not very well informed)
+    # - PLACE_BIRTH
+    # - PLACE_DEATH

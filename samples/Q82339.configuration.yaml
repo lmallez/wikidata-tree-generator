@@ -1,0 +1,18 @@
+wikidata_to_gedcom:
+    tree:
+        method: DESCENDANTS
+        generation_limit: 100
+        load_women_children: false
+    thread:
+        enable: true
+        max: 30
+    export:
+        format: GEDCOM
+        export_women: false
+    properties:
+        - SEX
+        - IS_HUMAN
+        - DATE_DEATH
+        - DATE_BIRTH
+        - PLACE_BIRTH
+        - PLACE_DEATH
