@@ -35,7 +35,7 @@ class MainModule:
         self.wikidata_fetcher = WikidataFetcher()
         self.character_database = Database()
         self.character_builder = CharacterBuilder(self.logger, configuration.properties)
-        self.place_database = Database()
+        self.property_database = Database()
         self.place_builder = PlaceBuilder(self.logger)
         self.fetcher = CharacterFetcher(self.wikidata_fetcher, self.character_database, self.character_builder)
 
@@ -45,10 +45,10 @@ class MainModule:
 
         if not configuration.thread_configuration.enable:
             self.dispatcher = BasicDispatcher()
-            self.entity_filler = EntityFiller(configuration.properties, self.character_database, self.place_database, self.wikidata_fetcher, self.place_builder, self.logger)
+            self.entity_filler = EntityFiller(configuration.properties, self.character_database, self.property_database, self.wikidata_fetcher, self.place_builder, self.logger)
         else:
             self.dispatcher = ThreadedDispatcher(configuration.thread_configuration.max_thread)
-            self.entity_filler = ThreadedEntityFiller(configuration.properties, self.character_database, self.place_database, self.wikidata_fetcher, self.place_builder, self.logger, configuration.thread_configuration)
+            self.entity_filler = ThreadedEntityFiller(configuration.properties, self.character_database, self.property_database, self.wikidata_fetcher, self.place_builder, self.logger, configuration.thread_configuration)
 
         self.tree_builder = self.__tree_builders[configuration.tree_configuration.method](self.fetcher, configuration.tree_configuration, self.dispatcher, self.logger)
 

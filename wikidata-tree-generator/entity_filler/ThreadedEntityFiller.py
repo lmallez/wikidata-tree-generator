@@ -10,9 +10,9 @@ from tree_builder.PlacerBuilder import PlaceBuilder
 
 
 class ThreadedEntityFiller(EntityFiller):
-    def __init__(self, properties: list, entity_database: Database, place_database: Database,
+    def __init__(self, properties: list, entity_database: Database, property_database: Database,
                  fetcher: WikidataFetcher, place_builder: PlaceBuilder, logger: Logger, thread_configuration: ThreadConfiguration):
-        super().__init__(properties, entity_database, place_database, fetcher, place_builder, logger)
+        super().__init__(properties, entity_database, property_database, fetcher, place_builder, logger)
         self.entity_queue = []
         self.logger = logger
         self.thread_configuration = thread_configuration

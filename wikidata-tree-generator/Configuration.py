@@ -23,8 +23,8 @@ class TreeConfiguration:
     generation_limit = None
     load_fathers = True
     load_mothers = True
-    load_sons = True
-    load_daughters = True
+    load_men_children = True
+    load_women_children = True
 
 
 class ExportConfiguration:

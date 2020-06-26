@@ -148,7 +148,14 @@ class GedcomExporter(Exporter):
         if givens is None:
             raise
         name_element = self.get_create_child_by_tag(element, 'NAME')
-        name_element.new_child_element('GIVN', '', ' '.join([given.given for given in givens]))
+        name_element.new_child_element('GIVN', '', ' '.join([given.name for given in givens]))
+
+    def export_family_name(self, character: CharacterEntity, element: Element):
+        families = character.get_property(Properties.FAMILY_NAME)
+        if families is None:
+            raise
+        name_element = self.get_create_child_by_tag(element, 'NAME')
+        name_element.new_child_element('SURN', '', ' '.join([family.name for family in families]))
 
     def create_family(self, character: CharacterEntity):
         if not character.has_property(Properties.MOTHER_ID) and not character.has_property(Properties.FATHER_ID):
@@ -219,6 +226,7 @@ field_method = {
     Properties.DATE_BIRTH: GedcomExporter.export_date_birth,
     Properties.DATE_DEATH: GedcomExporter.export_date_death,
     Properties.GIVEN_NAME: GedcomExporter.export_given_name,
+    Properties.FAMILY_NAME: GedcomExporter.export_family_name,
     Properties.PLACE_BIRTH: GedcomExporter.export_place_birth,
     Properties.PLACE_DEATH: GedcomExporter.export_place_death,
 }

@@ -2,6 +2,8 @@ from wikidata.entity import Entity
 
 from Database import Database
 from WikidataFetcher import WikidataFetcher
+from entity_filler.property_fillers.FamilyNameFiller import FamilyNameFiller
+from entity_filler.property_fillers.GivenNameFiller import GivenNameFiller
 from entity_filler.property_fillers.PlaceBirthFiller import PlaceBirthFiller
 from entity_filler.property_fillers.PlaceDeathFiller import PlaceDeathFiller
 from logger.Logger import Logger
@@ -10,12 +12,13 @@ from tree_builder.PlacerBuilder import PlaceBuilder
 
 
 class EntityFiller:
-    def __init__(self, properties: list, entity_database: Database, place_database: Database, wikidata: WikidataFetcher, place_builder: PlaceBuilder, logger: Logger):
+    def __init__(self, properties: list, entity_database: Database, property_database: Database, wikidata: WikidataFetcher, place_builder: PlaceBuilder, logger: Logger):
         self.entity_database = entity_database
         self.entity_filler = {
-            # Properties.GIVEN_NAME: GivenNameFiller(wikidata),
-            Properties.PLACE_BIRTH: PlaceBirthFiller(wikidata, place_database, place_builder, logger),
-            Properties.PLACE_DEATH: PlaceDeathFiller(wikidata, place_database, place_builder, logger),
+            Properties.FAMILY_NAME: FamilyNameFiller(wikidata, property_database, logger),
+            Properties.GIVEN_NAME: GivenNameFiller(wikidata, property_database, logger),
+            Properties.PLACE_BIRTH: PlaceBirthFiller(wikidata, property_database, place_builder, logger),
+            Properties.PLACE_DEATH: PlaceDeathFiller(wikidata, property_database, place_builder, logger),
         }
         self.fillers = []
         self.properties = properties

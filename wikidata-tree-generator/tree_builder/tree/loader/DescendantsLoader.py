@@ -18,7 +18,7 @@ class DescendantsLoader(Loader):
         next_entity_ids = []
         if character.has_property(Properties.SEX):
             sex = character.get_property(Properties.SEX)
-            if (sex == Sex.MALE and not self.configuration.load_sons) or (sex == Sex.FEMALE and not self.configuration.load_daughters):
+            if (sex == Sex.MALE and not self.configuration.load_men_children) or (sex == Sex.FEMALE and not self.configuration.load_women_children):
                 return []
         if character.has_property(Properties.CHILD_IDS):
             next_entity_ids = character.get_property(Properties.CHILD_IDS)
