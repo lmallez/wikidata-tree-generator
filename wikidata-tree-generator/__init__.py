@@ -1,7 +1,9 @@
-Config.py
+ConfigurationYaml.py
+Configuration.py
 Database.py
 WikidataFetcher.py
 MainModule.py
+WikidataTreeGenerator.py
 logger/
     Logger.py
 tree_builder/
@@ -26,7 +28,7 @@ tree_builder/
             DescendantsLoader.py
 models/
     Place.py
-    GivenName.py
+    Name.py
     CharacterEntity.py
     Date.py
 macros/
@@ -40,6 +42,8 @@ entity_filler/
     property_fillers/
         PlaceDeathFiller.py
         GivenNameFiller.py
+        NameFiller.py
+        FamilyNameFiller.py
         PropertyFiller.py
         PlaceBirthFiller.py
         PlaceFiller.py
