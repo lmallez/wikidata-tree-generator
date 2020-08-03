@@ -15,6 +15,7 @@ class ConfigurationYaml:
 
     __str_export_format = {
         "GEDCOM": ExportFormat.GEDCOM,
+        "JSON": ExportFormat.JSON
     }
 
     __str_properties = {

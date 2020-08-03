@@ -75,12 +75,6 @@ class GedcomExporter(Exporter):
         self.elements = {}
         self.families = {}
 
-    def allow_export(self, character: CharacterEntity) -> bool:
-        if not character.has_property(Properties.SEX):
-            return True
-        sex = character.get_property(Properties.SEX)
-        return (sex == Sex.MALE and self.configuration.export_men) or (sex == Sex.FEMALE and self.configuration.export_women)
-
     def create_character_element(self, character: CharacterEntity):
         element = Element(0, '@{}@'.format(character.id), 'INDI', '')
         element.new_child_element('NAME', '', str(character[Properties.LABEL]))

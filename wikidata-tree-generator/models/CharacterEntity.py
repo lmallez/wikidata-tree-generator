@@ -28,3 +28,6 @@ class CharacterEntity(dict):
         if not self.has_property(property_id):
             raise
         return self[property_id]
+
+    def __repr__(self):
+        return repr(self.__dict__)

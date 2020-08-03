@@ -6,6 +6,7 @@ from WikidataTreeGenerator import WikidataTreeGenerator
 from entity_filler.EntityFiller import EntityFiller
 from entity_filler.ThreadedEntityFiller import ThreadedEntityFiller
 from export.GedcomExporter import GedcomExporter
+from export.JsonExporter import JsonExporter
 from logger.Logger import Logger
 from tree_builder.CharacterBuilder import CharacterBuilder
 from tree_builder.CharacterFetcher import CharacterFetcher
@@ -28,6 +29,7 @@ class MainModule:
 
     __exporter = {
         ExportFormat.GEDCOM: GedcomExporter,
+        ExportFormat.JSON: JsonExporter,
     }
 
     def __init__(self, configuration: Configuration):

@@ -11,6 +11,7 @@ class TreeMethod(Enum):
 
 class ExportFormat(Enum):
     GEDCOM = 1
+    JSON = 2
 
 
 class ThreadConfiguration:
