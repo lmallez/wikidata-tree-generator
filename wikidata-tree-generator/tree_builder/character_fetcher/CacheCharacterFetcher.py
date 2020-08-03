@@ -5,19 +5,14 @@ from models.CharacterEntity import CharacterEntity
 from tree_builder.CharacterBuilder import CharacterBuilder
 from Database import Database
 from WikidataFetcher import WikidataFetcher
+from tree_builder.character_fetcher.CharacterFetcher import CharacterFetcher
 
 
-class CharacterFetcher:
+class CacheCharacterFetcher(CharacterFetcher):
     def __init__(self, wikidata: WikidataFetcher, database: Database, builder: CharacterBuilder):
-        self.wikidata = wikidata
-        self.database = database
-        self.builder = builder
+        super().__init__(wikidata, database, builder)
 
     def get(self, entity_id: EntityId) -> CharacterEntity:
         if self.database.contains(entity_id):
             return self.database.get(entity_id)
-        entity = self.wikidata.get(entity_id)
-        character = self.builder.build(entity)
-        if not self.database.contains(entity_id):
-            self.database.add(entity_id, character)
-        return character
+        return super().get(entity_id)

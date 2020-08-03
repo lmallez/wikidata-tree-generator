@@ -65,6 +65,8 @@ class ConfigurationYaml:
 
     def create_configuration(self) -> Configuration:
         configuration = Configuration()
+        configuration.entity_cache = self._content_get_default(['entity_cache'], [bool], True)
+
         method = self._content_get_raise(['tree', 'method'], [str])
         if method not in self.__str_tree_method.keys():
             raise
@@ -74,6 +76,7 @@ class ConfigurationYaml:
         configuration.tree_configuration.load_mothers = self._content_get_default(['tree', 'load_mothers'], [bool], True)
         configuration.tree_configuration.load_men_children = self._content_get_default(['tree', 'load_men_children'], [bool], True)
         configuration.tree_configuration.load_women_children = self._content_get_default(['tree', 'load_women_children'], [bool], True)
+        configuration.tree_configuration.branch_cache = self._content_get_default(['tree', 'branch_cache'], [bool], True)
 
         configuration.thread_configuration.enable = self._content_get_default(['thread', 'enable'], [bool], False)
         if configuration.thread_configuration.enable:

@@ -1,4 +1,6 @@
 wikidata_to_gedcom:
+    # Keeps entities cached to limit the number of requests.
+    entity_cache: # boolean (default true)
     tree:
         # Tree generation method
         #   ANCESTORS: load the ancestors of the character.
@@ -16,6 +18,8 @@ wikidata_to_gedcom:
         load_men_children: # boolean (default true)
         # Women's children are either loaded or not
         load_women_children: # boolean (default true)
+        # apply a cache to the branches of the tree
+        branch_cache: # boolean (default true)
     thread:
         # The program uses threads or not (greatly increases the speed of execution)
         enable: # boolean (default false)

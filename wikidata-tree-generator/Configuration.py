@@ -26,6 +26,7 @@ class TreeConfiguration:
     load_mothers = True
     load_men_children = True
     load_women_children = True
+    branch_cache = True
 
 
 class ExportConfiguration:
@@ -35,6 +36,7 @@ class ExportConfiguration:
 
 
 class Configuration:
+    entity_cache = True
     tree_configuration = TreeConfiguration()
     thread_configuration = ThreadConfiguration()
     export_configuration = ExportConfiguration()

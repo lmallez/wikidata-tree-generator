@@ -2,13 +2,13 @@ ConfigurationYaml.py
 Configuration.py
 Database.py
 WikidataFetcher.py
+main.py
 MainModule.py
 WikidataTreeGenerator.py
 logger/
     Logger.py
 tree_builder/
     Builder.py
-    CharacterFetcher.py
     CharacterBuilder.py
     PlacerBuilder.py
     tree/
@@ -18,6 +18,9 @@ tree_builder/
             AncestorsTreeBuilder.py
             DescandantsTreeBuilder.py
             FullTreeBuilder.py
+        tree_generator/
+            TreeGenerator.py
+            CacheTreeGenerator.py
         dispatcher/
             BasicDispatcher.py
             Dispatcher.py
@@ -26,6 +29,9 @@ tree_builder/
             Loader.py
             AncestorsLoader.py
             DescendantsLoader.py
+    character_fetcher/
+        CacheCharacterFetcher.py
+        CharacterFetcher.py
 models/
     Place.py
     Name.py
@@ -35,6 +41,7 @@ macros/
     WikidataProperties.py
 export/
     Exporter.py
+    JsonExporter.py
     GedcomExporter.py
 entity_filler/
     EntityFiller.py
@@ -47,3 +54,6 @@ entity_filler/
         PropertyFiller.py
         PlaceBirthFiller.py
         PlaceFiller.py
+    property_fetcher/
+        PropertyFetcher.py
+        CachePropertyFetcher.py

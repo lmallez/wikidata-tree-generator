@@ -3,18 +3,16 @@ from threading import Thread
 
 from Configuration import ThreadConfiguration
 from Database import Database
-from WikidataFetcher import WikidataFetcher
 from entity_filler.EntityFiller import EntityFiller
+from entity_filler.property_fetcher.PropertyFetcher import PropertyFetcher
 from logger.Logger import Logger, Color
 from tree_builder.PlacerBuilder import PlaceBuilder
 
 
 class ThreadedEntityFiller(EntityFiller):
-    def __init__(self, properties: list, entity_database: Database, property_database: Database,
-                 fetcher: WikidataFetcher, place_builder: PlaceBuilder, logger: Logger, thread_configuration: ThreadConfiguration):
-        super().__init__(properties, entity_database, property_database, fetcher, place_builder, logger)
+    def __init__(self, properties: list, character_database: Database, property_fetcher: PropertyFetcher, place_builder: PlaceBuilder, logger: Logger, thread_configuration: ThreadConfiguration):
+        super().__init__(properties, character_database, property_fetcher, place_builder, logger)
         self.entity_queue = []
-        self.logger = logger
         self.thread_configuration = thread_configuration
 
     def __next_entity(self):
