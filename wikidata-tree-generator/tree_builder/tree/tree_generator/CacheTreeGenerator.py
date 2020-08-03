@@ -18,7 +18,7 @@ class CacheTreeGenerator(TreeGenerator):
     def get_next_entities(self, entity_ids, prof=0, branch=0):
         excluded = list(filter(lambda x: x in self.entity_loaded, entity_ids))
         for exclude in excluded:
-            self.print(prof, branch, self.fetcher.database.get(exclude), Color.OKGREEN)
+            self.logger.log("{:>10}".format(exclude), Color.OKBLUE)
         return list(filter(lambda x: x not in self.entity_loaded, entity_ids))
 
     def compute(self, entity_id: EntityId, prof=0, branch=0) -> CharacterEntity:

@@ -17,17 +17,11 @@ class TreeGenerator:
         self.configuration = configuration
         self.logger = logger
 
-    def print(self, prof, branch, character, color=None):
-        self.logger.log(
-            "{:>3} {:>3} | {:>10} {}".format(prof, branch, character.id, character[Properties.LABEL]), color
-        )
-
     def get_next_entities(self, entity_ids, prof=0, branch=0):
         return entity_ids
 
     def compute(self, entity_id: EntityId, prof=0, branch=0) -> CharacterEntity:
         character = self.fetcher.get(entity_id)
-        self.print(prof, branch, character)
         prof += 1
         if prof <= self.configuration.generation_limit:
             entity_ids = []

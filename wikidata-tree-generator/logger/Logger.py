@@ -15,12 +15,12 @@ class Color(Enum):
 
 
 class Logger:
-    def log(self, log: str, color=None):
+    def log(self, log: str, color=None, end='\n'):
         if not color:
-            print(log, flush=True)
+            print(log, end=end, flush=True)
         else:
             color = self.__colors[color]
-            print("{}{}{}".format(color, log, '\033[0m'), flush=True)
+            print("{}{}{}".format(color, log, '\033[0m'), end=end, flush=True)
 
     def error(self, log: str):
         print(log, file=sys.stderr)

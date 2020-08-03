@@ -40,7 +40,7 @@ class MainModule:
         self.wikidata_fetcher = WikidataFetcher()
         self.character_database = Database()
         self.character_builder = CharacterBuilder(self.logger, configuration.properties)
-        self.character_fetcher = (CacheCharacterFetcher if configuration.entity_cache else CharacterFetcher)(self.wikidata_fetcher, self.character_database, self.character_builder)
+        self.character_fetcher = (CacheCharacterFetcher if configuration.entity_cache else CharacterFetcher)(self.wikidata_fetcher, self.character_database, self.character_builder, self.logger)
 
         self.property_database = Database()
         self.place_builder = PlaceBuilder(self.logger)
