@@ -9,18 +9,17 @@ class ThreadedDispatcher(Dispatcher):
         self.max_thread = max_thread
         self.thread_number = 0
 
-    def compute(self, entity_ids: [EntityId], method, prof, branch):
+    def compute(self, entity_ids: [EntityId], method, prof):
         if len(entity_ids) == 0:
             return
         if len(entity_ids) == 1:
-            method(entity_ids[0], prof, branch)
+            method(entity_ids[0], prof)
             return
         threads = []
         other_entities = []
         for entity_id in entity_ids:
             if self.thread_number < self.max_thread:
-                threads.append(Thread(target=method, args=[entity_id, prof, branch]))
-                branch += 1
+                threads.append(Thread(target=method, args=[entity_id, prof]))
                 self.thread_number += 1
             else:
                 other_entities.append(entity_id)
@@ -29,6 +28,5 @@ class ThreadedDispatcher(Dispatcher):
         for thread in threads:
             thread.join()
         for entity_id in other_entities:
-            method(entity_id, prof, branch)
-            branch += 1
+            method(entity_id, prof)
         self.thread_number -= len(threads)

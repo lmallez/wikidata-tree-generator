@@ -19,11 +19,6 @@ class TreeBuilder:
         self.configuration = configuration
         self.logger = logger
 
-    def print(self, prof, branch, character, color=None):
-        self.logger.log(
-            "{:>3} {:>3} | {:>10} {}".format(prof, branch, character.id, character[Properties.LABEL]), color
-        )
-
     def compute(self, entity_id: EntityId) -> CharacterEntity:
         generator = (CacheTreeGenerator if self.configuration.branch_cache else TreeGenerator)(self.fetcher, self.dispatcher, self.loaders, self.configuration, self.logger)
         return generator.compute(entity_id)
