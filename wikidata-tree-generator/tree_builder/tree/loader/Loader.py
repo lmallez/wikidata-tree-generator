@@ -11,6 +11,3 @@ class Loader:
 
     def load(self, character: CharacterEntity) -> [EntityId]:
         pass
-
-    def prof(self, prof: int) -> int:
-        pass

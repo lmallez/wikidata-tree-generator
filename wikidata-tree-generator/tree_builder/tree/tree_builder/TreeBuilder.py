@@ -2,7 +2,7 @@
 from wikidata.entity import EntityId
 
 from Configuration import TreeConfiguration
-from logger.Logger import Logger
+from logger.Logger import Logger, Color
 from models.CharacterEntity import Properties, CharacterEntity
 from tree_builder.character_fetcher.CharacterFetcher import CharacterFetcher
 from tree_builder.tree.dispatcher.Dispatcher import Dispatcher
@@ -20,5 +20,8 @@ class TreeBuilder:
         self.logger = logger
 
     def compute(self, entity_id: EntityId) -> CharacterEntity:
+        self.logger.log("{} : Start tree generation with a maximum depth of {}.".format(self.__class__.__name__, self.configuration.generation_limit), color=Color.HEADER)
         generator = (CacheTreeGenerator if self.configuration.branch_cache else TreeGenerator)(self.fetcher, self.dispatcher, self.loaders, self.configuration, self.logger)
-        return generator.compute(entity_id)
+        entity = generator.compute(entity_id)
+        self.logger.log("{} : End of the generation of the tree, {} entities loaded".format(self.__class__.__name__, len(self.fetcher.database.cache)), color=Color.HEADER)
+        return entity

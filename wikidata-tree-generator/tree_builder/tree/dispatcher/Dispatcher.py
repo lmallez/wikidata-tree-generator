@@ -3,5 +3,5 @@ from wikidata.entity import EntityId
 
 
 class Dispatcher:
-    def compute(self, entity_ids: [EntityId], method, prof):
+    def compute(self, entity_ids: [EntityId], method, depth):
         pass
