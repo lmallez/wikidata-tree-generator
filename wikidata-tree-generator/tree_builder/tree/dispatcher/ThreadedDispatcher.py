@@ -35,7 +35,7 @@ class ThreadedDispatcher(Dispatcher):
         threads = []
         self_id = entity_ids[0]
         executer = ThreadExecute(entity_ids[1:])
-        while self.thread_number < self.max_thread - 1 and executer.entity_queue:
+        while self.thread_number < self.max_thread and executer.entity_queue:
             threads.append(Thread(target=self.start_thread, args=[executer, method, executer.next_entity(), prof]))
             self.thread_number += 1
         for thread in threads:

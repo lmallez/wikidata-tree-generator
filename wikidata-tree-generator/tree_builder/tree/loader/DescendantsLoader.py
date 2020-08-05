@@ -12,9 +12,6 @@ class DescendantsLoader(Loader):
         super().__init__(configuration)
 
     def load(self, character: CharacterEntity) -> [EntityId]:
-        if character.id in self.entity_cache:
-            return []
-        self.entity_cache.append(character.id)
         next_entity_ids = []
         if character.has_property(Properties.SEX):
             sex = character.get_property(Properties.SEX)

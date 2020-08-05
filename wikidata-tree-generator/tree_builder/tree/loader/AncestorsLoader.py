@@ -9,12 +9,8 @@ from tree_builder.tree.loader.Loader import Loader
 class AncestorsLoader(Loader):
     def __init__(self, configuration: TreeConfiguration):
         super().__init__(configuration)
-        self.entity_cache = []
 
     def load(self, character: CharacterEntity) -> [EntityId]:
-        if character.id in self.entity_cache:
-            return []
-        self.entity_cache.append(character.id)
         next_entity_ids = []
         if self.configuration.load_fathers and character.has_property(Properties.FATHER_ID):
             next_entity_ids.append(character.get_property(Properties.FATHER_ID))

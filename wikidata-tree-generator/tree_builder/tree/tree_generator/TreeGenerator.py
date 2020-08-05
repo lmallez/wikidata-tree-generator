@@ -22,10 +22,9 @@ class TreeGenerator:
 
     def compute(self, entity_id: EntityId, prof=0) -> CharacterEntity:
         character = self.fetcher.get(entity_id)
-        prof += 1
         if prof <= self.configuration.generation_limit:
             entity_ids = []
             for loader in self.loaders:
                 entity_ids += loader.load(character)
-            self.dispatcher.compute(self.get_next_entities(entity_ids, prof), self.compute, prof)
+            self.dispatcher.compute(self.get_next_entities(entity_ids, prof), self.compute, prof + 1)
         return character

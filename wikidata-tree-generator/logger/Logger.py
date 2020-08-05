@@ -23,7 +23,7 @@ class Logger:
             print("{}{}{}".format(color, log, '\033[0m'), end=end, flush=True)
 
     def error(self, log: str):
-        print(log, file=sys.stderr)
+        print("{}\n".format(log), file=sys.stderr, end='')
 
     __colors = {
         Color.HEADER: '\033[95m',

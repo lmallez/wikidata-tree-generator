@@ -8,7 +8,6 @@ from Configuration import TreeConfiguration
 class Loader:
     def __init__(self, configuration: TreeConfiguration):
         self.configuration = configuration
-        self.entity_cache = []
 
     def load(self, character: CharacterEntity) -> [EntityId]:
         pass
