@@ -205,14 +205,17 @@ class GedcomExporter(Exporter):
         f.close()
 
     def export(self, output_file: str):
+        character_nbr = 0
         for character in self.database.cache.values():
             if self.allow_export(character):
                 self.create_character_element(character)
+                character_nbr += 1
         for family in self.families.values():
             self.create_family_element(family)
         self.write_gedcom(output_file, self.elements.values())
         self.elements = {}
         self.families = {}
+        self.log(character_nbr, 'GEDCOM', output_file)
 
 
 field_method = {

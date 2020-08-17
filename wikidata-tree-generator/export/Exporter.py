@@ -2,6 +2,7 @@
 from Configuration import ExportConfiguration
 from Database import Database
 from logger import Logger
+from logger.Logger import Color
 from macros.WikidataProperties import Sex
 from models.CharacterEntity import Properties, CharacterEntity
 
@@ -21,3 +22,6 @@ class Exporter:
 
     def export(self, output_file: str):
         pass
+
+    def log(self, entity_nbr: int, format: str, output_file: str):
+        self.logger.log("{} : {} entities exported in {} to {}".format(self.__class__.__name__, entity_nbr, format, output_file), color=Color.HEADER)

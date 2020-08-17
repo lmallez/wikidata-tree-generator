@@ -22,7 +22,7 @@ class TreeGenerator:
 
     def compute(self, entity_id: EntityId, depth=0) -> CharacterEntity:
         character = self.fetcher.get(entity_id)
-        if depth <= self.configuration.generation_limit:
+        if depth < self.configuration.generation_limit:
             entity_ids = []
             for loader in self.loaders:
                 entity_ids += loader.load(character)

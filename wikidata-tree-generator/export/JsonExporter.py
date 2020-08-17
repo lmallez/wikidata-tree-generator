@@ -26,3 +26,4 @@ class JsonExporter(Exporter):
         f = open(output_file, "w+")
         json.dump(export_character, f, cls=EmployeeEncoder, indent=4)
         f.close()
+        self.log(len(export_character), 'JSON', output_file)

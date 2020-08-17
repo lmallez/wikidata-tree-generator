@@ -19,7 +19,7 @@ class ThreadedEntityFiller(EntityFiller):
         return self.entity_queue.pop(0)
 
     def thread_entity(self, entity, thread_id=0):
-        self.logger.log("Filler {:>4} | {:>10}\n".format(thread_id, entity.id), end='')
+        self.logger.log("Filler {:>4} | {:>10}".format(thread_id, entity.id))
         self.process_entity(entity)
         if self.entity_queue:
             self.thread_entity(self.__next_entity(), thread_id)

@@ -17,10 +17,10 @@ class Color(Enum):
 class Logger:
     def log(self, log: str, color=None, end='\n'):
         if not color:
-            print(log, end=end, flush=True)
+            print('{}{}'.format(log, end), end='', flush=True)
         else:
             color = self.__colors[color]
-            print("{}{}{}".format(color, log, '\033[0m'), end=end, flush=True)
+            print("{}{}{}{}".format(color, log, '\033[0m', end), end='', flush=True)
 
     def error(self, log: str):
         print("{}\n".format(log), file=sys.stderr, end='')
