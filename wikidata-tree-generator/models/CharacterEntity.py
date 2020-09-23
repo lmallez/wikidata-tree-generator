@@ -19,7 +19,9 @@ class Properties:
 
 
 class CharacterEntity(dict):
-    id: EntityId
+    def __init__(self, entity_id: EntityId):
+        super().__init__()
+        self.id = entity_id
 
     def has_property(self, property_id: EntityId):
         return property_id in self.keys()

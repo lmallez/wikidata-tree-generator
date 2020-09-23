@@ -25,8 +25,7 @@ class CharacterBuilder(Builder):
         ]
 
     def build(self, entity: Entity) -> CharacterEntity:
-        character = CharacterEntity()
-        character.id = entity.id
+        character = CharacterEntity(entity.id)
         character[Properties.ID] = entity.id
         character[Properties.LABEL] = entity.label
         # TODO : use function pointer choose from array of properties
