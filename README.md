@@ -8,7 +8,7 @@ Install dependencies : `python3 -m pip install -r requirements.txt`
 
 ### Usage
     
-```python3 wikidata-tree-generator/main.py {{configuration file}} {{wikidata entity id}} {{output file}}```
+```python3 main.py {{configuration file}} {{wikidata entity id}} {{output file}}```
 
 * For configuration file see : https://github.com/lmallez/wikidata-tree-generator/blob/master/configuration.dist.yaml
 * To find the wikidata id of a character you have to go to https://www.wikidata.org, search for the character in question and select its ID (the ID starts with a Q and can be found in the url and to the right of the character's name).
@@ -30,7 +30,7 @@ The tree can be generated in different ways:
 
 ##### Clovis (descendants & load_men_children)
 
-```python3 wikidata-tree-generator/main.py samples/Q82339.configuration.yaml Q82339 samples/Q82339.ged```
+```python3 main.py samples/Q82339.configuration.yaml Q82339 samples/Q82339.ged```
 
 [Configuration](samples/Q823339.configuration.yaml)
 [Output](samples/Q823339.ged)
@@ -39,7 +39,7 @@ The tree can be generated in different ways:
 
 ##### John F. Kennedy (classic)
 
-```python3 wikidata-tree-generator/main.py samples/Q9696.1.configuration.yaml Q9696 samples/Q9696.1.ged```
+```python3 main.py samples/Q9696.1.configuration.yaml Q9696 samples/Q9696.1.ged```
 
 [Configuration](samples/Q9696.1.configuration.yaml)
 [Output](samples/Q9696.1.ged)
@@ -48,7 +48,7 @@ The tree can be generated in different ways:
 
 ##### John F. Kennedy (full)
 
-```python3 wikidata-tree-generator/main.py samples/Q9696.2.configuration.yaml Q9696 samples/Q9696.2.ged```
+```python3 main.py samples/Q9696.2.configuration.yaml Q9696 samples/Q9696.2.ged```
 
 [Configuration](samples/Q9696.2.configuration.yaml)
 [Output](samples/Q9696.2.ged)

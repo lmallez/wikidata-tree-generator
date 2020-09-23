@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 import sys
 from wikidata.entity import EntityId
-from ConfigurationYaml import ConfigurationYaml
-from MainModule import MainModule
+from wikidata_tree_generator.generate_from_yaml import generate_from_yaml
 
 if __name__ == '__main__':
-    configuration = ConfigurationYaml(sys.argv[1]).create_configuration()
-    module = MainModule(configuration)
-    launcher = module.get_generator()
-    launcher.execute(EntityId(sys.argv[2]), sys.argv[3])
+    generate_from_yaml(sys.argv[1], EntityId(sys.argv[2]), sys.argv[3])

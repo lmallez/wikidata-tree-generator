@@ -2,7 +2,7 @@
 from wikidata.entity import EntityId
 
 
-class WikidataTreeGenerator:
+class Launcher:
     def __init__(self, tree_builder, entity_filler, exporter):
         self.tree_builder = tree_builder
         self.entity_filler = entity_filler

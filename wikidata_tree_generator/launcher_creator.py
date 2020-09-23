@@ -2,7 +2,7 @@
 from wikidata_tree_generator.configuration import Configuration, TreeMethod, ExportFormat
 from wikidata_tree_generator.database import Database
 from wikidata_tree_generator.wikidata_fetcher import WikidataFetcher
-from wikidata_tree_generator.wikidata_tree_generator import WikidataTreeGenerator
+from wikidata_tree_generator.launcher import Launcher
 from wikidata_tree_generator.entity_filler.entity_filler import EntityFiller
 from wikidata_tree_generator.entity_filler.threaded_entity_filler import ThreadedEntityFiller
 from wikidata_tree_generator.entity_filler.property_fetcher.cache_property_fetcher import CachePropertyFetcher
@@ -22,7 +22,7 @@ from wikidata_tree_generator.tree_builder.tree.tree_builder.decendants_tree_buil
 from wikidata_tree_generator.tree_builder.tree.tree_builder.full_tree_builder import FullTreeBuilder
 
 
-class MainModule:
+class LauncherCreator:
     __tree_builders = {
         TreeMethod.ANCESTORS: AncestorsTreeBuilder,
         TreeMethod.DESCENDANTS: DescendantsTreeBuilder,
@@ -61,5 +61,5 @@ class MainModule:
 
         self.exporter = self.__exporters[configuration.export_configuration.format](self.character_database, configuration.properties, configuration.export_configuration, self.logger)
 
-    def get_generator(self) -> WikidataTreeGenerator:
-        return WikidataTreeGenerator(self.tree_builder, self.entity_filler, self.exporter)
+    def get_launcher(self) -> Launcher:
+        return Launcher(self.tree_builder, self.entity_filler, self.exporter)
