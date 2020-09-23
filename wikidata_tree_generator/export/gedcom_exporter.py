@@ -133,9 +133,10 @@ class GedcomExporter(Exporter):
     @staticmethod
     def __export_place(place: Place, event: Element):
         plac_element = event.new_child_element('PLAC', '', place.name)
-        map_element = plac_element.new_child_element('MAP')
-        map_element.new_child_element('LATI', '', '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
-        map_element.new_child_element('LONG', '', '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
+        if place.latitude and place.longitude:
+            map_element = plac_element.new_child_element('MAP')
+            map_element.new_child_element('LATI', '', '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
+            map_element.new_child_element('LONG', '', '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
 
     def export_given_name(self, character: Character, element: Element):
         givens = character.get_property(Properties.GIVEN_NAME)
