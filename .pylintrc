@@ -9,7 +9,7 @@ disable=
 extension-pkg-whitelist=wikidate_tree_extension
 
 # Specify a score threshold to be exceeded before program exits with error.
-fail-under=10.0
+fail-under=8.0
 
 # Add files or directories to the blacklist. They should be base names, not
 # paths.
