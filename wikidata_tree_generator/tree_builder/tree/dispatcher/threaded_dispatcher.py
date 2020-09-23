@@ -26,7 +26,7 @@ class ThreadedDispatcher(Dispatcher):
         executer.execute_thread(method, entity_id, depth)
         self.thread_number -= 1
 
-    def compute(self, entity_ids: [EntityId], method, depth):
+    def compute(self, entity_ids: [EntityId], method, depth=0):
         if len(entity_ids) == 0:
             return
         if len(entity_ids) == 1:

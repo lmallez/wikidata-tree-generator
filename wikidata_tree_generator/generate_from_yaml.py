@@ -2,7 +2,7 @@
 import sys
 
 from wikidata.entity import EntityId
-from wikidata_tree_generator.configuration.reader import YamlConfigurationReader
+from wikidata_tree_generator.configuration.reader import YamlConfigurationReader, YamlConfigurationReaderException
 from wikidata_tree_generator.launcher_creator import LauncherCreator
 
 

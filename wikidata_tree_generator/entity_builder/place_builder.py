@@ -22,7 +22,7 @@ class PlaceBuilder(Builder):
     def get_coordinate_location(self, entity: Entity, place: Place):
         coordinate = self.get_property(entity, wikidata_properties['coordinate_location'])
         if not coordinate:
-            raise InvalidCoordinateException()
+            raise InvalidCoordinateException(entity.id, wikidata_properties['coordinate_location'])
         value = coordinate[0]['mainsnak']['datavalue']['value']
         place.latitude = value['latitude']
         place.longitude = value['longitude']

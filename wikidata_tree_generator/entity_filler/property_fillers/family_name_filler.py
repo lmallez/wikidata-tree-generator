@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-from wikidata_tree_generator.entity_filler.property_fillers.name_filler import NameFiller
 from wikidata_tree_generator.models.character import Character, Properties
 from wikidata_tree_generator.models.name import Name
+from .name_filler import NameFiller
 
 
 class FamilyNameFiller(NameFiller):

@@ -3,7 +3,7 @@ from threading import Thread
 from wikidata_tree_generator.configuration import ThreadConfiguration
 from wikidata_tree_generator.database import Database
 from wikidata_tree_generator.entity_filler.entity_filler import EntityFiller
-from wikidata_tree_generator.entity_filler.property_fetcher.property_fetcher import PropertyFetcher
+from wikidata_tree_generator.entity_filler.property_fetcher import PropertyFetcher
 from wikidata_tree_generator.logger.logger import Logger, Color
 from wikidata_tree_generator.entity_builder.place_builder import PlaceBuilder
 

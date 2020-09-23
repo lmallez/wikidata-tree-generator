@@ -1,11 +1,11 @@
-#!/usr/bin/env python3from wikidata.entity import Entity
-from wikidata.entity import Entity, EntityId
+#!/usr/bin/env python3
+from wikidata.entity import Entity
 from wikidata_tree_generator.entity_filler.property_fetcher.property_fetcher import PropertyFetcher
-from wikidata_tree_generator.entity_filler.property_fillers.property_filler import PropertyFiller
 from wikidata_tree_generator.logger import Logger
-from wikidata_tree_generator.models.character import Character
+from wikidata_tree_generator.models.character import Character, Properties
 from wikidata_tree_generator.models.place import Place
-from wikidata_tree_generator.entity_builder.place_builder import PlaceBuilder
+from wikidata_tree_generator.entity_builder import PlaceBuilder
+from .property_filler import PropertyFiller
 
 
 class PlaceFiller(PropertyFiller):
@@ -19,7 +19,7 @@ class PlaceFiller(PropertyFiller):
     def convert(self, entity: Entity) -> Place:
         return self.place_builder.build(entity)
 
-    def process_property(self, entity: Character, prop: EntityId):
+    def process_property(self, entity: Character, prop: Properties):
         if prop not in entity.keys():
             return
         entity[prop] = self.get_entity(entity[prop])

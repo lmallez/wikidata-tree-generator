@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from wikidata.entity import EntityId, Entity
-from wikidata_tree_generator.entity_filler.property_fetcher.property_fetcher import PropertyFetcher
+from wikidata_tree_generator.entity_filler.property_fetcher import PropertyFetcher
 from wikidata_tree_generator.logger.logger import Logger
 
 

@@ -2,7 +2,7 @@
 import json
 from json import JSONEncoder
 from wikidata.multilingual import MultilingualText
-from .exporter import ExportPropertyException, Exporter
+from .exporter import Exporter
 
 
 class MultilingualEncoder(JSONEncoder):
