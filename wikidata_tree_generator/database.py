@@ -2,6 +2,10 @@
 from wikidata.entity import EntityId
 
 
+class DatabaseException(BaseException):
+    pass
+
+
 class Database:
     def __init__(self):
         self.cache = dict()
@@ -13,7 +17,7 @@ class Database:
 
     def add(self, entity_id: EntityId, entity):
         if self.contains(entity_id):
-            raise
+            raise DatabaseException()
         # useful for redirections
         if entity_id != entity.id:
             self.cache[entity_id] = entity
@@ -21,12 +25,12 @@ class Database:
 
     def remove(self, entity):
         if not self.contains(entity.id):
-            raise
+            raise DatabaseException()
         del self.cache[entity.id]
 
     def get(self, key: EntityId):
         if not self.contains(key):
-            raise
+            raise DatabaseException()
         return self.cache[key]
 
     def contains(self, key: EntityId):

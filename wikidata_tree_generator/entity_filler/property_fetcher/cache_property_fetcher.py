@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from wikidata.entity import EntityId
-from wikidata_tree_generator.entity_filler.property_fetcher import PropertyFetcher
 from wikidata_tree_generator.logger import Color
+from .property_fetcher import PropertyFetcher
 
 
 class CachePropertyFetcher(PropertyFetcher):

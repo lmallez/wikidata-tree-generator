@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
+from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Union
 from gedcom.element.element import Element
 from wikidata_tree_generator.configuration import ExportConfiguration
 from wikidata_tree_generator.database import Database
-from wikidata_tree_generator.export import Exporter
 from wikidata_tree_generator.logger import Logger
 from wikidata_tree_generator.macros.wikidate_properties import Sex
-from wikidata_tree_generator.models import Place, Date, CharacterEntity, Properties
+from wikidata_tree_generator.models import Place, Date, Character, Properties
+from wikidata_tree_generator.models.character import CharacterException
+from .exporter import ExportPropertyException, Exporter
 
 HEADER = '0 HEAD\n1 SOUR Wikidata to Gedcom\n2 VERS 5.1.1\n2 NAME Wikidata to Gedcom\n1 DATE {}\n2 TIME {}\n1 SUBM @SUBM@\n1 FILE {}\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 LANG English\n0 @SUBM@ SUBM\n1 NAME\n1 ADDR\n'
 
@@ -46,9 +48,13 @@ def create_between_gedcom_date(year, around, offset=0):
     return GedcomBetweenDate(GedcomDate(year), GedcomDate(year + around - 1))
 
 
+class GedcomDateException(BaseException):
+    pass
+
+
 def create_gedcom_date(date: Date) -> Union[GedcomDate, GedcomBetweenDate]:
     if date.precision < 6 or date.precision > 11:
-        raise
+        raise GedcomDateException()
     return [
         lambda x: create_between_gedcom_date(int(x[1:5]), 1000, offset=1),
         lambda x: create_between_gedcom_date(int(x[1:5]), 100, offset=1),
@@ -59,27 +65,27 @@ def create_gedcom_date(date: Date) -> Union[GedcomDate, GedcomBetweenDate]:
 
 
 class GedcomExporter(Exporter):
+    @dataclass()
     class Family:
-        def __init__(self, family_id):
-            self.id = family_id
-            self.children_ids = []
-            self.father_id = None
-            self.mother_id = None
+        family_id: int
+        children_ids: list = field(default_factory=list)
+        father_id: int = None
+        mother_id: int = None
 
     def __init__(self, database: Database, properties: list, configuration: ExportConfiguration, logger: Logger):
         super().__init__(database, properties, configuration, logger)
         self.elements = {}
         self.families = {}
 
-    def create_character_element(self, character: CharacterEntity):
+    def create_character_element(self, character: Character):
         element = Element(0, '@{}@'.format(character.id), 'INDI', '')
         element.new_child_element('NAME', '', str(character[Properties.LABEL]))
-        for field in self.properties:
-            if field in field_method.keys():
+        for entity_property in self.properties:
+            if entity_property in field_method.keys():
                 try:
-                    field_method[field](self, character, element)
-                except:
-                    self.logger.error('{}: {} is impossible to export'.format(self.__class__.__name__, field))
+                    field_method[entity_property](self, character, element)
+                except (ExportPropertyException, CharacterException):
+                    self.logger.error('{}: {} is impossible to export'.format(self.__class__.__name__, entity_property))
         self.create_family(character)
         self.elements[character.id] = element
 
@@ -91,36 +97,36 @@ class GedcomExporter(Exporter):
                 return child
         return element.new_child_element(tag)
 
-    def export_sex(self, character: CharacterEntity, element: Element):
+    def export_sex(self, character: Character, element: Element):
         sex = character.get_property(Properties.SEX)
         if sex != Sex.UNDEFINED:
-            element.new_child_element('SEX', '', ['M', 'F'][sex])
+            element.new_child_element('SEX', '', {Sex.MALE: 'M', Sex.FEMALE: 'F'}[sex])
 
-    def export_date_birth(self, character: CharacterEntity, element: Element):
+    def export_date_birth(self, character: Character, element: Element):
         birth = character.get_property(Properties.DATE_BIRTH)
         if birth is None:
-            raise
+            raise ExportPropertyException()
         birth_element = self.get_create_child_by_tag(element, 'BIRT')
         birth_element.new_child_element('DATE', '', str(create_gedcom_date(birth)))
 
-    def export_date_death(self, character: CharacterEntity, element: Element):
+    def export_date_death(self, character: Character, element: Element):
         death = character.get_property(Properties.DATE_DEATH)
         if death is None:
-            raise
+            raise ExportPropertyException()
         death_element = self.get_create_child_by_tag(element, 'DEAT')
         death_element.new_child_element('DATE', '', str(create_gedcom_date(death)))
 
-    def export_place_birth(self, character: CharacterEntity, element: Element):
+    def export_place_birth(self, character: Character, element: Element):
         place_birth = character.get_property(Properties.PLACE_BIRTH)
         if place_birth is None:
-            raise
+            raise ExportPropertyException()
         birth_element = self.get_create_child_by_tag(element, 'BIRT')
         self.__export_place(place_birth, birth_element)
 
-    def export_place_death(self, character: CharacterEntity, element: Element):
+    def export_place_death(self, character: Character, element: Element):
         place_death = character.get_property(Properties.PLACE_DEATH)
         if place_death is None:
-            raise
+            raise ExportPropertyException()
         death_element = self.get_create_child_by_tag(element, 'DEAT')
         self.__export_place(place_death, death_element)
 
@@ -128,26 +134,24 @@ class GedcomExporter(Exporter):
     def __export_place(place: Place, event: Element):
         plac_element = event.new_child_element('PLAC', '', place.name)
         map_element = plac_element.new_child_element('MAP')
-        map_element.new_child_element('LATI', '',
-                                      '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
-        map_element.new_child_element('LONG', '',
-                                      '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
+        map_element.new_child_element('LATI', '', '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
+        map_element.new_child_element('LONG', '', '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
 
-    def export_given_name(self, character: CharacterEntity, element: Element):
+    def export_given_name(self, character: Character, element: Element):
         givens = character.get_property(Properties.GIVEN_NAME)
         if givens is None:
-            raise
+            raise ExportPropertyException()
         name_element = self.get_create_child_by_tag(element, 'NAME')
         name_element.new_child_element('GIVN', '', ' '.join([given.name for given in givens]))
 
-    def export_family_name(self, character: CharacterEntity, element: Element):
+    def export_family_name(self, character: Character, element: Element):
         families = character.get_property(Properties.FAMILY_NAME)
         if families is None:
-            raise
+            raise ExportPropertyException()
         name_element = self.get_create_child_by_tag(element, 'NAME')
         name_element.new_child_element('SURN', '', ' '.join([family.name for family in families]))
 
-    def create_family(self, character: CharacterEntity):
+    def create_family(self, character: Character):
         if not character.has_property(Properties.MOTHER_ID) and not character.has_property(Properties.FATHER_ID):
             return
         family_id = '{}//{}'.format(
@@ -168,37 +172,37 @@ class GedcomExporter(Exporter):
             self.families[family_id] = family
 
     def create_family_element(self, family: Family):
-        element = Element(0, '@{}@'.format(family.id), 'FAM', '')
+        element = Element(0, '@{}@'.format(family.family_id), 'FAM', '')
         if family.father_id and family.father_id in self.elements.keys():
             element.new_child_element('HUSB', '', '@{}@'.format(family.father_id))
-            self.elements[family.father_id].new_child_element('FAMS', '', '@{}@'.format(family.id))
+            self.elements[family.father_id].new_child_element('FAMS', '', '@{}@'.format(family.family_id))
         if family.mother_id and family.mother_id in self.elements.keys():
             element.new_child_element('WIFE', '', '@{}@'.format(family.mother_id))
-            self.elements[family.mother_id].new_child_element('FAMS', '', '@{}@'.format(family.id))
+            self.elements[family.mother_id].new_child_element('FAMS', '', '@{}@'.format(family.family_id))
         for child_id in family.children_ids:
             if child_id in self.database.cache.keys():
                 element.new_child_element('CHIL', '', '@{}@'.format(child_id))
-                self.elements[child_id].new_child_element('FAMC', '', '@{}@'.format(family.id))
-        self.elements[family.id] = element
+                self.elements[child_id].new_child_element('FAMC', '', '@{}@'.format(family.family_id))
+        self.elements[family.family_id] = element
 
     def print_element(self, file, element: Element, depth=0):
-        a = element.to_gedcom_string()
-        file.write(a)
+        gedcom_string = element.to_gedcom_string()
+        file.write(gedcom_string)
         for child in element.get_child_elements():
             self.print_element(file, child, depth=depth + 1)
 
     def write_gedcom(self, output_file, elements):
-        f = open(output_file, "w+", encoding="utf8")
-        dt = datetime.now()
-        f.write(HEADER.format(
-            dt.strftime("%d %b %Y"),
-            dt.strftime("%H:%M:%S"),
+        file = open(output_file, "w+", encoding="utf8")
+        time = datetime.now()
+        file.write(HEADER.format(
+            time.strftime("%d %b %Y"),
+            time.strftime("%H:%M:%S"),
             output_file
         ))
         for element in elements:
-            self.print_element(f, element)
-        f.write(FOOTER)
-        f.close()
+            self.print_element(file, element)
+        file.write(FOOTER)
+        file.close()
 
     def export(self, output_file: str):
         character_nbr = 0

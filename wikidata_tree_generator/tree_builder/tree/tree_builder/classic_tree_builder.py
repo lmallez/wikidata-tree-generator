@@ -4,7 +4,8 @@ from wikidata_tree_generator.configuration import TreeConfiguration
 from wikidata_tree_generator.logger import Logger
 from wikidata_tree_generator.tree_builder.character_fetcher import CharacterFetcher
 from wikidata_tree_generator.tree_builder.tree.dispatcher import Dispatcher
-from wikidata_tree_generator.tree_builder.tree.tree_builder import AncestorsTreeBuilder, DescendantsTreeBuilder
+from .ancestors_tree_builder import AncestorsTreeBuilder
+from .decendants_tree_builder import DescendantsTreeBuilder
 
 
 class ClassicTreeBuilder:

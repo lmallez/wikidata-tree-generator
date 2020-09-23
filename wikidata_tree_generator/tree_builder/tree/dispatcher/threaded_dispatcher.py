@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from threading import Thread
 from wikidata.entity import EntityId
-from wikidata_tree_generator.tree_builder.tree.dispatcher import Dispatcher
+from .dispatcher import Dispatcher
 
 
 class ThreadExecute:

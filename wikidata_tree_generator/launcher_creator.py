@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from wikidata_tree_generator.configuration import Configuration, TreeMethod, ExportFormat
 from wikidata_tree_generator.database import Database
+from wikidata_tree_generator.tree_builder.tree.dispatcher import Dispatcher
 from wikidata_tree_generator.wikidata_fetcher import WikidataFetcher
 from wikidata_tree_generator.launcher import Launcher
 from wikidata_tree_generator.entity_filler.entity_filler import EntityFiller
@@ -14,7 +15,6 @@ from wikidata_tree_generator.entity_builder.character_buidler import CharacterBu
 from wikidata_tree_generator.entity_builder.place_builder import PlaceBuilder
 from wikidata_tree_generator.tree_builder.character_fetcher.cache_character_fetcher import CacheCharacterFetcher
 from wikidata_tree_generator.tree_builder.character_fetcher.character_fetcher import CharacterFetcher
-from wikidata_tree_generator.tree_builder.tree.dispatcher.basic_dispatcher import BasicDispatcher
 from wikidata_tree_generator.tree_builder.tree.dispatcher.threaded_dispatcher import ThreadedDispatcher
 from wikidata_tree_generator.tree_builder.tree.tree_builder.ancestors_tree_builder import AncestorsTreeBuilder
 from wikidata_tree_generator.tree_builder.tree.tree_builder.classic_tree_builder import ClassicTreeBuilder
@@ -51,7 +51,7 @@ class LauncherCreator:
         self.entity_filler = None
 
         if not configuration.thread_configuration.enable:
-            self.dispatcher = BasicDispatcher()
+            self.dispatcher = Dispatcher()
             self.entity_filler = EntityFiller(configuration.properties, self.character_database, self.property_fetcher, self.place_builder, self.logger)
         else:
             self.dispatcher = ThreadedDispatcher(configuration.thread_configuration.max_thread)

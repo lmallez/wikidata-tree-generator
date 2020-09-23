@@ -2,8 +2,7 @@ from wikidata.entity import Entity
 from wikidata_tree_generator.database import Database
 from wikidata_tree_generator.entity_builder import PlaceBuilder
 from wikidata_tree_generator.entity_filler.property_fetcher import PropertyFetcher
-from wikidata_tree_generator.entity_filler.property_fillers import FamilyNameFiller, GivenNameFiller, PlaceBirthFiller, \
-    PlaceDeathFiller
+from wikidata_tree_generator.entity_filler.property_fillers import FamilyNameFiller, GivenNameFiller, PlaceBirthFiller, PlaceDeathFiller
 from wikidata_tree_generator.logger import Logger
 from wikidata_tree_generator.models.character import Properties
 

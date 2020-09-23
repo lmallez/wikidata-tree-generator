@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 from typing import List
-
 from wikidata.entity import EntityId, Entity
-from wikidata_tree_generator.entity_builder import Builder
 from wikidata_tree_generator.logger import Logger
 from wikidata_tree_generator.macros.wikidate_properties import wikidata_entities, Sex, wikidata_properties
-from wikidata_tree_generator.models import Properties, CharacterEntity, Date
+from wikidata_tree_generator.models import Properties, Character, Date
+from .builder import Builder, PropertyNotFoundException
 
 sex_list = {
     wikidata_entities['male']: Sex.MALE,
@@ -22,8 +21,8 @@ class CharacterBuilder(Builder):
             Properties.CHILD_IDS,
         ]
 
-    def build(self, entity: Entity) -> CharacterEntity:
-        character = CharacterEntity(entity.id)
+    def build(self, entity: Entity) -> Character:
+        character = Character(entity.id)
         character[Properties.ID] = entity.id
         character[Properties.LABEL] = entity.label
         # TODO : use function pointer choose from array of properties
@@ -33,7 +32,7 @@ class CharacterBuilder(Builder):
                 self.logger.error("method {} not found".format(field))
             try:
                 character[field] = field_method[field](self, entity)
-            except:
+            except PropertyNotFoundException:
                 self.logger.error('{}: {} is impossible to get'.format(self.__class__.__name__, field))
         return character
 
@@ -49,7 +48,7 @@ class CharacterBuilder(Builder):
             return False
         return True
 
-    def get_sex(self, entity: Entity) -> int:
+    def get_sex(self, entity: Entity) -> Sex:
         sex = self.get_property(entity, wikidata_properties["sex"])
         if len(sex) == 0:
             self.logger.error('{}: {} -> sex not specified'.format(self.__class__.__name__, entity.id))
@@ -109,7 +108,7 @@ class CharacterBuilder(Builder):
             self.logger.error('{}: {} -> has multiple date {}'.format(self.__class__.__name__, entity.id, property_id))
         date = dates[0]
         if not 'datavalue' in date['mainsnak']:
-            raise
+            raise PropertyNotFoundException(entity.id, property_id)
         return Date(
             date['mainsnak']['datavalue']['value']['time'],
             date['mainsnak']['datavalue']['value']['precision']
@@ -134,8 +133,10 @@ class CharacterBuilder(Builder):
     def __get_place(self, entity: Entity, property_id: EntityId):
         places = self.get_property(entity, property_id)
         if not places:
-            raise
+            raise PropertyNotFoundException(entity.id, property_id)
         # TODO : select right place
+        if not 'datavalue' in places[0]['mainsnak']:
+            raise PropertyNotFoundException(entity.id, property_id)
         return places[0]['mainsnak']['datavalue']['value']['id']
 
 

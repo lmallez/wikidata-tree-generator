@@ -15,15 +15,18 @@ class Color(Enum):
 
 
 class Logger:
-    def log(self, log: str, color=None, end='\n'):
+    def __print(self, file, log: str, color=None, end='\n'):
         if not color:
-            print('{}{}'.format(log, end), end='', flush=True)
+            print('{}{}'.format(log, end), end='', flush=True, file=file)
         else:
             color = self.__colors[color]
-            print("{}{}{}{}".format(color, log, '\033[0m', end), end='', flush=True)
+            print("{}{}{}{}".format(color, log, '\033[0m', end), end='', flush=True, file=file)
 
-    def error(self, log: str):
-        print("{}\n".format(log), file=sys.stderr, end='')
+    def log(self, log: str, color=None, end='\n'):
+        self.__print(sys.stdout, log, color, end)
+
+    def error(self, log: str, color=None, end='\n'):
+        self.__print(sys.stderr, log, color, end)
 
     __colors = {
         Color.HEADER: '\033[95m',

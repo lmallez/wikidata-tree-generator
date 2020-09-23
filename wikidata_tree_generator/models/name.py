@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+from dataclasses import dataclass
 from wikidata.entity import EntityId
 
 
+@dataclass
 class Name:
-    def __init__(self, id: EntityId, name: str = None):
-        self.id = id
-        self.name = name
+    id: EntityId
+    name: str = None

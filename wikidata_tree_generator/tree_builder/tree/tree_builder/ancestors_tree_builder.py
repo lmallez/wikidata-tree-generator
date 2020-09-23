@@ -4,7 +4,7 @@ from wikidata_tree_generator.logger import Logger
 from wikidata_tree_generator.tree_builder.character_fetcher import CharacterFetcher
 from wikidata_tree_generator.tree_builder.tree.dispatcher import Dispatcher
 from wikidata_tree_generator.tree_builder.tree.loader import AncestorsLoader
-from wikidata_tree_generator.tree_builder.tree.tree_builder import TreeBuilder
+from .tree_builder import TreeBuilder
 
 
 class AncestorsTreeBuilder(TreeBuilder):

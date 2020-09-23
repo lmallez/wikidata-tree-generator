@@ -4,6 +4,10 @@ from wikidata_tree_generator.configuration import TreeMethod, ExportFormat, Conf
 from wikidata_tree_generator.models.character import Properties
 
 
+class YamlConfigurationReaderException(Exception):
+    pass
+
+
 class YamlConfigurationReader:
     __str_tree_method = {
         "ANCESTORS": TreeMethod.ANCESTORS,
@@ -33,8 +37,8 @@ class YamlConfigurationReader:
         self.content = self.load_config(config_path)
 
     @staticmethod
-    def __configuration_exception(message: str) -> Exception:
-        return Exception("{}: {}".format(YamlConfigurationReader.__name__, message))
+    def __configuration_exception(message: str) -> YamlConfigurationReaderException:
+        return YamlConfigurationReaderException("{}: {}".format(YamlConfigurationReader.__name__, message))
 
     @staticmethod
     def load_config(config_path):

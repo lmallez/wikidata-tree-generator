@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from enum import Enum
 
 wikidata_properties = {
     "sex": "P21",
@@ -25,7 +26,7 @@ wikidata_entities = {
 }
 
 
-class Sex:
-    MALE: int = 0
-    FEMALE: int = 1
-    UNDEFINED: int = 2
+class Sex(Enum):
+    MALE = 0
+    FEMALE = 1
+    UNDEFINED = 2
