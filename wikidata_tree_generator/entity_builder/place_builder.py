@@ -24,5 +24,7 @@ class PlaceBuilder(Builder):
         if not coordinate:
             raise InvalidCoordinateException(entity.id, wikidata_properties['coordinate_location'])
         value = coordinate[0]['mainsnak']['datavalue']['value']
+        if not 'latitude' in value or not 'longitude' in value:
+            raise InvalidCoordinateException(entity.id, wikidata_properties['coordinate_location'])
         place.latitude = value['latitude']
         place.longitude = value['longitude']
