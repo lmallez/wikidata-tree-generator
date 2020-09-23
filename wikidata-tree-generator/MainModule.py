@@ -30,7 +30,7 @@ class MainModule:
         TreeMethod.CLASSIC: ClassicTreeBuilder,
     }
 
-    __exporter = {
+    __exporters = {
         ExportFormat.GEDCOM: GedcomExporter,
         ExportFormat.JSON: JsonExporter,
     }
@@ -59,7 +59,7 @@ class MainModule:
 
         self.tree_builder = self.__tree_builders[configuration.tree_configuration.method](self.character_fetcher, configuration.tree_configuration, self.dispatcher, self.logger)
 
-        self.exporter = self.__exporter[configuration.export_configuration.format](self.character_database, configuration.properties, configuration.export_configuration, self.logger)
+        self.exporter = self.__exporters[configuration.export_configuration.format](self.character_database, configuration.properties, configuration.export_configuration, self.logger)
 
     def get_generator(self) -> WikidataTreeGenerator:
         return WikidataTreeGenerator(self.tree_builder, self.entity_filler, self.exporter)

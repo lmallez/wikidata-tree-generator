@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from dataclasses import dataclass, field
 from enum import Enum
 
 
@@ -14,30 +15,34 @@ class ExportFormat(Enum):
     JSON = 2
 
 
+@dataclass
 class ThreadConfiguration:
-    enable = True
-    max_thread = 10
+    enable: bool = True
+    max_thread: int = 10
 
 
+@dataclass
 class TreeConfiguration:
-    method = None
-    generation_limit = None
-    load_fathers = True
-    load_mothers = True
-    load_men_children = True
-    load_women_children = True
-    branch_cache = True
+    method: TreeMethod = None
+    generation_limit: bool = None
+    load_fathers: bool = True
+    load_mothers: bool = True
+    load_men_children: bool = True
+    load_women_children: bool = True
+    branch_cache: bool = True
 
 
+@dataclass
 class ExportConfiguration:
-    format = None
-    export_men = True
-    export_women = True
+    format: ExportFormat = None
+    export_men: bool = True
+    export_women: bool = True
 
 
+@dataclass
 class Configuration:
-    entity_cache = True
-    tree_configuration = TreeConfiguration()
-    thread_configuration = ThreadConfiguration()
-    export_configuration = ExportConfiguration()
-    properties = []
+    entity_cache: bool = True
+    tree_configuration: TreeConfiguration = field(default_factory=TreeConfiguration)
+    thread_configuration: ThreadConfiguration = field(default_factory=ThreadConfiguration)
+    export_configuration: ExportConfiguration = field(default_factory=ExportConfiguration)
+    properties: list = field(default_factory=list)
