@@ -1,0 +1,23 @@
+name: SampleRun
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Python 3.8
+              uses: actions/setup-python@v1
+              with:
+                  python-version: 3.8
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install pylint
+                  pip install -r requirements.txt
+            - name: Test that the samples run without crashing
+              run: |
+                  python3 main.py samples/Q82339.configuration.yaml Q82339 samples/Q82339.ged
+                  python3 main.py samples/Q9696.1.configuration.yaml Q9696 samples/Q9696.1.ged
+                  python3 main.py samples/Q9696.2.configuration.yaml Q9696 samples/Q9696.2.ged
