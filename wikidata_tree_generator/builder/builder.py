@@ -5,8 +5,9 @@ from wikidata.entity import Entity as WikidataEntity, EntityId
 
 from wikidata_tree_generator.logger import Logger
 from .extractor import PropertyNotFoundException, extract_property
-from ..macros.character_properties import PropertyMeta, ExtractType, Property
+from ..macros.property_meta import PropertyMeta, ExtractType
 from ..models import Entity
+from ..models.property import Property
 
 
 class Builder:
@@ -33,7 +34,7 @@ class Builder:
         # if len(wikidata_properties) == 0:
         #     raise PropertyNotFoundException(entity.id, property_meta.wikidata_id)
         if len(wiki_properties) > 1:
-            self.logger.error('{}: {} -> has multiple {} ({})'.format(self.__class__.__name__, entity.id, property_meta.name, property_meta.wikidata_id))
+            self.logger.error('{}: {} -> has multiple {} ({})'.format(self.__class__.__name__, entity.id, property_meta.tag, property_meta.wikidata_id))
         # TODO : select the correct property to take
         return extract_property(property_meta, wiki_properties[0])
 
@@ -61,7 +62,7 @@ class Builder:
             except PropertyNotFoundException:
                 self.logger.error(
                     '{}: {} ({}) -> property {} ({}) not found'.format(
-                        self.__class__.__name__, entity.id, entity.label, meta.name, meta.wikidata_id)
+                        self.__class__.__name__, entity.id, entity.label, meta.tag, meta.wikidata_id)
                 )
         return build_entity
 

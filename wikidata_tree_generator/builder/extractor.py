@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 from typing import Dict, Callable
 
-from wikidata_tree_generator.macros.character_properties import Property, PropertyToLoad, PropertyMeta, ExtractMethod
-from wikidata_tree_generator.macros.wikidate_properties import wikidata_entities, Sex
+from wikidata_tree_generator.macros.property_meta import PropertyMeta, ExtractMethod
+from wikidata_tree_generator.macros.wikidata import wikidata_entities, Sex
 from wikidata_tree_generator.models import Date
 from wikidata_tree_generator.models.place import CoordinateLocation
+from wikidata_tree_generator.models.property import PropertyToLoad, Property
 
 
 class PropertyNotFoundException(BaseException):

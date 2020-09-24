@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 from dataclasses import dataclass
 
-from .entity import Entity, Properties
+from .entity import Entity
+from ..macros import PropertyTag
 
 
 @dataclass
@@ -12,5 +13,5 @@ class CoordinateLocation:
 
 class Place(Entity):
     PROPERTIES = [
-        Properties.COORDINATE_LOCATION
+        PropertyTag.COORDINATE_LOCATION
     ]

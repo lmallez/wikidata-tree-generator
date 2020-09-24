@@ -13,7 +13,8 @@ from wikidata_tree_generator.export.gedcom_exporter import GedcomExporter
 from wikidata_tree_generator.export.json_exporter import JsonExporter
 from wikidata_tree_generator.launcher import Launcher
 from wikidata_tree_generator.logger.logger import Logger
-from wikidata_tree_generator.macros.character_properties import character_property_metas
+from wikidata_tree_generator.macros import PropertyTag
+from wikidata_tree_generator.macros.property_meta import character_property_metas
 from wikidata_tree_generator.tree_builder.dispatcher import Dispatcher
 from wikidata_tree_generator.tree_builder.dispatcher import ThreadedDispatcher
 from wikidata_tree_generator.tree_builder.tree_builder import AncestorsTreeBuilder
@@ -41,7 +42,11 @@ class LauncherCreator:
         self.wikidata_fetcher = WikidataFetcher()
 
         self.character_database = Database()
-        self.character_builder = CharacterBuilder(self.logger, configuration.properties)
+        self.character_builder = CharacterBuilder(self.logger, configuration.properties + [
+            PropertyTag.FATHER,
+            PropertyTag.MOTHER,
+            PropertyTag.CHILDREN,
+        ])
         self.character_fetcher = (CacheCharacterFetcher if configuration.entity_cache else CharacterFetcher)(self.wikidata_fetcher, self.character_database, self.character_builder, self.logger)
 
         self.property_database = Database()

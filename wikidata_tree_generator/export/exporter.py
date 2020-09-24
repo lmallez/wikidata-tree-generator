@@ -2,8 +2,9 @@
 from wikidata_tree_generator.configuration import ExportConfiguration
 from wikidata_tree_generator.database import Database
 from wikidata_tree_generator.logger import Logger, Color
-from wikidata_tree_generator.macros.wikidate_properties import Sex
-from wikidata_tree_generator.models import Character, Properties
+from wikidata_tree_generator.macros import PropertyTag
+from wikidata_tree_generator.macros.wikidata import Sex
+from wikidata_tree_generator.models import Character
 
 
 class ExportPropertyException(BaseException):
@@ -18,9 +19,9 @@ class Exporter:
         self.logger = logger
 
     def allow_export(self, character: Character) -> bool:
-        if not character.has_property(Properties.SEX):
+        if not character.has_property(PropertyTag.SEX):
             return True
-        sex = character.get_property(Properties.SEX).value
+        sex = character.get_property(PropertyTag.SEX).value
         return (sex == Sex.MALE and self.configuration.export_men) or (sex == Sex.FEMALE and self.configuration.export_women)
 
     def export(self, output_file: str):

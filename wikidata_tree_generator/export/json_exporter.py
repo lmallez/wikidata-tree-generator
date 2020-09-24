@@ -5,11 +5,13 @@ from typing import Dict, Callable
 
 from wikidata.multilingual import MultilingualText
 from .exporter import Exporter, ExportPropertyException
-from ..macros.character_properties import Property, PropertyToLoad, PropertyMeta, character_property_metas, property_metas_by_type
-from ..macros.wikidate_properties import Sex
-from ..models import Character, Properties, Place, Name, Date
+from ..macros.export.json import json_property_tag_str
+from ..macros.property_meta import PropertyMeta, character_property_metas, property_metas_by_type
+from ..macros.wikidata import Sex
+from ..models import Character, Place, Name, Date
 from ..models.entity import EntityException
 from ..models.place import CoordinateLocation
+from ..models.property import Property, PropertyToLoad
 
 
 class MultilingualEncoder(JSONEncoder):
@@ -17,24 +19,6 @@ class MultilingualEncoder(JSONEncoder):
         if isinstance(o, MultilingualText):
             return str(o)
         return o.__dict__
-
-
-properties_to_str = {
-    Properties.ID: 'id',
-    Properties.LABEL: 'label',
-    Properties.SEX: 'sex',
-    Properties.IS_HUMAN: 'is_human',
-    Properties.MOTHER: 'mother',
-    Properties.FATHER: 'father',
-    Properties.CHILDREN: 'children',
-    Properties.DATE_BIRTH: 'date_birth',
-    Properties.DATE_DEATH: 'date_death',
-    Properties.GIVEN_NAME: 'given_name',
-    Properties.FAMILY_NAME: 'family_name',
-    Properties.PLACE_BIRTH: 'place_birth',
-    Properties.PLACE_DEATH: 'place_death',
-    Properties.COORDINATE_LOCATION: 'coordinate_location',
-}
 
 
 class JsonExporter(Exporter):
@@ -64,12 +48,12 @@ class JsonExporter(Exporter):
     def export_entity(prop: [Property]):
         entity = prop.value
         export_character = {'id': entity.id, 'label': entity.label}
-        if len(entity.properties.items()) > 0:
+        if len(entity.property_tags.items()) > 0:
             export_character['properties'] = {}
-            for tag, entity_property in entity.properties.items():
+            for tag, entity_property in entity.property_tags.items():
                 if not entity_property or type(prop.value) not in property_metas_by_type.keys():
                     continue
-                export_character['properties'][properties_to_str[tag]] = JsonExporter.export_property(entity_property, property_metas_by_type[type(prop.value)][tag])
+                export_character['properties'][json_property_tag_str[tag]] = JsonExporter.export_property(entity_property, property_metas_by_type[type(prop.value)][tag])
         return export_character
 
     @staticmethod
@@ -84,7 +68,7 @@ class JsonExporter(Exporter):
         for property_tag in self.properties:
             try:
                 meta = character_property_metas[property_tag]
-                export_character[properties_to_str[property_tag]] = self.export_property(character.get_property(property_tag), meta)
+                export_character[json_property_tag_str[property_tag]] = self.export_property(character.get_property(property_tag), meta)
             except EntityException:
                 self.logger.error('{}: {} is impossible to export'.format(self.__class__.__name__, property_tag))
         return export_character

@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-from .entity import Entity, Properties
+from ..macros import PropertyTag
+from ..models.entity import Entity
 
 
 class Character(Entity):
     PROPERTIES = [
-        Properties.MOTHER,
-        Properties.FATHER,
-        Properties.CHILDREN,
-        Properties.DATE_DEATH,
-        Properties.DATE_BIRTH,
-        Properties.FAMILY_NAME,
-        Properties.GIVEN_NAME,
-        Properties.IS_HUMAN,
-        Properties.PLACE_BIRTH,
-        Properties.PLACE_DEATH,
-        Properties.SEX
+        PropertyTag.MOTHER,
+        PropertyTag.FATHER,
+        PropertyTag.CHILDREN,
+        PropertyTag.DATE_DEATH,
+        PropertyTag.DATE_BIRTH,
+        PropertyTag.FAMILY_NAME,
+        PropertyTag.GIVEN_NAME,
+        PropertyTag.IS_HUMAN,
+        PropertyTag.PLACE_BIRTH,
+        PropertyTag.PLACE_DEATH,
+        PropertyTag.SEX
     ]

@@ -1,14 +1,14 @@
-from typing import Dict
-
-from wikidata_tree_generator.builder.fetcher.property_fetcher import PropertyFetcher
+#!/usr/bin/env python3
+from wikidata_tree_generator.builder.fetcher import PropertyFetcher
 from wikidata_tree_generator.logger import Logger
-from wikidata_tree_generator.macros.character_properties import PropertyToLoad, Property, PropertyMeta
-from wikidata_tree_generator.models import Entity, Properties
+from ..macros.property_meta import PropertyList, PropertyTag
+from ..models.property import Property, PropertyToLoad
+from ..models.entity import Entity
 
 
 class EntityFiller:
-    def __init__(self, logger: Logger, property_fetcher: PropertyFetcher, properties: [Properties], property_metas: Dict[Properties, PropertyMeta]):
-        self.properties = properties
+    def __init__(self, logger: Logger, property_fetcher: PropertyFetcher, property_tags: [PropertyTag], property_metas: PropertyList):
+        self.property_tags = property_tags
         self.logger = logger
         self.fetcher = property_fetcher
         self.property_metas = property_metas
@@ -21,7 +21,7 @@ class EntityFiller:
             self.load_property(meta, prop)
 
     def load(self, entity: Entity):
-        for property_tag in self.properties:
+        for property_tag in self.property_tags:
             meta = self.property_metas[property_tag]
             if not meta.to_load or not entity.has_property(property_tag):
                 continue
