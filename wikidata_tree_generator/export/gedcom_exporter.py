@@ -8,8 +8,8 @@ from wikidata_tree_generator.database import Database
 from wikidata_tree_generator.logger import Logger
 from wikidata_tree_generator.macros.wikidate_properties import Sex
 from wikidata_tree_generator.models import Place, Date, Character, Properties
-from wikidata_tree_generator.models.character import CharacterException
 from .exporter import ExportPropertyException, Exporter
+from ..models.entity import EntityException
 
 HEADER = '0 HEAD\n1 SOUR Wikidata to Gedcom\n2 VERS 5.1.1\n2 NAME Wikidata to Gedcom\n1 DATE {}\n2 TIME {}\n1 SUBM @SUBM@\n1 FILE {}\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 LANG English\n0 @SUBM@ SUBM\n1 NAME\n1 ADDR\n'
 
@@ -67,7 +67,7 @@ def create_gedcom_date(date: Date) -> Union[GedcomDate, GedcomBetweenDate]:
 class GedcomExporter(Exporter):
     @dataclass()
     class Family:
-        family_id: int
+        family_id: str
         children_ids: list = field(default_factory=list)
         father_id: int = None
         mother_id: int = None
@@ -76,16 +76,19 @@ class GedcomExporter(Exporter):
         super().__init__(database, properties, configuration, logger)
         self.elements = {}
         self.families = {}
+        for property_tag in self.properties:
+            if property_tag not in export_gedcom_property_methods.keys():
+                self.properties.remove(property_tag)
+                self.logger.error('{}: Property {} cannot and will not be exported'.format(self.__class__.__name__, property_tag))
 
     def create_character_element(self, character: Character):
         element = Element(0, '@{}@'.format(character.id), 'INDI', '')
-        element.new_child_element('NAME', '', str(character[Properties.LABEL]))
-        for entity_property in self.properties:
-            if entity_property in field_method.keys():
-                try:
-                    field_method[entity_property](self, character, element)
-                except (ExportPropertyException, CharacterException):
-                    self.logger.error('{}: {} is impossible to export'.format(self.__class__.__name__, entity_property))
+        element.new_child_element('NAME', '', str(character.label))
+        for property_tag in self.properties:
+            try:
+                export_gedcom_property_methods[property_tag](self, character, element)
+            except (ExportPropertyException, EntityException):
+                self.logger.error('{}: {} is impossible to export'.format(self.__class__.__name__, property_tag))
         self.create_family(character)
         self.elements[character.id] = element
 
@@ -98,19 +101,19 @@ class GedcomExporter(Exporter):
         return element.new_child_element(tag)
 
     def export_sex(self, character: Character, element: Element):
-        sex = character.get_property(Properties.SEX)
+        sex = character.get_property(Properties.SEX).value
         if sex != Sex.UNDEFINED:
             element.new_child_element('SEX', '', {Sex.MALE: 'M', Sex.FEMALE: 'F'}[sex])
 
     def export_date_birth(self, character: Character, element: Element):
-        birth = character.get_property(Properties.DATE_BIRTH)
+        birth = character.get_property(Properties.DATE_BIRTH).value
         if birth is None:
             raise ExportPropertyException()
         birth_element = self.get_create_child_by_tag(element, 'BIRT')
         birth_element.new_child_element('DATE', '', str(create_gedcom_date(birth)))
 
     def export_date_death(self, character: Character, element: Element):
-        death = character.get_property(Properties.DATE_DEATH)
+        death = character.get_property(Properties.DATE_DEATH).value
         if death is None:
             raise ExportPropertyException()
         death_element = self.get_create_child_by_tag(element, 'DEAT')
@@ -121,54 +124,55 @@ class GedcomExporter(Exporter):
         if place_birth is None:
             raise ExportPropertyException()
         birth_element = self.get_create_child_by_tag(element, 'BIRT')
-        self.__export_place(place_birth, birth_element)
+        self.__export_place(place_birth.value, birth_element)
 
     def export_place_death(self, character: Character, element: Element):
         place_death = character.get_property(Properties.PLACE_DEATH)
         if place_death is None:
             raise ExportPropertyException()
         death_element = self.get_create_child_by_tag(element, 'DEAT')
-        self.__export_place(place_death, death_element)
+        self.__export_place(place_death.value, death_element)
 
     @staticmethod
     def __export_place(place: Place, event: Element):
-        plac_element = event.new_child_element('PLAC', '', place.name)
-        if place.latitude and place.longitude:
+        plac_element = event.new_child_element('PLAC', '', place.label)
+        coordinates = place.get_property(Properties.COORDINATE_LOCATION).value
+        if coordinates.latitude and coordinates.longitude:
             map_element = plac_element.new_child_element('MAP')
-            map_element.new_child_element('LATI', '', '{}{}'.format('N' if place.latitude > 0 else 'S', abs(place.latitude)))
-            map_element.new_child_element('LONG', '', '{}{}'.format('E' if place.longitude > 0 else 'W', abs(place.longitude)))
+            map_element.new_child_element('LATI', '', '{}{}'.format('N' if coordinates.latitude > 0 else 'S', abs(coordinates.latitude)))
+            map_element.new_child_element('LONG', '', '{}{}'.format('E' if coordinates.longitude > 0 else 'W', abs(coordinates.longitude)))
 
     def export_given_name(self, character: Character, element: Element):
         givens = character.get_property(Properties.GIVEN_NAME)
         if givens is None:
             raise ExportPropertyException()
         name_element = self.get_create_child_by_tag(element, 'NAME')
-        name_element.new_child_element('GIVN', '', ' '.join([given.name for given in givens]))
+        name_element.new_child_element('GIVN', '', ' '.join([given.value.label for given in givens]))
 
     def export_family_name(self, character: Character, element: Element):
         families = character.get_property(Properties.FAMILY_NAME)
         if families is None:
             raise ExportPropertyException()
         name_element = self.get_create_child_by_tag(element, 'NAME')
-        name_element.new_child_element('SURN', '', ' '.join([family.name for family in families]))
+        name_element.new_child_element('SURN', '', ' '.join([family.value.label for family in families]))
 
     def create_family(self, character: Character):
-        if not character.has_property(Properties.MOTHER_ID) and not character.has_property(Properties.FATHER_ID):
+        if not character.has_property(Properties.MOTHER) and not character.has_property(Properties.FATHER):
             return
         family_id = '{}//{}'.format(
-            character.get_property(Properties.MOTHER_ID) if character.has_property(Properties.MOTHER_ID) else "",
-            character.get_property(Properties.FATHER_ID) if character.has_property(Properties.FATHER_ID) else ""
+            character.get_property(Properties.MOTHER) if character.has_property(Properties.MOTHER) else "",
+            character.get_property(Properties.FATHER) if character.has_property(Properties.FATHER) else ""
         )
         if family_id in self.families.keys():
             self.families[family_id].children_ids.append(character.id)
         else:
             family = self.Family('FAM{}'.format(len(self.families.keys())))
-            if character.has_property(Properties.MOTHER_ID) and character.get_property(
-                    Properties.MOTHER_ID) in self.database.cache.keys():
-                family.mother_id = character.get_property(Properties.MOTHER_ID)
-            if character.has_property(Properties.FATHER_ID) and character.get_property(
-                    Properties.FATHER_ID) in self.database.cache.keys():
-                family.father_id = character.get_property(Properties.FATHER_ID)
+            if character.has_property(Properties.MOTHER) and character.get_property(
+                    Properties.MOTHER).loader in self.database.cache.keys():
+                family.mother_id = character.get_property(Properties.MOTHER).loader
+            if character.has_property(Properties.FATHER) and character.get_property(
+                    Properties.FATHER).loader in self.database.cache.keys():
+                family.father_id = character.get_property(Properties.FATHER).loader
             family.children_ids.append(character.id)
             self.families[family_id] = family
 
@@ -219,7 +223,7 @@ class GedcomExporter(Exporter):
         self.log(character_nbr, 'GEDCOM', output_file)
 
 
-field_method = {
+export_gedcom_property_methods = {
     Properties.SEX: GedcomExporter.export_sex,
     Properties.DATE_BIRTH: GedcomExporter.export_date_birth,
     Properties.DATE_DEATH: GedcomExporter.export_date_death,

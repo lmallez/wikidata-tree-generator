@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 from dataclasses import dataclass
-from wikidata.entity import EntityId
+
+from .entity import Entity, Properties
 
 
 @dataclass
-class Place:
-    id: EntityId
-    name: str = None
+class CoordinateLocation:
     latitude: float = None
     longitude: float = None
+
+
+class Place(Entity):
+    PROPERTIES = [
+        Properties.COORDINATE_LOCATION
+    ]

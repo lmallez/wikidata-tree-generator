@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-from dataclasses import dataclass
-from wikidata.entity import EntityId
+from .entity import Entity
 
 
-@dataclass
-class Name:
-    id: EntityId
-    name: str = None
+class Name(Entity):
+    PROPERTIES = []

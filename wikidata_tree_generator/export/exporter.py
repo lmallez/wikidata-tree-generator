@@ -20,7 +20,7 @@ class Exporter:
     def allow_export(self, character: Character) -> bool:
         if not character.has_property(Properties.SEX):
             return True
-        sex = character.get_property(Properties.SEX)
+        sex = character.get_property(Properties.SEX).value
         return (sex == Sex.MALE and self.configuration.export_men) or (sex == Sex.FEMALE and self.configuration.export_women)
 
     def export(self, output_file: str):
