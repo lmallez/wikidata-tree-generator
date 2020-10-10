@@ -21,3 +21,4 @@ jobs:
                   python3 main.py samples/Q82339.configuration.yaml Q82339 samples/Q82339.ged
                   python3 main.py samples/Q9696.1.configuration.yaml Q9696 samples/Q9696.1.ged
                   python3 main.py samples/Q9696.2.configuration.yaml Q9696 samples/Q9696.2.ged
+                  python3 main.py samples/Q9682.configuration.yaml Q9682 samples/Q9682.json

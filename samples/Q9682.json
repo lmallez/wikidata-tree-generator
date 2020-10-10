@@ -1,0 +1,5772 @@
+{
+    "Q9682": {
+        "id": "Q9682",
+        "label": "Elizabeth II",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1926-04-21T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q124184",
+            "label": "Mayfair",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.508755555556,
+                    "longitude": -0.14743055555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q6081128",
+                "label": "Alexandra"
+            },
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            }
+        ]
+    },
+    "Q10633": {
+        "id": "Q10633",
+        "label": "Queen Elizabeth The Queen Mother",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2002-03-30T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1900-08-04T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q19798",
+            "label": "Hitchin",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.947,
+                    "longitude": -0.283
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q3238037",
+            "label": "Royal Lodge",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.439,
+                    "longitude": -0.6068
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q4851436",
+                "label": "Angela"
+            },
+            {
+                "id": "Q1587821",
+                "label": "Marguerite"
+            }
+        ]
+    },
+    "Q151754": {
+        "id": "Q151754",
+        "label": "Anne, Princess Royal",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1950-08-15T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q565521",
+            "label": "Clarence House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.504,
+                    "longitude": -0.1385
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q564684",
+                "label": "Anne"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q650689",
+                "label": "Alice"
+            },
+            {
+                "id": "Q3215140",
+                "label": "Louise"
+            }
+        ]
+    },
+    "Q280856": {
+        "id": "Q280856",
+        "label": "George VI",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1952-02-06T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1895-12-14T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1320376",
+            "label": "York Cottage",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.82638889,
+                    "longitude": 0.51638889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q935116",
+            "label": "Sandringham House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.829722222222,
+                    "longitude": 0.51388888888889
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            },
+            {
+                "id": "Q3273004",
+                "label": "Frederick"
+            },
+            {
+                "id": "Q1778168",
+                "label": "Arthur"
+            },
+            {
+                "id": "Q15921732",
+                "label": "George"
+            }
+        ]
+    },
+    "Q43274": {
+        "id": "Q43274",
+        "label": "Charles, Prince of Wales",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1948-11-14T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q42182",
+            "label": "Buckingham Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.501,
+                    "longitude": -0.142
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q827311",
+                "label": "Philip"
+            },
+            {
+                "id": "Q1778168",
+                "label": "Arthur"
+            },
+            {
+                "id": "Q15921732",
+                "label": "George"
+            }
+        ]
+    },
+    "Q154920": {
+        "id": "Q154920",
+        "label": "Prince Edward, Earl of Wessex",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1964-03-10T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q42182",
+            "label": "Buckingham Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.501,
+                    "longitude": -0.142
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            },
+            {
+                "id": "Q18064323",
+                "label": "Antony"
+            },
+            {
+                "id": "Q1249148",
+                "label": "Richard"
+            },
+            {
+                "id": "Q2897866",
+                "label": "Louis"
+            }
+        ]
+    },
+    "Q153330": {
+        "id": "Q153330",
+        "label": "Prince Andrew, Duke of York",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1960-02-19T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q42182",
+            "label": "Buckingham Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.501,
+                    "longitude": -0.142
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q18042461",
+                "label": "Andrew"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            },
+            {
+                "id": "Q18001597",
+                "label": "Christian"
+            },
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            }
+        ]
+    },
+    "Q238820": {
+        "id": "Q238820",
+        "label": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1938-06-23T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1862-09-11T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q1051858",
+                "label": "Cavendish-Bentinck"
+            },
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q859234",
+                "label": "Cecilia"
+            },
+            {
+                "id": "Q1508902",
+                "label": "Nina"
+            }
+        ]
+    },
+    "Q344908": {
+        "id": "Q344908",
+        "label": "Peter Phillips",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1977-11-15T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q3495342",
+            "label": "St. Mary's Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.517222222222,
+                    "longitude": -0.17305555555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2793828",
+                "label": "Phillips"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2793400",
+                "label": "Peter"
+            },
+            {
+                "id": "Q13610143",
+                "label": "Mark"
+            },
+            {
+                "id": "Q18042461",
+                "label": "Andrew"
+            }
+        ]
+    },
+    "Q165657": {
+        "id": "Q165657",
+        "label": "Princess Beatrice",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1988-08-08T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7231952",
+            "label": "Portland Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5227,
+                    "longitude": -0.1436
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q734292",
+                "label": "Beatrice"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            }
+        ]
+    },
+    "Q6779476": {
+        "id": "Q6779476",
+        "label": "Mary Elphinstone, Lady Elphinstone",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1961-02-08T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1883-08-30T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q202177",
+            "label": "Angus",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 56.666666666667,
+                    "longitude": -2.9166666666667
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q2731694",
+            "label": "Inveresk",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 55.9366,
+                    "longitude": -3.0468
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            },
+            {
+                "id": "Q1440778",
+                "label": "Frances"
+            }
+        ]
+    },
+    "Q63806478": {
+        "id": "Q63806478",
+        "label": "Michael Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1953-05-01T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1893-10-01T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4927524",
+                "label": "Michael"
+            },
+            {
+                "id": "Q17523984",
+                "label": "Claude"
+            },
+            {
+                "id": "Q19818110",
+                "label": "Hamilton"
+            }
+        ]
+    },
+    "Q75381408": {
+        "id": "Q75381408",
+        "label": "Alexander Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1911-10-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1887-04-14T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q923",
+                "label": "Alexander"
+            }
+        ]
+    },
+    "Q335159": {
+        "id": "Q335159",
+        "label": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1944-11-07T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1855-03-14T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q743535",
+            "label": "Chelsea",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4875,
+                    "longitude": -0.1684
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1529151",
+            "label": "Glamis Castle",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 56.6203,
+                    "longitude": -3.0024
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q17523984",
+                "label": "Claude"
+            }
+        ]
+    },
+    "Q5444165": {
+        "id": "Q5444165",
+        "label": "Fergus Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1915-09-27T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1889-04-18T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q26319620",
+            "label": "Forbes House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.50115027,
+                    "longitude": -0.152604086
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q9301693",
+                "label": "Fergus"
+            }
+        ]
+    },
+    "Q147663": {
+        "id": "Q147663",
+        "label": "Zara Tindall",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1981-05-15T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q3495342",
+            "label": "St. Mary's Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.517222222222,
+                    "longitude": -0.17305555555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2793828",
+                "label": "Phillips"
+            },
+            {
+                "id": "Q37470659",
+                "label": "Tindall"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4023853",
+                "label": "Zara"
+            },
+            {
+                "id": "Q564684",
+                "label": "Anne"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            }
+        ]
+    },
+    "Q3077944": {
+        "id": "Q3077944",
+        "label": "Savannah Phillips",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2010-12-29T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1532247",
+            "label": "Gloucestershire Royal Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.865278,
+                    "longitude": -2.230556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2793828",
+                "label": "Phillips"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q7427835",
+                "label": "Savannah"
+            },
+            {
+                "id": "Q564684",
+                "label": "Anne"
+            },
+            {
+                "id": "Q16290387",
+                "label": "Kathleen"
+            }
+        ]
+    },
+    "Q75411": {
+        "id": "Q75411",
+        "label": "John Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1930-02-07T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1886-04-01T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4925477",
+                "label": "John"
+            },
+            {
+                "id": "Q4926833",
+                "label": "Herbert"
+            }
+        ]
+    },
+    "Q269412": {
+        "id": "Q269412",
+        "label": "George V",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1936-01-20T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1865-06-03T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q565532",
+            "label": "Marlborough House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505,
+                    "longitude": -0.13583333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q935116",
+            "label": "Sandringham House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.829722222222,
+                    "longitude": 0.51388888888889
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q15921732",
+                "label": "George"
+            },
+            {
+                "id": "Q3273004",
+                "label": "Frederick"
+            },
+            {
+                "id": "Q595105",
+                "label": "Ernest"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            }
+        ]
+    },
+    "Q547893": {
+        "id": "Q547893",
+        "label": "Mark Phillips",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1948-09-22T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1248924",
+            "label": "Tetbury",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.636,
+                    "longitude": -2.158
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2793828",
+                "label": "Phillips"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q13610143",
+                "label": "Mark"
+            },
+            {
+                "id": "Q12241622",
+                "label": "Anthony"
+            },
+            {
+                "id": "Q2793400",
+                "label": "Peter"
+            }
+        ]
+    },
+    "Q550183": {
+        "id": "Q550183",
+        "label": "James, Viscount Severn",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2007-12-17T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q5504570",
+            "label": "Frimley Park Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.319,
+                    "longitude": -0.7412
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q677191",
+                "label": "James"
+            }
+        ]
+    },
+    "Q680304": {
+        "id": "Q680304",
+        "label": "Lady Louise Windsor",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2003-11-08T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q5504570",
+            "label": "Frimley Park Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.319,
+                    "longitude": -0.7412
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q3215140",
+                "label": "Louise"
+            },
+            {
+                "id": "Q650689",
+                "label": "Alice"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            }
+        ]
+    },
+    "Q1758535": {
+        "id": "Q1758535",
+        "label": "Patrick Bowes-Lyon, 15th Earl of Strathmore and Kinghorne",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1949-05-25T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1884-09-22T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7595181",
+            "label": "St Paul's Walden Bury",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.8811,
+                    "longitude": -0.276111
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q67387310",
+            "label": "Angus",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 56.666666666666664,
+                    "longitude": -2.8666666666666667
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q18002623",
+                "label": "Patrick"
+            }
+        ]
+    },
+    "Q5231604": {
+        "id": "Q5231604",
+        "label": "David Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1961-09-13T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1902-05-02T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1120695",
+            "label": "Birkhall",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 57.0288931289614,
+                    "longitude": -3.07408037664758
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q18057751",
+                "label": "David"
+            }
+        ]
+    },
+    "Q1031989": {
+        "id": "Q1031989",
+        "label": "Louisa Cavendish-Bentinck",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1918-07-06T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1832-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "place_birth": {
+            "id": "Q83065",
+            "label": "Leicester",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.633333333333,
+                    "longitude": -1.1333333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1248368",
+            "label": "Dawlish",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 50.581,
+                    "longitude": -3.466
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q4999578",
+                "label": "Burnaby"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q16275172",
+                "label": "Caroline"
+            }
+        ]
+    },
+    "Q75381406": {
+        "id": "Q75381406",
+        "label": "Violet Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1893-10-17T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1882-04-17T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1454272",
+                "label": "Violet"
+            },
+            {
+                "id": "Q22205315",
+                "label": "Hyacinth"
+            }
+        ]
+    },
+    "Q7367831": {
+        "id": "Q7367831",
+        "label": "Rose Leveson-Gower, Countess Granville",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1967-11-17T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1890-05-06T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            },
+            {
+                "id": "Q1821838",
+                "label": "Leveson-Gower"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q3585338",
+                "label": "Rose"
+            },
+            {
+                "id": "Q679755",
+                "label": "Constance"
+            }
+        ]
+    },
+    "Q5921597": {
+        "id": "Q5921597",
+        "label": "Isla Phillips",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2012-03-29T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1532247",
+            "label": "Gloucestershire Royal Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.865278,
+                    "longitude": -2.230556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2793828",
+                "label": "Phillips"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q19967988",
+                "label": "Isla"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            }
+        ]
+    },
+    "Q75271852": {
+        "id": "Q75271852",
+        "label": "Mary Elphinstone",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1980-05-16T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1911-07-02T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            }
+        ]
+    },
+    "Q128341": {
+        "id": "Q128341",
+        "label": "Charles Cavendish-Bentinck",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1865-08-17T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1817-11-08T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q288781",
+            "label": "Kensington",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5004,
+                    "longitude": -0.1909
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q1051858",
+                "label": "Cavendish-Bentinck"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            }
+        ]
+    },
+    "Q75248480": {
+        "id": "Q75248480",
+        "label": "Lady Mary Cecilia Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1932-01-30T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            },
+            {
+                "id": "Q859234",
+                "label": "Cecilia"
+            }
+        ]
+    },
+    "Q6231704": {
+        "id": "Q6231704",
+        "label": "John Elphinstone, 17th Lord Elphinstone",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1975-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "date_birth": {
+            "time": "+1914-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "given_name": [
+            {
+                "id": "Q4925477",
+                "label": "John"
+            }
+        ]
+    },
+    "Q75310347": {
+        "id": "Q75310347",
+        "label": "Rosemary Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1989-01-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1915-07-18T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q1428410",
+                "label": "Rosemary"
+            }
+        ]
+    },
+    "Q6759834": {
+        "id": "Q6759834",
+        "label": "Margaret Rhodes",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2016-11-25T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1925-06-09T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q464955",
+            "label": "Windsor",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.483333333333,
+                    "longitude": -0.6
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q4398705",
+                "label": "Rhodes"
+            },
+            {
+                "id": "Q16869814",
+                "label": "Elphinstone"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4963612",
+                "label": "Margaret"
+            }
+        ]
+    },
+    "Q153815": {
+        "id": "Q153815",
+        "label": "Princess Margaret, Countess of Snowdon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2002-02-09T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1930-08-21T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1529151",
+            "label": "Glamis Castle",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 56.6203,
+                    "longitude": -3.0024
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q580652",
+            "label": "King Edward VII's Hospital Sister Agnes",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.520917,
+                    "longitude": -0.150417
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            },
+            {
+                "id": "Q24088315",
+                "label": "Armstrong-Jones"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4963612",
+                "label": "Margaret"
+            },
+            {
+                "id": "Q3585338",
+                "label": "Rose"
+            }
+        ]
+    },
+    "Q76927": {
+        "id": "Q76927",
+        "label": "Mary of Teck",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1953-03-24T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1867-05-26T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q207385",
+            "label": "Kensington Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505277777778,
+                    "longitude": -0.18833333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q565532",
+            "label": "Marlborough House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505,
+                    "longitude": -0.13583333333333
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            },
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            },
+            {
+                "id": "Q1370330",
+                "label": "Augusta"
+            },
+            {
+                "id": "Q3215140",
+                "label": "Louise"
+            },
+            {
+                "id": "Q18009833",
+                "label": "Pauline"
+            },
+            {
+                "id": "Q5129299",
+                "label": "Claudine"
+            },
+            {
+                "id": "Q394431",
+                "label": "Agnes"
+            },
+            {
+                "id": "Q38038024",
+                "label": "Olga"
+            }
+        ]
+    },
+    "Q3856119": {
+        "id": "Q3856119",
+        "label": "Michael Bowes-Lyon, 17th Earl of Strathmore and Kinghorne",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1987-08-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1928-12-31T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q22",
+            "label": "Scotland",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 57,
+                    "longitude": -5
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4927524",
+                "label": "Michael"
+            }
+        ]
+    },
+    "Q75248478": {
+        "id": "Q75248478",
+        "label": "Michael Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1940-05-29T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4927524",
+                "label": "Michael"
+            },
+            {
+                "id": "Q19874132",
+                "label": "Albemarle"
+            }
+        ]
+    },
+    "Q165709": {
+        "id": "Q165709",
+        "label": "Princess Eugenie",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1990-03-23T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7231952",
+            "label": "Portland Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5227,
+                    "longitude": -0.1436
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            },
+            {
+                "id": "Q4975070",
+                "label": "Brooksbank"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q21142133",
+                "label": "Eugenie"
+            },
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            },
+            {
+                "id": "Q1035239",
+                "label": "Helena"
+            }
+        ]
+    },
+    "Q75267089": {
+        "id": "Q75267089",
+        "label": "Jean Elphinstone",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1915-04-03T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q16869814",
+                "label": "Elphinstone"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4160311",
+                "label": "Jean"
+            },
+            {
+                "id": "Q679755",
+                "label": "Constance"
+            }
+        ]
+    },
+    "Q54164320": {
+        "id": "Q54164320",
+        "label": "Andrew Elphinstone",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1975-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "date_birth": {
+            "time": "+1918-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "family_name": [
+            {
+                "id": "Q16869814",
+                "label": "Elphinstone"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q18042461",
+                "label": "Andrew"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q539581",
+                "label": "Victor"
+            }
+        ]
+    },
+    "Q63676181": {
+        "id": "Q63676181",
+        "label": "Lena Tindall",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2018-06-18T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q30293017",
+            "label": "Stroud Maternity Hospital"
+        },
+        "family_name": [
+            {
+                "id": "Q37470659",
+                "label": "Tindall"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q654581",
+                "label": "Lena"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            }
+        ]
+    },
+    "Q28536747": {
+        "id": "Q28536747",
+        "label": "Mia Tindall",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2014-01-17T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1532247",
+            "label": "Gloucestershire Royal Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.865278,
+                    "longitude": -2.230556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q37470659",
+                "label": "Tindall"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1747696",
+                "label": "Mia"
+            },
+            {
+                "id": "Q1541047",
+                "label": "Grace"
+            }
+        ]
+    },
+    "Q741870": {
+        "id": "Q741870",
+        "label": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1904-02-16T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1824-07-21T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q19853",
+            "label": "Redbourn",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.8002,
+                    "longitude": -0.3965
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q268214",
+            "label": "Bordighera",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 43.778897222222,
+                    "longitude": 7.6721277777778
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q17523984",
+                "label": "Claude"
+            }
+        ]
+    },
+    "Q455160": {
+        "id": "Q455160",
+        "label": "Autumn Phillips",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1978-05-03T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q340",
+            "label": "Montreal",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 45.508888888889,
+                    "longitude": -73.561666666667
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2793828",
+                "label": "Phillips"
+            },
+            {
+                "id": "Q928249",
+                "label": "Kelly"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4827123",
+                "label": "Autumn"
+            },
+            {
+                "id": "Q1231089",
+                "label": "Patricia"
+            }
+        ]
+    },
+    "Q75251951": {
+        "id": "Q75251951",
+        "label": "Patricia Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1917-06-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1916-07-06T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1231089",
+                "label": "Patricia"
+            }
+        ]
+    },
+    "Q75268055": {
+        "id": "Q75268055",
+        "label": "Felicity Tonkin",
+        "sex": "female",
+        "is_human": true,
+        "given_name": [
+            {
+                "id": "Q2435284",
+                "label": "Felicity"
+            }
+        ]
+    },
+    "Q2871729": {
+        "id": "Q2871729",
+        "label": "Princess Anne of Denmark",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1980-09-26T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1917-12-04T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q61",
+            "label": "Washington, D.C.",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 38.895,
+                    "longitude": -77.036666666667
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            },
+            {
+                "id": "Q22062007",
+                "label": "Anson"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q564684",
+                "label": "Anne"
+            },
+            {
+                "id": "Q99748114",
+                "label": "Ferelith"
+            },
+            {
+                "id": "Q30100062",
+                "label": "Fenella"
+            }
+        ]
+    },
+    "Q75251944": {
+        "id": "Q75251944",
+        "label": "John Bowes-Lyon, Master of Glamis",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1941-09-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1910-01-01T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q4925477",
+                "label": "John"
+            }
+        ]
+    },
+    "Q152316": {
+        "id": "Q152316",
+        "label": "Prince Harry, Duke of Sussex",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1984-09-15T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q3495342",
+            "label": "St. Mary's Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.517222222222,
+                    "longitude": -0.17305555555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1158477",
+                "label": "Henry"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            },
+            {
+                "id": "Q18057751",
+                "label": "David"
+            }
+        ]
+    },
+    "Q75383790": {
+        "id": "Q75383790",
+        "label": "Anne Patricia Tiarks",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1988-07-25T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1926-02-28T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q564684",
+                "label": "Anne"
+            }
+        ]
+    },
+    "Q75251053": {
+        "id": "Q75251053",
+        "label": "Nerissa Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1986-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "date_birth": {
+            "time": "+1919-02-18T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q375542",
+                "label": "Nerissa"
+            },
+            {
+                "id": "Q1682564",
+                "label": "Jane"
+            },
+            {
+                "id": "Q389528",
+                "label": "Irene"
+            }
+        ]
+    },
+    "Q55720": {
+        "id": "Q55720",
+        "label": "Sarah, Duchess of York",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1959-10-15T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q6671010",
+            "label": "London Welbeck Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5182,
+                    "longitude": -0.1496
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q18201513",
+                "label": "Sarah"
+            },
+            {
+                "id": "Q4963612",
+                "label": "Margaret"
+            }
+        ]
+    },
+    "Q75383218": {
+        "id": "Q75383218",
+        "label": "Peter William Garside Phillips",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1998-09-12T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1920-07-26T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q2793400",
+                "label": "Peter"
+            }
+        ]
+    },
+    "Q80976": {
+        "id": "Q80976",
+        "label": "Prince Philip, Duke of Edinburgh",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1921-06-10T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q824940",
+            "label": "Mon Repos",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 39.606328,
+                    "longitude": 19.926119
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q827311",
+                "label": "Philip"
+            }
+        ]
+    },
+    "Q75251946": {
+        "id": "Q75251946",
+        "label": "Lady Cecilia Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1947-03-20T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1912-02-28T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q859234",
+                "label": "Cecilia"
+            }
+        ]
+    },
+    "Q2592020": {
+        "id": "Q2592020",
+        "label": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1922-02-05T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1832-07-29T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q123634",
+            "label": "Marylebone",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5177,
+                    "longitude": -0.147
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q6427536",
+                "label": "Bowes"
+            },
+            {
+                "id": "Q30102635",
+                "label": "Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1440778",
+                "label": "Frances"
+            }
+        ]
+    },
+    "Q36812": {
+        "id": "Q36812",
+        "label": "Prince William, Duke of Cambridge",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1982-06-21T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q3495342",
+            "label": "St. Mary's Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.517222222222,
+                    "longitude": -0.17305555555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q12344159",
+                "label": "William"
+            },
+            {
+                "id": "Q1778168",
+                "label": "Arthur"
+            },
+            {
+                "id": "Q827311",
+                "label": "Philip"
+            },
+            {
+                "id": "Q2897866",
+                "label": "Louis"
+            }
+        ]
+    },
+    "Q75721792": {
+        "id": "Q75721792",
+        "label": "Lady Mary Leveson-Gower",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2014-02-13T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1917-12-12T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            }
+        ]
+    },
+    "Q5346963": {
+        "id": "Q5346963",
+        "label": "Edwyn Burnaby",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1867-07-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1798-09-29T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q4999578",
+                "label": "Burnaby"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q5346961",
+                "label": "Edwyn"
+            }
+        ]
+    },
+    "Q1102293": {
+        "id": "Q1102293",
+        "label": "Anne Caroline Salisbury",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1881-05-03T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1805-00-00T00:00:00Z",
+            "precision": 9
+        },
+        "given_name": [
+            {
+                "id": "Q564684",
+                "label": "Anne"
+            }
+        ]
+    },
+    "Q75260349": {
+        "id": "Q75260349",
+        "label": "Stephanie Phillips",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1997-10-02T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q2793828",
+                "label": "Phillips"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1291472",
+                "label": "Stephanie"
+            }
+        ]
+    },
+    "Q25998958": {
+        "id": "Q25998958",
+        "label": "Granville Leveson-Gower, 5th Earl",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1996-10-31T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1918-12-06T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q19870795",
+                "label": "Granville"
+            }
+        ]
+    },
+    "Q75253177": {
+        "id": "Q75253177",
+        "label": "Davina Katherine Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2017-11-01T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1930-05-02T00:00:00Z",
+            "precision": 11
+        }
+    },
+    "Q75248488": {
+        "id": "Q75248488",
+        "label": "Katherine Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2014-02-23T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1926-07-04T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q108631",
+                "label": "Katherine"
+            },
+            {
+                "id": "Q20000410",
+                "label": "Juliet"
+            }
+        ]
+    },
+    "Q11801765": {
+        "id": "Q11801765",
+        "label": "Simon Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1932-06-17T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q4117588",
+                "label": "Simon"
+            }
+        ]
+    },
+    "Q75248621": {
+        "id": "Q75248621",
+        "label": "Ann Violet Cavendish-Bentinck",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1932-05-15T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1864-12-09T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q558067",
+                "label": "Ann"
+            }
+        ]
+    },
+    "Q75239380": {
+        "id": "Q75239380",
+        "label": "Diana Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1986-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "date_birth": {
+            "time": "+1923-12-14T00:00:00Z",
+            "precision": 11
+        },
+        "family_name": [
+            {
+                "id": "Q56269307",
+                "label": "Bowes-Lyon"
+            },
+            {
+                "id": "Q16883559",
+                "label": "Somerville"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q645412",
+                "label": "Diana"
+            },
+            {
+                "id": "Q99747708",
+                "label": "Cinderella"
+            },
+            {
+                "id": "Q11287301",
+                "label": "Mildred"
+            }
+        ]
+    },
+    "Q75248623": {
+        "id": "Q75248623",
+        "label": "Hyacinth Mary Cavendish-Bentinck",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1916-12-09T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1864-12-09T00:00:00Z",
+            "precision": 11
+        }
+    },
+    "Q75251949": {
+        "id": "Q75251949",
+        "label": "Lady Nancy Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1959-02-11T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1918-03-18T00:00:00Z",
+            "precision": 11
+        }
+    },
+    "Q3991503": {
+        "id": "Q3991503",
+        "label": "Timothy Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1972-09-13T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1918-03-18T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q996509",
+            "label": "Forfar",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 56.643055555556,
+                    "longitude": -2.89
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q15885954",
+                "label": "Timothy"
+            }
+        ]
+    },
+    "Q117174": {
+        "id": "Q117174",
+        "label": "Prince Henry, Duke of Gloucester",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1974-06-10T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1900-03-31T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1320376",
+            "label": "York Cottage",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.82638889,
+                    "longitude": 0.51638889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q808536",
+            "label": "Barnwell Manor",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.4543,
+                    "longitude": -0.456367
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1158477",
+                "label": "Henry"
+            },
+            {
+                "id": "Q12344159",
+                "label": "William"
+            },
+            {
+                "id": "Q3273004",
+                "label": "Frederick"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            }
+        ]
+    },
+    "Q310488": {
+        "id": "Q310488",
+        "label": "Prince John of the United Kingdom",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1919-01-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1905-07-12T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1320376",
+            "label": "York Cottage",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.82638889,
+                    "longitude": 0.51638889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q23109",
+            "label": "Norfolk",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.666666666667,
+                    "longitude": 1
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q4925477",
+                "label": "John"
+            }
+        ]
+    },
+    "Q2918041": {
+        "id": "Q2918041",
+        "label": "Charlotte Lyon-Bowes, Lady Glamis",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1881-01-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1797-01-22T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q264002",
+                "label": "Charlotte"
+            }
+        ]
+    },
+    "Q6470028": {
+        "id": "Q6470028",
+        "label": "Lady Charles Bentinck",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1875-03-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1788-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "given_name": [
+            {
+                "id": "Q482671",
+                "label": "Ana"
+            }
+        ]
+    },
+    "Q152260": {
+        "id": "Q152260",
+        "label": "Alexandra of Denmark",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1925-11-20T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1844-12-01T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q2504988",
+            "label": "Yellow Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 55.6829,
+                    "longitude": 12.5926
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q935116",
+            "label": "Sandringham House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.829722222222,
+                    "longitude": 0.51388888888889
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q6081128",
+                "label": "Alexandra"
+            },
+            {
+                "id": "Q16275172",
+                "label": "Caroline"
+            },
+            {
+                "id": "Q632104",
+                "label": "Marie"
+            },
+            {
+                "id": "Q264002",
+                "label": "Charlotte"
+            },
+            {
+                "id": "Q3215140",
+                "label": "Louise"
+            },
+            {
+                "id": "Q2737173",
+                "label": "Julia"
+            }
+        ]
+    },
+    "Q233913": {
+        "id": "Q233913",
+        "label": "Mary, Princess Royal and Countess of Harewood",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1965-03-28T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1897-04-25T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1320376",
+            "label": "York Cottage",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.82638889,
+                    "longitude": 0.51638889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1585312",
+            "label": "Harewood House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 53.8969,
+                    "longitude": -1.5273
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            },
+            {
+                "id": "Q6081128",
+                "label": "Alexandra"
+            },
+            {
+                "id": "Q650689",
+                "label": "Alice"
+            },
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            }
+        ]
+    },
+    "Q75251963": {
+        "id": "Q75251963",
+        "label": "Maud Agnes Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1941-02-28T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1870-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "given_name": [
+            {
+                "id": "Q1781876",
+                "label": "Maud"
+            }
+        ]
+    },
+    "Q155203": {
+        "id": "Q155203",
+        "label": "Sophie, Countess of Wessex",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1965-01-20T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7280027",
+            "label": "Radcliffe Infirmary",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.760278,
+                    "longitude": -1.261944
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q56192323",
+                "label": "Rhys-Jones"
+            },
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q14942517",
+                "label": "Sophie"
+            },
+            {
+                "id": "Q13376892",
+                "label": "Helen"
+            }
+        ]
+    },
+    "Q160770": {
+        "id": "Q160770",
+        "label": "Prince George, Duke of Kent",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1942-08-25T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1902-12-20T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1320376",
+            "label": "York Cottage",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.82638889,
+                    "longitude": 0.51638889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q864668",
+            "label": "Caithness",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 58.416666666667,
+                    "longitude": -3.5
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q15921732",
+                "label": "George"
+            },
+            {
+                "id": "Q401836",
+                "label": "Edmund"
+            },
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            },
+            {
+                "id": "Q923",
+                "label": "Alexander"
+            }
+        ]
+    },
+    "Q75240152": {
+        "id": "Q75240152",
+        "label": "Francis Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1948-02-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1856-02-23T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q1441346",
+                "label": "Francis"
+            }
+        ]
+    },
+    "Q128343": {
+        "id": "Q128343",
+        "label": "Lord Charles Bentinck",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1826-04-28T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1780-05-00T00:00:00Z",
+            "precision": 10
+        },
+        "place_birth": {
+            "id": "Q2390615",
+            "label": "Welbeck Abbey",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 53.2621,
+                    "longitude": -1.15603
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27490773",
+                "label": "Bentinck"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q12344159",
+                "label": "William"
+            }
+        ]
+    },
+    "Q75240155": {
+        "id": "Q75240155",
+        "label": "Kenneth Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1911-01-09T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1867-04-26T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q2492643",
+                "label": "Kenneth"
+            }
+        ]
+    },
+    "Q1386944": {
+        "id": "Q1386944",
+        "label": "Mike Tindall",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1978-10-18T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q658902",
+            "label": "Otley",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 53.905,
+                    "longitude": -1.687
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q37470659",
+                "label": "Tindall"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q361309",
+                "label": "Mike"
+            }
+        ]
+    },
+    "Q75251964": {
+        "id": "Q75251964",
+        "label": "Evelyn Mary Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1876-03-15T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1872-00-00T00:00:00Z",
+            "precision": 9
+        },
+        "given_name": [
+            {
+                "id": "Q1381706",
+                "label": "Evelyn"
+            }
+        ]
+    },
+    "Q20875": {
+        "id": "Q20875",
+        "label": "Edward VII",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1910-05-06T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1841-11-09T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q42182",
+            "label": "Buckingham Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.501,
+                    "longitude": -0.142
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q42182",
+            "label": "Buckingham Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.501,
+                    "longitude": -0.142
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            }
+        ]
+    },
+    "Q75241639": {
+        "id": "Q75241639",
+        "label": "Herbert Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1897-04-14T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1860-08-15T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q4926833",
+                "label": "Herbert"
+            }
+        ]
+    },
+    "Q75251960": {
+        "id": "Q75251960",
+        "label": "Lady Constance Frances Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1951-11-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1865-01-01T00:00:00Z",
+            "precision": 9
+        }
+    },
+    "Q1091237": {
+        "id": "Q1091237",
+        "label": "David Armstrong-Jones, 2nd Earl of Snowdon",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1961-11-03T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q565521",
+            "label": "Clarence House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.504,
+                    "longitude": -0.1385
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q18057751",
+                "label": "David"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            }
+        ]
+    },
+    "Q5716005": {
+        "id": "Q5716005",
+        "label": "Henrietta Mildred Hodgson",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1891-11-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1805-01-06T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q783677",
+                "label": "Henrietta"
+            }
+        ]
+    },
+    "Q75240154": {
+        "id": "Q75240154",
+        "label": "Ernest Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1891-12-27T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1858-08-04T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q595105",
+                "label": "Ernest"
+            }
+        ]
+    },
+    "Q75251961": {
+        "id": "Q75251961",
+        "label": "Mildred Marion Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1897-06-09T00:00:00Z",
+            "precision": 11
+        }
+    },
+    "Q533403": {
+        "id": "Q533403",
+        "label": "Thomas Lyon-Bowes, Lord Glamis",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1834-01-27T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1801-02-06T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7595182",
+            "label": "St Paul's Walden",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.8861,
+                    "longitude": -0.266667
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q16428906",
+                "label": "Thomas"
+            }
+        ]
+    },
+    "Q75390536": {
+        "id": "Q75390536",
+        "label": "Hon. Malcom Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1957-08-23T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1874-04-23T00:00:00Z",
+            "precision": 11
+        }
+    },
+    "Q1040807": {
+        "id": "Q1040807",
+        "label": "Lady Sarah Chatto",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1964-05-01T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q207385",
+            "label": "Kensington Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505277777778,
+                    "longitude": -0.18833333333333
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q21494621",
+                "label": "Chatto"
+            },
+            {
+                "id": "Q24088315",
+                "label": "Armstrong-Jones"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q18201513",
+                "label": "Sarah"
+            },
+            {
+                "id": "Q1440778",
+                "label": "Frances"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            }
+        ]
+    },
+    "Q233997": {
+        "id": "Q233997",
+        "label": "Princess Mary Adelaide of Cambridge",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1897-10-27T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1833-11-27T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1715",
+            "label": "Hanover",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.374444444444,
+                    "longitude": 9.7386111111111
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1887338",
+            "label": "White Lodge",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4452,
+                    "longitude": -0.2648
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q325872",
+                "label": "Maria"
+            }
+        ]
+    },
+    "Q535987": {
+        "id": "Q535987",
+        "label": "Francis, Duke of Teck",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1900-01-21T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1837-08-28T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1640",
+            "label": "Osijek",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 45.560277777778,
+                    "longitude": 18.670277777778
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1887338",
+            "label": "White Lodge",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4452,
+                    "longitude": -0.2648
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q4925932",
+                "label": "Franz"
+            }
+        ]
+    },
+    "Q16738479": {
+        "id": "Q16738479",
+        "label": "Oswald Smith",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1863-06-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1794-07-07T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q146732",
+            "label": "Bexleyheath",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4589,
+                    "longitude": 0.1384
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q1158446",
+                "label": "Smith"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q18190932",
+                "label": "Oswald"
+            }
+        ]
+    },
+    "Q439989": {
+        "id": "Q439989",
+        "label": "Patrick Bowes-Lyon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1946-10-05T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1863-03-05T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q123024",
+            "label": "Belgravia",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.49795,
+                    "longitude": -0.15453055555556
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q2564756",
+            "label": "Westerham (Feldkirchen-Westerham)",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 47.8994,
+                    "longitude": 11.8314
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q18002623",
+                "label": "Patrick"
+            }
+        ]
+    },
+    "Q590227": {
+        "id": "Q590227",
+        "label": "Edward VIII",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1972-05-28T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1894-06-23T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1887338",
+            "label": "White Lodge",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4452,
+                    "longitude": -0.2648
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q48958",
+            "label": "Neuilly-sur-Seine",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 48.887222222222,
+                    "longitude": 2.2675
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            },
+            {
+                "id": "Q18001597",
+                "label": "Christian"
+            },
+            {
+                "id": "Q15921732",
+                "label": "George"
+            },
+            {
+                "id": "Q18042461",
+                "label": "Andrew"
+            },
+            {
+                "id": "Q18002623",
+                "label": "Patrick"
+            },
+            {
+                "id": "Q18057751",
+                "label": "David"
+            }
+        ]
+    },
+    "Q4165785": {
+        "id": "Q4165785",
+        "label": "Susan Barrantes",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1998-09-19T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1937-06-09T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q4956139",
+            "label": "Bramcote",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.935,
+                    "longitude": -1.247
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q2319885",
+            "label": "Tres Lomas",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": -36.45,
+                    "longitude": -62.85
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q36894006",
+                "label": "Barrantes"
+            },
+            {
+                "id": "Q2594455",
+                "label": "Wright"
+            },
+            {
+                "id": "Q2694490",
+                "label": "Ferguson"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q14936243",
+                "label": "Susan"
+            }
+        ]
+    },
+    "Q62938826": {
+        "id": "Q62938826",
+        "label": "Archie Mountbatten-Windsor",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2019-05-06T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7231952",
+            "label": "Portland Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5227,
+                    "longitude": -0.1436
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q19826472",
+                "label": "Archie"
+            },
+            {
+                "id": "Q19826485",
+                "label": "Harrison"
+            }
+        ]
+    },
+    "Q657778": {
+        "id": "Q657778",
+        "label": "Prince William of Gloucester",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1972-08-28T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1941-12-18T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q66466855",
+            "label": "Hadley Common (street)",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.65931,
+                    "longitude": -0.18879
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q3915261",
+            "label": "Wolverhampton Airport",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.5175,
+                    "longitude": -2.2597222222222
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q12344159",
+                "label": "William"
+            },
+            {
+                "id": "Q1158477",
+                "label": "Henry"
+            },
+            {
+                "id": "Q18042461",
+                "label": "Andrew"
+            },
+            {
+                "id": "Q3273004",
+                "label": "Frederick"
+            }
+        ]
+    },
+    "Q775665": {
+        "id": "Q775665",
+        "label": "Ronald Ferguson",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+2003-03-16T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1931-10-10T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q810196",
+            "label": "Basingstoke",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.2667,
+                    "longitude": -1.0876
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2694490",
+                "label": "Ferguson"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2532287",
+                "label": "Ronald"
+            }
+        ]
+    },
+    "Q75383800": {
+        "id": "Q75383800",
+        "label": "Mary O'Sullivan",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2005-08-28T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1934-00-00T00:00:00Z",
+            "precision": 9
+        },
+        "family_name": [
+            {
+                "id": "Q21449778",
+                "label": "O'Sullivan"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            }
+        ]
+    },
+    "Q170294": {
+        "id": "Q170294",
+        "label": "Prince Richard, Duke of Gloucester",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1944-08-26T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q192240",
+            "label": "Northampton",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.233333333333,
+                    "longitude": -0.9
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1249148",
+                "label": "Richard"
+            },
+            {
+                "id": "Q15921732",
+                "label": "George"
+            },
+            {
+                "id": "Q923",
+                "label": "Alexander"
+            },
+            {
+                "id": "Q499249",
+                "label": "Walter"
+            }
+        ]
+    },
+    "Q75383798": {
+        "id": "Q75383798",
+        "label": "Christopher Rhys-Jones",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1931-06-19T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q1084472",
+                "label": "Christopher"
+            }
+        ]
+    },
+    "Q38668629": {
+        "id": "Q38668629",
+        "label": "Prince Louis of Cambridge",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2018-04-23T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q3495342",
+            "label": "St. Mary's Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.517222222222,
+                    "longitude": -0.17305555555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2897866",
+                "label": "Louis"
+            },
+            {
+                "id": "Q1778168",
+                "label": "Arthur"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            }
+        ]
+    },
+    "Q18002970": {
+        "id": "Q18002970",
+        "label": "Princess Charlotte of Cambridge",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2015-05-02T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q3495342",
+            "label": "St. Mary's Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.517222222222,
+                    "longitude": -0.17305555555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q264002",
+                "label": "Charlotte"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q645412",
+                "label": "Diana"
+            }
+        ]
+    },
+    "Q156531": {
+        "id": "Q156531",
+        "label": "Prince Andrew of Greece and Denmark",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1944-12-03T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1882-02-02T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1524",
+            "label": "Athens",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 37.979444444444,
+                    "longitude": 23.716111111111
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q45240",
+            "label": "Monte Carlo",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 43.738942,
+                    "longitude": 7.425237
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q18177306",
+                "label": "Andrea"
+            }
+        ]
+    },
+    "Q2962982": {
+        "id": "Q2962982",
+        "label": "Gerald David Lascelles",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1998-02-27T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1924-08-21T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q5580294",
+            "label": "Goldsborough Hall",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 53.9991,
+                    "longitude": -1.41627
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q187911",
+            "label": "Bergerac",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 44.851111111111,
+                    "longitude": 0.48194444444444
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q2131007",
+                "label": "Gerald"
+            },
+            {
+                "id": "Q18057751",
+                "label": "David"
+            }
+        ]
+    },
+    "Q116062": {
+        "id": "Q116062",
+        "label": "Princess Alice of Battenberg",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1969-12-05T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1885-02-25T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q42646",
+            "label": "Windsor Castle",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4838,
+                    "longitude": -0.60483
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q42182",
+            "label": "Buckingham Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.501,
+                    "longitude": -0.142
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q650689",
+                "label": "Alice"
+            },
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            },
+            {
+                "id": "Q632104",
+                "label": "Marie"
+            },
+            {
+                "id": "Q2737173",
+                "label": "Julia"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            }
+        ]
+    },
+    "Q12738554": {
+        "id": "Q12738554",
+        "label": "Prince Alexander John of Wales",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1871-04-07T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1871-04-06T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q935116",
+            "label": "Sandringham House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.829722222222,
+                    "longitude": 0.51388888888889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q935116",
+            "label": "Sandringham House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.829722222222,
+                    "longitude": 0.51388888888889
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q923",
+                "label": "Alexander"
+            },
+            {
+                "id": "Q4925477",
+                "label": "John"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q4927937",
+                "label": "Robert"
+            },
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            }
+        ]
+    },
+    "Q2414886": {
+        "id": "Q2414886",
+        "label": "Lady Margarita Armstrong-Jones",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2002-05-14T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7231952",
+            "label": "Portland Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5227,
+                    "longitude": -0.1436
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q24088315",
+                "label": "Armstrong-Jones"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q6760124",
+                "label": "Margarita"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q3585338",
+                "label": "Rose"
+            },
+            {
+                "id": "Q26944839",
+                "label": "Alleyne"
+            }
+        ]
+    },
+    "Q13590412": {
+        "id": "Q13590412",
+        "label": "Prince George of Cambridge",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+2013-07-22T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q3495342",
+            "label": "St. Mary's Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.517222222222,
+                    "longitude": -0.17305555555556
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q15921732",
+                "label": "George"
+            },
+            {
+                "id": "Q923",
+                "label": "Alexander"
+            },
+            {
+                "id": "Q2897866",
+                "label": "Louis"
+            }
+        ]
+    },
+    "Q336609": {
+        "id": "Q336609",
+        "label": "George Lascelles, 7th Earl of Harewood",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+2011-07-11T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1923-02-07T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1585312",
+            "label": "Harewood House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 53.8969,
+                    "longitude": -1.5273
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q15921732",
+                "label": "George"
+            }
+        ]
+    },
+    "Q4381222": {
+        "id": "Q4381222",
+        "label": "Samuel Chatto",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1996-07-28T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q21494621",
+                "label": "Chatto"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q629347",
+                "label": "Samuel"
+            },
+            {
+                "id": "Q18057751",
+                "label": "David"
+            },
+            {
+                "id": "Q16275020",
+                "label": "Benedict"
+            }
+        ]
+    },
+    "Q158258": {
+        "id": "Q158258",
+        "label": "Prince Edward, Duke of Kent",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1935-10-09T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q2894411",
+            "label": "Belgrave Square",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.499,
+                    "longitude": -0.1537
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q203052",
+                "label": "Patrick"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            },
+            {
+                "id": "Q15921732",
+                "label": "George"
+            },
+            {
+                "id": "Q42771",
+                "label": "Nicholas"
+            },
+            {
+                "id": "Q4925623",
+                "label": "Paul"
+            }
+        ]
+    },
+    "Q3736601": {
+        "id": "Q3736601",
+        "label": "Arthur Chatto",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1999-02-05T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q21494621",
+                "label": "Chatto"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q1778168",
+                "label": "Arthur"
+            },
+            {
+                "id": "Q4927937",
+                "label": "Robert"
+            },
+            {
+                "id": "Q18978396",
+                "label": "Nathaniel"
+            }
+        ]
+    },
+    "Q5641192": {
+        "id": "Q5641192",
+        "label": "Prince Francis of Teck",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1910-10-22T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1870-01-09T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q207385",
+            "label": "Kensington Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505277777778,
+                    "longitude": -0.18833333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q7980511",
+            "label": "Welbeck Street",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5175,
+                    "longitude": -0.14938
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q1441346",
+                "label": "Francis"
+            },
+            {
+                "id": "Q471788",
+                "label": "Joseph"
+            },
+            {
+                "id": "Q1076652",
+                "label": "Leopold"
+            },
+            {
+                "id": "Q3273004",
+                "label": "Frederick"
+            }
+        ]
+    },
+    "Q313752": {
+        "id": "Q313752",
+        "label": "Prince Michael of Kent",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1942-07-04T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1777752",
+            "label": "Coppins",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.526,
+                    "longitude": -0.509
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4927524",
+                "label": "Michael"
+            },
+            {
+                "id": "Q14647745",
+                "label": "Franklin"
+            },
+            {
+                "id": "Q15921732",
+                "label": "George"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            }
+        ]
+    },
+    "Q336084": {
+        "id": "Q336084",
+        "label": "Adolphus Cambridge, 1st Marquess of Cambridge",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1927-10-24T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1868-08-13T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q207385",
+            "label": "Kensington Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505277777778,
+                    "longitude": -0.18833333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q201970",
+            "label": "Shrewsbury",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.708055555556,
+                    "longitude": -2.7544444444444
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q37059326",
+                "label": "Cambridge"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q365625",
+                "label": "Adolphe"
+            }
+        ]
+    },
+    "Q62068": {
+        "id": "Q62068",
+        "label": "Princess Augusta of Hesse-Kassel",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1889-04-06T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1797-07-25T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q2865",
+            "label": "Kassel",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.315777777778,
+                    "longitude": 9.4979166666667
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q272162",
+            "label": "St James's Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5046,
+                    "longitude": -0.13771
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q28053272",
+                "label": "Auguste"
+            },
+            {
+                "id": "Q15728223",
+                "label": "Wilhelmine"
+            },
+            {
+                "id": "Q3215140",
+                "label": "Louise"
+            }
+        ]
+    },
+    "Q3312300": {
+        "id": "Q3312300",
+        "label": "Charles Armstrong-Jones, Viscount Linley",
+        "sex": "male",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1999-07-01T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7231952",
+            "label": "Portland Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5227,
+                    "longitude": -0.1436
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q24088315",
+                "label": "Armstrong-Jones"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q18002623",
+                "label": "Patrick"
+            },
+            {
+                "id": "Q19967986",
+                "label": "Inigo"
+            }
+        ]
+    },
+    "Q335091": {
+        "id": "Q335091",
+        "label": "Alexander Cambridge, 1st Earl of Athlone",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1957-01-16T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1874-04-14T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q207385",
+            "label": "Kensington Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505277777778,
+                    "longitude": -0.18833333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q37059326",
+                "label": "Cambridge"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q923",
+                "label": "Alexander"
+            }
+        ]
+    },
+    "Q234542": {
+        "id": "Q234542",
+        "label": "Princess Victoria of the United Kingdom",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1935-12-03T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1868-07-06T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q565532",
+            "label": "Marlborough House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505,
+                    "longitude": -0.13583333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1777752",
+            "label": "Coppins",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.526,
+                    "longitude": -0.509
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            },
+            {
+                "id": "Q6081128",
+                "label": "Alexandra"
+            },
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            },
+            {
+                "id": "Q38038024",
+                "label": "Olga"
+            }
+        ]
+    },
+    "Q166028": {
+        "id": "Q166028",
+        "label": "Louise of Hesse-Kassel",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1898-09-29T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1817-09-07T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q2865",
+            "label": "Kassel",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.315777777778,
+                    "longitude": 9.4979166666667
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1443597",
+            "label": "Bernstorff Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 55.758405381933,
+                    "longitude": 12.552362509491
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q3215140",
+                "label": "Louise"
+            },
+            {
+                "id": "Q15728223",
+                "label": "Wilhelmine"
+            },
+            {
+                "id": "Q18352956",
+                "label": "Friederike"
+            },
+            {
+                "id": "Q16275172",
+                "label": "Caroline"
+            },
+            {
+                "id": "Q18010311",
+                "label": "Auguste"
+            },
+            {
+                "id": "Q15725563",
+                "label": "Julie"
+            }
+        ]
+    },
+    "Q9685": {
+        "id": "Q9685",
+        "label": "Diana, Princess of Wales",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1997-08-31T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1961-07-01T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q2006803",
+            "label": "Sandringham",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.827369444444,
+                    "longitude": 0.51436944444444
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q90",
+            "label": "Paris",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 48.856944444444,
+                    "longitude": 2.3513888888889
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q1261064",
+                "label": "Spencer"
+            },
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q645412",
+                "label": "Diana"
+            },
+            {
+                "id": "Q1440778",
+                "label": "Frances"
+            }
+        ]
+    },
+    "Q159670": {
+        "id": "Q159670",
+        "label": "Prince Albert Victor, Duke of Clarence and Avondale",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1892-01-14T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1864-01-08T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q6679988",
+            "label": "Frogmore Estate",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.474027777778,
+                    "longitude": -0.59644444444444
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q935116",
+            "label": "Sandringham House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.829722222222,
+                    "longitude": 0.51388888888889
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            },
+            {
+                "id": "Q18001597",
+                "label": "Christian"
+            },
+            {
+                "id": "Q539581",
+                "label": "Victor"
+            },
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            }
+        ]
+    },
+    "Q236196": {
+        "id": "Q236196",
+        "label": "Princess Cecilie of Greece and Denmark",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1937-11-16T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1911-06-22T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1524",
+            "label": "Athens",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 37.979444444444,
+                    "longitude": 23.716111111111
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q12996",
+            "label": "Ostend",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.233333333333,
+                    "longitude": 2.9333333333333
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q16275183",
+                "label": "Cecilie"
+            }
+        ]
+    },
+    "Q233516": {
+        "id": "Q233516",
+        "label": "Louise, Princess Royal",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1931-01-04T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1867-02-20T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q565532",
+            "label": "Marlborough House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505,
+                    "longitude": -0.13583333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q7232117",
+            "label": "Portman Square",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5157,
+                    "longitude": -0.1557
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q3215140",
+                "label": "Louise"
+            },
+            {
+                "id": "Q1157241",
+                "label": "Dagmar"
+            },
+            {
+                "id": "Q6081128",
+                "label": "Alexandra"
+            },
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            }
+        ]
+    },
+    "Q154423": {
+        "id": "Q154423",
+        "label": "Maud of Wales",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1938-11-20T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1869-11-26T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q565532",
+            "label": "Marlborough House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505,
+                    "longitude": -0.13583333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q935116",
+            "label": "Sandringham House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.829722222222,
+                    "longitude": 0.51388888888889
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q1781876",
+                "label": "Maud"
+            },
+            {
+                "id": "Q264002",
+                "label": "Charlotte"
+            },
+            {
+                "id": "Q734578",
+                "label": "Mary"
+            },
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            }
+        ]
+    },
+    "Q265865": {
+        "id": "Q265865",
+        "label": "Countess Claudine Rh\u00e9dey von Kis-Rh\u00e9de",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1841-10-01T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1812-09-21T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q39473",
+            "label": "Transylvania",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 46.766666666667,
+                    "longitude": 23.583333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q131964",
+            "label": "Austrian Empire",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 48.2,
+                    "longitude": 16.35
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q11871961",
+                "label": "Klaudia"
+            },
+            {
+                "id": "Q14937153",
+                "label": "Zsuzsanna"
+            }
+        ]
+    },
+    "Q170191": {
+        "id": "Q170191",
+        "label": "Princess Alexandra, The Honourable Lady Ogilvy",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1936-12-25T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q2894411",
+            "label": "Belgrave Square",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.499,
+                    "longitude": -0.1537
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q27235787",
+                "label": "Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q6081128",
+                "label": "Alexandra"
+            },
+            {
+                "id": "Q13376892",
+                "label": "Helen"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            },
+            {
+                "id": "Q38038024",
+                "label": "Olga"
+            },
+            {
+                "id": "Q21727943",
+                "label": "Christabel"
+            }
+        ]
+    },
+    "Q152245": {
+        "id": "Q152245",
+        "label": "Albert, Prince Consort",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1861-12-14T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1819-08-26T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q449510",
+            "label": "Schloss Rosenau",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 50.2981,
+                    "longitude": 11.0225
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q42646",
+            "label": "Windsor Castle",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4838,
+                    "longitude": -0.60483
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q577011",
+                "label": "Albert"
+            },
+            {
+                "id": "Q1441346",
+                "label": "Francis"
+            },
+            {
+                "id": "Q770041",
+                "label": "Augustus"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q18001873",
+                "label": "Emmanuel"
+            }
+        ]
+    },
+    "Q240317": {
+        "id": "Q240317",
+        "label": "Princess Margarita of Greece and Denmark",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1981-04-24T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1905-04-18T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1524",
+            "label": "Athens",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 37.979444444444,
+                    "longitude": 23.716111111111
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q502921",
+            "label": "Bad Wiessee",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 47.716666666667,
+                    "longitude": 11.716666666667
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q98544741",
+                "label": "Margarita"
+            }
+        ]
+    },
+    "Q61155": {
+        "id": "Q61155",
+        "label": "Duke Alexander of W\u00fcrttemberg",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1885-07-04T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1804-09-09T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q656",
+            "label": "Saint Petersburg",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 59.95,
+                    "longitude": 30.316666666667
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q15887",
+            "label": "La\u0161ko Municipality",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 46.15,
+                    "longitude": 15.233333333333
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q923",
+                "label": "Alexander"
+            }
+        ]
+    },
+    "Q151305": {
+        "id": "Q151305",
+        "label": "Christian IX of Denmark",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1906-01-29T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1818-04-08T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q647987",
+            "label": "Gottorf Castle",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 54.511666666667,
+                    "longitude": 9.5413888888889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q211053",
+            "label": "Amalienborg",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 55.684027777778,
+                    "longitude": 12.593333333333
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q18001597",
+                "label": "Christian"
+            }
+        ]
+    },
+    "Q630371": {
+        "id": "Q630371",
+        "label": "Princess Sophie of Greece and Denmark",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2001-11-03T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1914-06-26T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q121378",
+            "label": "Corfu",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 39.623888888889,
+                    "longitude": 19.82
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q1726",
+            "label": "Munich",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 48.137194444444,
+                    "longitude": 11.5755
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q97959398",
+                "label": "Sophia"
+            }
+        ]
+    },
+    "Q255382": {
+        "id": "Q255382",
+        "label": "Princess Theodora of Greece and Denmark",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1969-10-16T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1906-05-30T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q257617",
+            "label": "Tatoi Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 38.162730555556,
+                    "longitude": 23.793688888889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q382481",
+            "label": "B\u00fcdingen",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 50.290833333333,
+                    "longitude": 9.1125
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q2642390",
+                "label": "Mountbatten family"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q19962796",
+                "label": "Theodora"
+            }
+        ]
+    },
+    "Q57658": {
+        "id": "Q57658",
+        "label": "Princess Victoria of Hesse and by Rhine",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1950-09-24T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1863-04-05T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q42646",
+            "label": "Windsor Castle",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4838,
+                    "longitude": -0.60483
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            },
+            {
+                "id": "Q687536",
+                "label": "Alberta"
+            },
+            {
+                "id": "Q17524931",
+                "label": "Elisabeth"
+            },
+            {
+                "id": "Q12326416",
+                "label": "Mathilde"
+            },
+            {
+                "id": "Q632104",
+                "label": "Marie"
+            }
+        ]
+    },
+    "Q17142": {
+        "id": "Q17142",
+        "label": "George I of Greece",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1913-03-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1845-12-24T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q1748",
+            "label": "Copenhagen",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 55.676111111111,
+                    "longitude": 12.568888888889
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q17151",
+            "label": "Thessaloniki",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 40.633333333333,
+                    "longitude": 22.95
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q18001597",
+                "label": "Christian"
+            },
+            {
+                "id": "Q12344159",
+                "label": "William"
+            },
+            {
+                "id": "Q3276175",
+                "label": "Ferdinand"
+            },
+            {
+                "id": "Q18145837",
+                "label": "Adolf"
+            },
+            {
+                "id": "Q15921732",
+                "label": "George"
+            }
+        ]
+    },
+    "Q3304418": {
+        "id": "Q3304418",
+        "label": "Meghan, Duchess of Sussex",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1981-08-04T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q65",
+            "label": "Los Angeles",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 34.05223,
+                    "longitude": -118.24368
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q37496255",
+                "label": "Markle"
+            },
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q935489",
+                "label": "Rachel"
+            },
+            {
+                "id": "Q10328269",
+                "label": "Meghan"
+            }
+        ]
+    },
+    "Q155178": {
+        "id": "Q155178",
+        "label": "Olga Constantinovna of Russia",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1926-06-18T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1851-08-22T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q177888",
+            "label": "Pavlovsk",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 59.683333333333,
+                    "longitude": 30.433333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q220",
+            "label": "Rome",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 41.893055555556,
+                    "longitude": 12.482777777778
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q20187",
+                "label": "Olga"
+            }
+        ]
+    },
+    "Q313771": {
+        "id": "Q313771",
+        "label": "Prince Adolphus, Duke of Cambridge",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1850-07-08T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1774-02-24T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q42182",
+            "label": "Buckingham Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.501,
+                    "longitude": -0.142
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q5025454",
+            "label": "Cambridge House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5058,
+                    "longitude": -0.1452
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q16881414",
+                "label": "Prince"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q365967",
+                "label": "Adolphus"
+            }
+        ]
+    },
+    "Q335260": {
+        "id": "Q335260",
+        "label": "Antony Armstrong-Jones, 1st Earl of Snowdon",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+2017-01-13T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1930-03-07T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q123024",
+            "label": "Belgravia",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.49795,
+                    "longitude": -0.15453055555556
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q288781",
+            "label": "Kensington",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.5004,
+                    "longitude": -0.1909
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q24088315",
+                "label": "Armstrong-Jones"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q18064323",
+                "label": "Antony"
+            },
+            {
+                "id": "Q2958359",
+                "label": "Charles"
+            },
+            {
+                "id": "Q4927937",
+                "label": "Robert"
+            }
+        ]
+    },
+    "Q57468": {
+        "id": "Q57468",
+        "label": "Prince Louis of Battenberg",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1921-09-11T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1854-05-24T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q13298",
+            "label": "Graz",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 47.066666666667,
+                    "longitude": 15.433333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q37536501",
+                "label": "Battenberg"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2897866",
+                "label": "Louis"
+            }
+        ]
+    },
+    "Q10479": {
+        "id": "Q10479",
+        "label": "Catherine, Duchess of Cambridge",
+        "sex": "female",
+        "is_human": true,
+        "date_birth": {
+            "time": "+1982-01-09T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q7373809",
+            "label": "Royal Berkshire Hospital",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.4508,
+                    "longitude": -0.959444
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q696647",
+                "label": "Mountbatten-Windsor"
+            },
+            {
+                "id": "Q2779549",
+                "label": "Middleton"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q2218095",
+                "label": "Catherine"
+            },
+            {
+                "id": "Q385468",
+                "label": "Elizabeth"
+            }
+        ]
+    },
+    "Q9439": {
+        "id": "Q9439",
+        "label": "Queen Victoria",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1901-01-22T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1819-05-24T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q207385",
+            "label": "Kensington Palace",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.505277777778,
+                    "longitude": -0.18833333333333
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q565155",
+            "label": "Osborne House",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 50.750547222222,
+                    "longitude": -1.2697305555556
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q590893",
+                "label": "Victoria"
+            },
+            {
+                "id": "Q16002474",
+                "label": "Alexandrina"
+            }
+        ]
+    },
+    "Q256893": {
+        "id": "Q256893",
+        "label": "Frances Shand Kydd",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+2004-06-03T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1936-01-20T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q2006803",
+            "label": "Sandringham",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 52.827369444444,
+                    "longitude": 0.51436944444444
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q607334",
+            "label": "Seil",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 56.3,
+                    "longitude": -5.62
+                }
+            }
+        },
+        "given_name": [
+            {
+                "id": "Q1440778",
+                "label": "Frances"
+            },
+            {
+                "id": "Q18014868",
+                "label": "Ruth"
+            }
+        ]
+    },
+    "Q593671": {
+        "id": "Q593671",
+        "label": "John Spencer, 8th Earl Spencer",
+        "sex": "male",
+        "is_human": true,
+        "date_death": {
+            "time": "+1992-03-29T00:00:00Z",
+            "precision": 11
+        },
+        "date_birth": {
+            "time": "+1924-01-24T00:00:00Z",
+            "precision": 11
+        },
+        "place_birth": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "place_death": {
+            "id": "Q84",
+            "label": "London",
+            "properties": {
+                "coordinate_location": {
+                    "latitude": 51.507222222222,
+                    "longitude": -0.1275
+                }
+            }
+        },
+        "family_name": [
+            {
+                "id": "Q1261064",
+                "label": "Spencer"
+            }
+        ],
+        "given_name": [
+            {
+                "id": "Q4925477",
+                "label": "John"
+            },
+            {
+                "id": "Q278835",
+                "label": "Edward"
+            }
+        ]
+    },
+    "Q75248484": {
+        "id": "Q75248484",
+        "label": "Lady Patricia Bowes-Lyon",
+        "sex": "female",
+        "is_human": true,
+        "date_death": {
+            "time": "+1997-01-01T00:00:00Z",
+            "precision": 9
+        },
+        "date_birth": {
+            "time": "+1932-01-30T00:00:00Z",
+            "precision": 11
+        },
+        "given_name": [
+            {
+                "id": "Q1231089",
+                "label": "Patricia"
+            }
+        ]
+    }
+}

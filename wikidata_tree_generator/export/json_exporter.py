@@ -48,9 +48,9 @@ class JsonExporter(Exporter):
     def export_entity(prop: [Property]):
         entity = prop.value
         export_character = {'id': entity.id, 'label': entity.label}
-        if len(entity.property_tags.items()) > 0:
+        if len(entity.properties.items()) > 0:
             export_character['properties'] = {}
-            for tag, entity_property in entity.property_tags.items():
+            for tag, entity_property in entity.properties.items():
                 if not entity_property or type(prop.value) not in property_metas_by_type.keys():
                     continue
                 export_character['properties'][json_property_tag_str[tag]] = JsonExporter.export_property(entity_property, property_metas_by_type[type(prop.value)][tag])
