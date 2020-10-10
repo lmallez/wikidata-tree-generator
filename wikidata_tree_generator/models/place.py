@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 from dataclasses import dataclass
-from wikidata.entity import EntityId
+
+from .entity import Entity
+from ..macros import PropertyTag
 
 
 @dataclass
-class Place:
-    id: EntityId
-    name: str = None
+class CoordinateLocation:
     latitude: float = None
     longitude: float = None
+
+
+class Place(Entity):
+    PROPERTIES = [
+        PropertyTag.COORDINATE_LOCATION
+    ]

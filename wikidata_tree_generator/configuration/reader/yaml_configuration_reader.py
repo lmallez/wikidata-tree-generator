@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import yaml
-from wikidata_tree_generator.configuration import TreeMethod, ExportFormat, Configuration
-from wikidata_tree_generator.models.character import Properties
+from wikidata_tree_generator.configuration import Configuration
+from wikidata_tree_generator.macros.configuration.yaml import yaml_tree_method, yaml_export_format, yaml_property_tag
 
 
 class YamlConfigurationReaderException(Exception):
@@ -9,29 +9,6 @@ class YamlConfigurationReaderException(Exception):
 
 
 class YamlConfigurationReader:
-    __str_tree_method = {
-        "ANCESTORS": TreeMethod.ANCESTORS,
-        "DESCENDANTS": TreeMethod.DESCENDANTS,
-        "FULL": TreeMethod.FULL,
-        "CLASSIC": TreeMethod.CLASSIC,
-    }
-
-    __str_export_format = {
-        "GEDCOM": ExportFormat.GEDCOM,
-        "JSON": ExportFormat.JSON
-    }
-
-    __str_properties = {
-        "DATE_DEATH": Properties.DATE_DEATH,
-        "DATE_BIRTH": Properties.DATE_BIRTH,
-        "FAMILY_NAME": Properties.FAMILY_NAME,
-        "GIVEN_NAME": Properties.GIVEN_NAME,
-        "IS_HUMAN": Properties.IS_HUMAN,
-        "PLACE_BIRTH": Properties.PLACE_BIRTH,
-        "PLACE_DEATH": Properties.PLACE_DEATH,
-        "SEX": Properties.SEX,
-    }
-
     def __init__(self, config_path: str):
         self.config_path = config_path
         self.content = self.load_config(config_path)
@@ -75,9 +52,9 @@ class YamlConfigurationReader:
         configuration.entity_cache = self._content_get_default(['entity_cache'], [bool], True)
 
         method = self._content_get_raise(['tree', 'method'], [str])
-        if method not in self.__str_tree_method.keys():
-            raise self.__configuration_exception('tree method {} does not exist\n\t(methods available : {})'.format(method, ', '.join(self.__str_tree_method.keys())))
-        configuration.tree_configuration.method = self.__str_tree_method[method]
+        if method not in yaml_tree_method.keys():
+            raise self.__configuration_exception('tree method {} does not exist\n\t(methods available : {})'.format(method, ', '.join(yaml_tree_method.keys())))
+        configuration.tree_configuration.method = yaml_tree_method[method]
         configuration.tree_configuration.generation_limit = self._content_get_default(['tree', 'generation_limit'], [int], 10)
         configuration.tree_configuration.load_fathers = self._content_get_default(['tree', 'load_fathers'], [bool], True)
         configuration.tree_configuration.load_mothers = self._content_get_default(['tree', 'load_mothers'], [bool], True)
@@ -90,17 +67,17 @@ class YamlConfigurationReader:
             configuration.thread_configuration.max_thread = self._content_get_default(['thread', 'max'], [int], 10)
 
         export_format = self._content_get_raise(['export', 'format'], [str])
-        if export_format not in self.__str_export_format.keys():
-            raise self.__configuration_exception('export format {} does not exist\n\t(formats available : {})'.format(export_format, ', '.join(self.__str_export_format.keys())))
-        configuration.export_configuration.format = self.__str_export_format[export_format]
+        if export_format not in yaml_export_format.keys():
+            raise self.__configuration_exception('export format {} does not exist\n\t(formats available : {})'.format(export_format, ', '.join(yaml_export_format.keys())))
+        configuration.export_configuration.format = yaml_export_format[export_format]
         configuration.export_configuration.export_men = self._content_get_default(['export', 'export_men'], [bool], True)
         configuration.export_configuration.export_women = self._content_get_default(['export', 'export_women'], [bool], True)
 
         character_properties = self._content_get_default(['properties'], [list], [])
         configuration.properties = []
         for character_property in character_properties:
-            if not isinstance(character_property, str) or (character_property not in self.__str_properties.keys()):
-                raise self.__configuration_exception("character_property '{}' does not exist\n\t(properties available : {})".format(character_property, ', '.join(self.__str_properties.keys())))
-            configuration.properties.append(self.__str_properties[character_property])
+            if not isinstance(character_property, str) or (character_property not in yaml_property_tag.keys()):
+                raise self.__configuration_exception("character_property '{}' does not exist\n\t(properties available : {})".format(character_property, ', '.join(yaml_property_tag.keys())))
+            configuration.properties.append(yaml_property_tag[character_property])
 
         return configuration
