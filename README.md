@@ -1,4 +1,4 @@
-# Wikidata Tree Generarator
+# Wikidata Tree Generator
 
 ### Requirements
 
